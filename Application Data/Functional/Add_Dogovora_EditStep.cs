@@ -15,6 +15,7 @@ namespace course1._0.Application_Data.Functional
         public Add_Dogovora_EditStep()
         {
             InitializeComponent();
+            Console.WriteLine("123321");
         }
     }
 }
