@@ -1,0 +1,11 @@
+﻿
+//Лямбда для выборки по какому-то знасению
+ using (myCreatePO_projectEntities1 context = new myCreatePO_projectEntities1())
+            {
+                var q = from z in context.Т_Должность
+                        where z.Должность =="Верстальщик"
+                        select z;
+                
+                //Вывод в грид .Tolist();
+				
+			}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c4cf579448ad45e8847c3070a496f837" Name="Diagram1" ZoomLevel="62">
+        <EntityTypeShape EntityType="myCreatePO_projectModel1.Т_ВидыРабот" Width="1.5" PointX="4.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="myCreatePO_projectModel1.Т_Договора" Width="1.5" PointX="4.125" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="myCreatePO_projectModel1.Т_Должность" Width="1.5" PointX="0.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="myCreatePO_projectModel1.Т_Клиент" Width="1.5" PointX="1" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="myCreatePO_projectModel1.Т_Кураторы" Width="1.5" PointX="2.375" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="myCreatePO_projectModel1.Т_Штат_сотрудников" Width="1.5" PointX="2" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="myCreatePO_projectModel1.Т_Языки_прог" Width="1.5" PointX="4.125" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="myCreatePO_projectModel1.Login" Width="1.5" PointX="6.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="myCreatePO_projectModel1.Т_Договора_Архив" Width="1.5" PointX="6.75" PointY="2.625" IsExpanded="true" />
+        <AssociationConnector Association="myCreatePO_projectModel1.FK_Т_Договора_Т_Клиент" ManuallyRouted="false" />
+        <AssociationConnector Association="myCreatePO_projectModel1.FK_Т_Договора_Т_Кураторы" ManuallyRouted="false" />
+        <AssociationConnector Association="myCreatePO_projectModel1.FK_Т_Договора_Т_Языки_прог" ManuallyRouted="false" />
+        <AssociationConnector Association="myCreatePO_projectModel1.FK_Т_Кураторы_Т_Должность" ManuallyRouted="false" />
+        <AssociationConnector Association="myCreatePO_projectModel1.FK_Т_Штат_сотрудников_Т_Кураторы" ManuallyRouted="false" />
+        <AssociationConnector Association="myCreatePO_projectModel1.FK_Т_Штат_сотрудников_Т_Языки_прог" />
+        <EntityTypeShape EntityType="myCreatePO_projectModel1.Т_Договор_Этапы" Width="1.5" PointX="1.75" PointY="9.5" />
+        <AssociationConnector Association="myCreatePO_projectModel1.FK_Т_Договор_Этапы_Т_ВидыРабот" />
+        <AssociationConnector Association="myCreatePO_projectModel1.FK_Т_Договор_Этапы_Т_Договора" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

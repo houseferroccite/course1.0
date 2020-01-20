@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{792C0441-15B0-4944-A163-AEBA2C3F03CA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>course1._0</RootNamespace>
+    <AssemblyName>course1.0</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application Data\Form%27s for acces rights\Curator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application Data\Form%27s for acces rights\Curator.Designer.cs">
+      <DependentUpon>Curator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application Data\Form%27s for acces rights\Guest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application Data\Form%27s for acces rights\Guest.Designer.cs">
+      <DependentUpon>Guest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application Data\Functional\Add_Dogovora_EditStep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application Data\Functional\Add_Dogovora_EditStep.Designer.cs">
+      <DependentUpon>Add_Dogovora_EditStep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application Data\Functional\Notification_registration_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application Data\Functional\Notification_registration_form.Designer.cs">
+      <DependentUpon>Notification_registration_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application Data\Functional\Search_Adm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application Data\Functional\Search_Adm.Designer.cs">
+      <DependentUpon>Search_Adm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application Data\Office.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application Data\Office.Designer.cs">
+      <DependentUpon>Office.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application Data\Form%27s for acces rights\Sign_In.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application Data\Form%27s for acces rights\Sign_In.Designer.cs">
+      <DependentUpon>Sign_In.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application Data\Functional\Add_Dogovora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application Data\Functional\Add_Dogovora.Designer.cs">
+      <DependentUpon>Add_Dogovora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application Data\Functional\Add_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application Data\Functional\Add_user.Designer.cs">
+      <DependentUpon>Add_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application Data\Form%27s for acces rights\Adm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application Data\Form%27s for acces rights\Adm.Designer.cs">
+      <DependentUpon>Adm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application Data\Functional\Inform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application Data\Functional\Inform.Designer.cs">
+      <DependentUpon>Inform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application Data\Functional\Seen_Dogovor_guest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application Data\Functional\Seen_Dogovor_guest.Designer.cs">
+      <DependentUpon>Seen_Dogovor_guest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application Data\Functional\test_insert_position.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application Data\Functional\test_insert_position.Designer.cs">
+      <DependentUpon>test_insert_position.cs</DependentUpon>
+    </Compile>
+    <Compile Include="contextstudent.cs" />
+    <Compile Include="DelPosition_Result.cs">
+      <DependentUpon>Model_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Geo%28%29\Geo.cs" />
+    <Compile Include="InsertClient_Result.cs">
+      <DependentUpon>Model_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InsertLogin_Result.cs">
+      <DependentUpon>Model_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InsertPosition_Result.cs">
+      <DependentUpon>Model_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <DependentUpon>Model_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model_Entity.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_Entity.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model_Entity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model_Entity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_Entity.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="myCreatePO_projectDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myCreatePO_projectDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="myCreatePO_projectDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myCreatePO_projectDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="myCreatePO_projectDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myCreatePO_projectDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="myCreatePO_projectDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myCreatePO_projectDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Model_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>Model_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs" />
+    <Compile Include="Style\GridViewStyles.cs" />
+    <Compile Include="Style\Setting_Application.cs" />
+    <Compile Include="UpdateClient_Result.cs">
+      <DependentUpon>Model_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePosition_Result.cs">
+      <DependentUpon>Model_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Use_BD\DB.cs" />
+    <Compile Include="Use_BD\dbHelper.cs" />
+    <Compile Include="Use_BD\Parametrs_command.cs" />
+    <Compile Include="Use_BD\QuiclyChangeBD.cs" />
+    <Compile Include="Т_ВидыРабот.cs">
+      <DependentUpon>Model_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Т_Договор_Этапы.cs">
+      <DependentUpon>Model_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Т_Договора.cs">
+      <DependentUpon>Model_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Т_Договора_Архив.cs">
+      <DependentUpon>Model_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Т_Должность.cs">
+      <DependentUpon>Model_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Т_Клиент.cs">
+      <DependentUpon>Model_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Т_Кураторы.cs">
+      <DependentUpon>Model_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Т_Штат_сотрудников.cs">
+      <DependentUpon>Model_Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Т_Языки_прог.cs">
+      <DependentUpon>Model_Entity.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Application Data\Form%27s for acces rights\Curator.resx">
+      <DependentUpon>Curator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application Data\Form%27s for acces rights\Guest.resx">
+      <DependentUpon>Guest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application Data\Functional\Add_Dogovora_EditStep.resx">
+      <DependentUpon>Add_Dogovora_EditStep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application Data\Functional\Notification_registration_form.resx">
+      <DependentUpon>Notification_registration_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application Data\Functional\Search_Adm.resx">
+      <DependentUpon>Search_Adm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application Data\Office.resx">
+      <DependentUpon>Office.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application Data\Form%27s for acces rights\Sign_In.resx">
+      <DependentUpon>Sign_In.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application Data\Functional\Add_Dogovora.resx">
+      <DependentUpon>Add_Dogovora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application Data\Functional\Add_user.resx">
+      <DependentUpon>Add_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application Data\Form%27s for acces rights\Adm.resx">
+      <DependentUpon>Adm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application Data\Functional\Inform.resx">
+      <DependentUpon>Inform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application Data\Functional\Seen_Dogovor_guest.resx">
+      <DependentUpon>Seen_Dogovor_guest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application Data\Functional\test_insert_position.resx">
+      <DependentUpon>test_insert_position.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="Model_Entity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model_Entity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model_Entity.edmx.diagram">
+      <DependentUpon>Model_Entity.edmx</DependentUpon>
+    </None>
+    <None Include="myCreatePO_projectDataSet.xsc">
+      <DependentUpon>myCreatePO_projectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="myCreatePO_projectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>myCreatePO_projectDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="myCreatePO_projectDataSet.xss">
+      <DependentUpon>myCreatePO_projectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="myCreatePO_projectDataSet1.xsc">
+      <DependentUpon>myCreatePO_projectDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="myCreatePO_projectDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>myCreatePO_projectDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="myCreatePO_projectDataSet1.xss">
+      <DependentUpon>myCreatePO_projectDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="myCreatePO_projectDataSet2.xsc">
+      <DependentUpon>myCreatePO_projectDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="myCreatePO_projectDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>myCreatePO_projectDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="myCreatePO_projectDataSet2.xss">
+      <DependentUpon>myCreatePO_projectDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="myCreatePO_projectDataSet3.xsc">
+      <DependentUpon>myCreatePO_projectDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="myCreatePO_projectDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>myCreatePO_projectDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="myCreatePO_projectDataSet3.xss">
+      <DependentUpon>myCreatePO_projectDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Application Data\Magic_helper.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Magic_helper.txt</LastGenOutput>
+    </Content>
+    <Content Include="Application Data\Magic_helper.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Magic_helper.tt</DependentUpon>
+    </Content>
+    <Content Include="Model_Entity.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_Entity.edmx</DependentUpon>
+      <LastGenOutput>Model_Entity.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model_Entity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_Entity.edmx</DependentUpon>
+      <LastGenOutput>Model_Entity.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
+</Project>
