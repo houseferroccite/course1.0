@@ -58,10 +58,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.loadAllTablesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.myCreatePO_projectDataSet1 = new course1._0.myCreatePO_projectDataSet1();
-            this.myCreatePO_projectDataSet = new course1._0.myCreatePO_projectDataSet();
+            //this.myCreatePO_projectDataSet1 = new course1._0.myCreatePO_projectDataSet1();
+            //this.myCreatePO_projectDataSet = new course1._0.myCreatePO_projectDataSet();
             this.myCreatePOprojectDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.loadAllTablesTableAdapter = new course1._0.myCreatePO_projectDataSet1TableAdapters.LoadAllTablesTableAdapter();
+            //this.loadAllTablesTableAdapter = new course1._0.myCreatePO_projectDataSet1TableAdapters.LoadAllTablesTableAdapter();
             this.button_search_butn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -79,8 +79,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.grid_for_all)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loadAllTablesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myCreatePO_projectDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myCreatePO_projectDataSet)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.myCreatePO_projectDataSet1)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.myCreatePO_projectDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myCreatePOprojectDataSetBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -382,26 +382,26 @@
             // loadAllTablesBindingSource
             // 
             this.loadAllTablesBindingSource.DataMember = "LoadAllTables";
-            this.loadAllTablesBindingSource.DataSource = this.myCreatePO_projectDataSet1;
+            //this.loadAllTablesBindingSource.DataSource = this.myCreatePO_projectDataSet1;
             // 
             // myCreatePO_projectDataSet1
             // 
-            this.myCreatePO_projectDataSet1.DataSetName = "myCreatePO_projectDataSet1";
-            this.myCreatePO_projectDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.myCreatePO_projectDataSet1.DataSetName = "myCreatePO_projectDataSet1";
+            //this.myCreatePO_projectDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // myCreatePO_projectDataSet
             // 
-            this.myCreatePO_projectDataSet.DataSetName = "myCreatePO_projectDataSet";
-            this.myCreatePO_projectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // myCreatePOprojectDataSetBindingSource
-            // 
-            this.myCreatePOprojectDataSetBindingSource.DataSource = this.myCreatePO_projectDataSet;
-            this.myCreatePOprojectDataSetBindingSource.Position = 0;
-            // 
-            // loadAllTablesTableAdapter
-            // 
-            this.loadAllTablesTableAdapter.ClearBeforeFill = true;
+            //this.myCreatePO_projectDataSet.DataSetName = "myCreatePO_projectDataSet";
+            //this.myCreatePO_projectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //// 
+            //// myCreatePOprojectDataSetBindingSource
+            //// 
+            //this.myCreatePOprojectDataSetBindingSource.DataSource = this.myCreatePO_projectDataSet;
+            //this.myCreatePOprojectDataSetBindingSource.Position = 0;
+            //// 
+            //// loadAllTablesTableAdapter
+            //// 
+            //this.loadAllTablesTableAdapter.ClearBeforeFill = true;
             // 
             // button_search_butn
             // 
@@ -562,8 +562,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.grid_for_all)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.loadAllTablesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myCreatePO_projectDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myCreatePO_projectDataSet)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.myCreatePO_projectDataSet1)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.myCreatePO_projectDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myCreatePOprojectDataSetBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -603,10 +603,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.BindingSource myCreatePOprojectDataSetBindingSource;
-        private myCreatePO_projectDataSet myCreatePO_projectDataSet;
-        private myCreatePO_projectDataSet1 myCreatePO_projectDataSet1;
+        //private myCreatePO_projectDataSet myCreatePO_projectDataSet;
+        //private myCreatePO_projectDataSet1 myCreatePO_projectDataSet1;
         private System.Windows.Forms.BindingSource loadAllTablesBindingSource;
-        private myCreatePO_projectDataSet1TableAdapters.LoadAllTablesTableAdapter loadAllTablesTableAdapter;
+        //private myCreatePO_projectDataSet1TableAdapters.LoadAllTablesTableAdapter loadAllTablesTableAdapter;
         private System.Windows.Forms.DataGridView grid_for_all;
         private System.Windows.Forms.Button button_search_butn;
         private System.Windows.Forms.Panel panel1;

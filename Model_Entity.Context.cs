@@ -19,7 +19,7 @@ namespace course1._0
     public partial class myCreatePO_projectEntities2 : DbContext
     {
         public myCreatePO_projectEntities2()
-            : base("name=myCreatePO_projectEntities2")
+            : base("name=myCreatePO_projectConnectionString")//myCreatePO_projectEntities2")
         {
         }
     

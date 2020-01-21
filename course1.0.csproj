@@ -178,26 +178,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model_Entity.edmx</DependentUpon>
     </Compile>
-    <Compile Include="myCreatePO_projectDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>myCreatePO_projectDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="myCreatePO_projectDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>myCreatePO_projectDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="myCreatePO_projectDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>myCreatePO_projectDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="myCreatePO_projectDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>myCreatePO_projectDataSet3.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
@@ -300,50 +280,6 @@
     </EntityDeploy>
     <None Include="Model_Entity.edmx.diagram">
       <DependentUpon>Model_Entity.edmx</DependentUpon>
-    </None>
-    <None Include="myCreatePO_projectDataSet.xsc">
-      <DependentUpon>myCreatePO_projectDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="myCreatePO_projectDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>myCreatePO_projectDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="myCreatePO_projectDataSet.xss">
-      <DependentUpon>myCreatePO_projectDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="myCreatePO_projectDataSet1.xsc">
-      <DependentUpon>myCreatePO_projectDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="myCreatePO_projectDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>myCreatePO_projectDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="myCreatePO_projectDataSet1.xss">
-      <DependentUpon>myCreatePO_projectDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="myCreatePO_projectDataSet2.xsc">
-      <DependentUpon>myCreatePO_projectDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="myCreatePO_projectDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>myCreatePO_projectDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="myCreatePO_projectDataSet2.xss">
-      <DependentUpon>myCreatePO_projectDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="myCreatePO_projectDataSet3.xsc">
-      <DependentUpon>myCreatePO_projectDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="myCreatePO_projectDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>myCreatePO_projectDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="myCreatePO_projectDataSet3.xss">
-      <DependentUpon>myCreatePO_projectDataSet3.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

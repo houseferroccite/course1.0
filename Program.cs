@@ -19,7 +19,7 @@ namespace course1._0
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Add_Dogovora_EditStep());
+            Application.Run(new Form1());
         }
     }
 }

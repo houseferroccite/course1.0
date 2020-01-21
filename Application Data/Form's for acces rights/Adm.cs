@@ -407,25 +407,30 @@ namespace course1._0.Forms
                      t.Show();
                      s = true;
             }
-            //if (grid_for_all.Columns[e.ColumnIndex].Name == "Del")
-            //{
-            //    using (myCreatePO_projectEntities2 context = new myCreatePO_projectEntities2())
-            //    {
-            //        int id = (int)grid_for_all.CurrentRow.Cells["ID_Клиента"].Value;
-            //        if ()
-            //        {
-            //            //находим нужную запись     
-            //            qq = context.Т_Клиент.FirstOrDefault(x => x.ID_Клиента == id);
-            //            //удаляем выбранную запись
-            //            context.Т_Клиент.Remove(qq);
-            //            //сохраняем изменения
-            //            context.SaveChanges();
-            //            var q = from z in context.Т_Клиент select new { z.ID_Клиента, z.Фото, z.ФИО, z.Адрес, z.Реквизиты_банка };
-            //            grid_for_all.DataSource = q.ToList();
-            //            grid_for_all.Rows.Remove(grid_for_all.Rows[id]);
-            //        }
-            //    }
-            //}
+            if (grid_for_all.Columns[e.ColumnIndex].Name == "Del")
+            {
+                using (myCreatePO_projectEntities2 context = new myCreatePO_projectEntities2())
+                {
+                    if (!String.IsNullOrEmpty(grid_for_all.CurrentRow.Cells["ID_Клиента"].Value.ToString()))
+                    {
+                         int id = (int)grid_for_all.CurrentRow.Cells["ID_Клиента"].Value;
+                    
+                        //находим нужную запись     
+                        qq = context.Т_Клиент.FirstOrDefault(x => x.ID_Клиента == id);
+                        if (qq != null)
+                        {
+                            //удаляем выбранную запись
+                            context.Т_Клиент.Remove(qq);
+                            //сохраняем изменения
+                            context.SaveChanges();
+                        }
+                        
+                        var q = from z in context.Т_Клиент select new { z.ID_Клиента, z.ФИО, z.Адрес, z.Реквизиты_банка };
+                        grid_for_all.DataSource = q.ToList();
+                        //grid_for_all.Rows.Remove(grid_for_all.Rows[id]);
+                    }
+                }
+            }
         }
 
         private void Button2_Click_1(object sender, EventArgs e)

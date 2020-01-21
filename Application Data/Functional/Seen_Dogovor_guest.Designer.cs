@@ -33,23 +33,22 @@
             this.data_seen_guest = new System.Windows.Forms.DataGridView();
             this.combo_dog_zak = new System.Windows.Forms.ComboBox();
             this.тДоговораАрхивBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.myCreatePO_projectDataSet3 = new course1._0.myCreatePO_projectDataSet3();
+          
             this.тДоговораАрхивBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.myCreatePO_projectDataSet = new course1._0.myCreatePO_projectDataSet();
+       
             this.label2 = new System.Windows.Forms.Label();
-            this.т_Договора_АрхивTableAdapter = new course1._0.myCreatePO_projectDataSetTableAdapters.Т_Договора_АрхивTableAdapter();
+      
             this.panel_decor_seen_dog_guest = new System.Windows.Forms.Panel();
-            this.myCreatePO_projectDataSet2 = new course1._0.myCreatePO_projectDataSet2();
+   
             this.тДоговораАрхивBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.т_Договора_АрхивTableAdapter1 = new course1._0.myCreatePO_projectDataSet2TableAdapters.Т_Договора_АрхивTableAdapter();
-            this.т_Договора_АрхивTableAdapter2 = new course1._0.myCreatePO_projectDataSet3TableAdapters.Т_Договора_АрхивTableAdapter();
+    
             ((System.ComponentModel.ISupportInitialize)(this.data_seen_guest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.тДоговораАрхивBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myCreatePO_projectDataSet3)).BeginInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.тДоговораАрхивBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myCreatePO_projectDataSet)).BeginInit();
+
             this.panel_decor_seen_dog_guest.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.myCreatePO_projectDataSet2)).BeginInit();
+         
             ((System.ComponentModel.ISupportInitialize)(this.тДоговораАрхивBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,22 +88,20 @@
             // тДоговораАрхивBindingSource2
             // 
             this.тДоговораАрхивBindingSource2.DataMember = "Т_Договора Архив";
-            this.тДоговораАрхивBindingSource2.DataSource = this.myCreatePO_projectDataSet3;
+           
             // 
             // myCreatePO_projectDataSet3
             // 
-            this.myCreatePO_projectDataSet3.DataSetName = "myCreatePO_projectDataSet3";
-            this.myCreatePO_projectDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+         
             // 
             // тДоговораАрхивBindingSource
             // 
             this.тДоговораАрхивBindingSource.DataMember = "Т_Договора Архив";
-            this.тДоговораАрхивBindingSource.DataSource = this.myCreatePO_projectDataSet;
+    
             // 
             // myCreatePO_projectDataSet
             // 
-            this.myCreatePO_projectDataSet.DataSetName = "myCreatePO_projectDataSet";
-            this.myCreatePO_projectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+    
             // 
             // label2
             // 
@@ -119,7 +116,7 @@
             // 
             // т_Договора_АрхивTableAdapter
             // 
-            this.т_Договора_АрхивTableAdapter.ClearBeforeFill = true;
+ 
             // 
             // panel_decor_seen_dog_guest
             // 
@@ -132,21 +129,20 @@
             // 
             // myCreatePO_projectDataSet2
             // 
-            this.myCreatePO_projectDataSet2.DataSetName = "myCreatePO_projectDataSet2";
-            this.myCreatePO_projectDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+           
             // 
             // тДоговораАрхивBindingSource1
             // 
             this.тДоговораАрхивBindingSource1.DataMember = "Т_Договора Архив";
-            this.тДоговораАрхивBindingSource1.DataSource = this.myCreatePO_projectDataSet2;
+         
             // 
             // т_Договора_АрхивTableAdapter1
             // 
-            this.т_Договора_АрхивTableAdapter1.ClearBeforeFill = true;
+
             // 
             // т_Договора_АрхивTableAdapter2
             // 
-            this.т_Договора_АрхивTableAdapter2.ClearBeforeFill = true;
+ 
             // 
             // Seen_Dogovor_guest
             // 
@@ -163,12 +159,12 @@
             this.Load += new System.EventHandler(this.Seen_Dogovor_guest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_seen_guest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.тДоговораАрхивBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myCreatePO_projectDataSet3)).EndInit();
+ 
             ((System.ComponentModel.ISupportInitialize)(this.тДоговораАрхивBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myCreatePO_projectDataSet)).EndInit();
+        
             this.panel_decor_seen_dog_guest.ResumeLayout(false);
             this.panel_decor_seen_dog_guest.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.myCreatePO_projectDataSet2)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.тДоговораАрхивBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -180,16 +176,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView data_seen_guest;
         private System.Windows.Forms.ComboBox combo_dog_zak;
-        private myCreatePO_projectDataSet myCreatePO_projectDataSet;
+        //private myCreatePO_projectDataSet myCreatePO_projectDataSet;
         private System.Windows.Forms.BindingSource тДоговораАрхивBindingSource;
-        private myCreatePO_projectDataSetTableAdapters.Т_Договора_АрхивTableAdapter т_Договора_АрхивTableAdapter;
+        //private myCreatePO_projectDataSetTableAdapters.Т_Договора_АрхивTableAdapter т_Договора_АрхивTableAdapter;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel_decor_seen_dog_guest;
-        private myCreatePO_projectDataSet2 myCreatePO_projectDataSet2;
+        //private myCreatePO_projectDataSet2 myCreatePO_projectDataSet2;
         private System.Windows.Forms.BindingSource тДоговораАрхивBindingSource1;
-        private myCreatePO_projectDataSet2TableAdapters.Т_Договора_АрхивTableAdapter т_Договора_АрхивTableAdapter1;
-        private myCreatePO_projectDataSet3 myCreatePO_projectDataSet3;
+        //private myCreatePO_projectDataSet2TableAdapters.Т_Договора_АрхивTableAdapter т_Договора_АрхивTableAdapter1;
+        //private myCreatePO_projectDataSet3 myCreatePO_projectDataSet3;
         private System.Windows.Forms.BindingSource тДоговораАрхивBindingSource2;
-        private myCreatePO_projectDataSet3TableAdapters.Т_Договора_АрхивTableAdapter т_Договора_АрхивTableAdapter2;
+        //private myCreatePO_projectDataSet3TableAdapters.Т_Договора_АрхивTableAdapter т_Договора_АрхивTableAdapter2;
     }
 }
