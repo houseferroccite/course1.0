@@ -18,6 +18,7 @@ namespace course1._0
         public Т_Должность()
         {
             this.Т_Кураторы = new HashSet<Т_Кураторы>();
+            this.Т_Штат_сотрудников = new HashSet<Т_Штат_сотрудников>();
         }
     
         public int ID_Должности { get; set; }
@@ -25,5 +26,7 @@ namespace course1._0
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Т_Кураторы> Т_Кураторы { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Т_Штат_сотрудников> Т_Штат_сотрудников { get; set; }
     }
 }

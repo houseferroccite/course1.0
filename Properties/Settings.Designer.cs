@@ -28,20 +28,9 @@ namespace course1._0.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=WIN-OL50286AMSI;Initial Catalog=myCreatePO_project;Integrated Securit" +
             "y=True")]
-        public string myDB {
+        public string CONN {
             get {
-                return ((string)(this["myDB"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=WIN-OL50286AMSI;Initial Catalog=myCreatePO_project;Integrated Securit" +
-            "y=True")]
-        public string myCreatePO_projectConnectionString {
-            get {
-                return ((string)(this["myCreatePO_projectConnectionString"]));
+                return ((string)(this["CONN"]));
             }
         }
     }

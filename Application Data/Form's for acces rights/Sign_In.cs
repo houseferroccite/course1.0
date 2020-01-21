@@ -51,7 +51,7 @@ namespace course1._0
                         //Notification
                         I_N.BalloonTipText = $"Вход успешно выполнен!\n Вход произведен под правами - {combo_login.Text}";
                         I_N.BalloonTipTitle = "Добро пожаловать!";
-                        I_N.BalloonTipIcon = ToolTipIcon.Error;
+                        I_N.BalloonTipIcon = ToolTipIcon.Info;
                         I_N.Icon = this.Icon;
                         I_N.Visible = true;
                         I_N.ShowBalloonTip(1000);

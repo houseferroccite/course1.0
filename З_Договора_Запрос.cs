@@ -10,13 +10,18 @@
 namespace course1._0
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class InsertClient_Result
+    public partial class З_Договора_Запрос
     {
-        public int ID_Клиента { get; set; }
-        public byte[] Фото { get; set; }
+        public int C__Договора { get; set; }
+        public string Название_договора { get; set; }
+        public string Этапы_разработки { get; set; }
         public string ФИО { get; set; }
-        public string Адрес { get; set; }
-        public string Реквизиты_банка { get; set; }
+        public Nullable<System.DateTime> Дата_составления { get; set; }
+        public Nullable<int> Колво_дней { get; set; }
+        public Nullable<System.DateTime> Плановая_дата { get; set; }
+        public string Фактическа_Дата { get; set; }
+        public string Примечание { get; set; }
     }
 }

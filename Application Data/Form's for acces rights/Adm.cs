@@ -237,7 +237,7 @@ namespace course1._0.Forms
 
         private void button_arch_prim_Click(object sender, EventArgs e)
         {
-            using (myCreatePO_projectEntities2 context = new myCreatePO_projectEntities2())
+            using (myCreatePO_projectEntities context = new myCreatePO_projectEntities())
             {
                 var q1 = from D in context.Т_Договора
                          select D.Название_договора;
@@ -279,11 +279,11 @@ namespace course1._0.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (myCreatePO_projectEntities2 context = new myCreatePO_projectEntities2())
+            using (myCreatePO_projectEntities context = new myCreatePO_projectEntities())
             {
                 var q = from sotr in context.Т_Штат_сотрудников
                         join lang in context.Т_Языки_прог
-                        on sotr.Язык_Программирования equals lang.КодЯзыка
+                        on sotr.Язык_программирования equals lang.КодЯзыка
                         group new { sotr, lang }
                         by new { sotr.ФИО, lang.Язык }
                         into gg
@@ -409,7 +409,7 @@ namespace course1._0.Forms
             }
             if (grid_for_all.Columns[e.ColumnIndex].Name == "Del")
             {
-                using (myCreatePO_projectEntities2 context = new myCreatePO_projectEntities2())
+                using (myCreatePO_projectEntities context = new myCreatePO_projectEntities())
                 {
                     if (!String.IsNullOrEmpty(grid_for_all.CurrentRow.Cells["ID_Клиента"].Value.ToString()))
                     {

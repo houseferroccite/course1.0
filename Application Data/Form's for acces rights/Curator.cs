@@ -214,7 +214,7 @@ namespace course1._0.Application_Data.Form_s_for_acces_rights
 
         private void button_arch_count_prim_Curator_Click(object sender, EventArgs e)
         {
-            using (myCreatePO_projectEntities2 context = new myCreatePO_projectEntities2())
+            using (myCreatePO_projectEntities context = new myCreatePO_projectEntities())
             {
                 var q1 = from D in context.Т_Договора
                          select D.Название_договора;

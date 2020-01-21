@@ -42,7 +42,7 @@ namespace course1._0.Forms
             
             if (flag)
             {
-                using (myCreatePO_projectEntities2 context = new myCreatePO_projectEntities2())
+                using (myCreatePO_projectEntities context = new myCreatePO_projectEntities())
                 {
                     z.Должность = text_insert_posisiton.Text;
                     //форма открыта как новая запись

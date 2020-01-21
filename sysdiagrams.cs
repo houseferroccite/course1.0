@@ -10,13 +10,14 @@
 namespace course1._0
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class UpdateClient_Result
+    public partial class sysdiagrams
     {
-        public int ID_Клиента { get; set; }
-        public byte[] Фото { get; set; }
-        public string ФИО { get; set; }
-        public string Адрес { get; set; }
-        public string Реквизиты_банка { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Хранилище myCreatePO_projectModel1" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище myCreatePO_projectModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Ошибки, обнаруженные при создании:
 предупреждение 6002: В таблице или представлении "myCreatePO_project.dbo.Login" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
         <EntityType Name="Login">
@@ -15,6 +15,18 @@
           <Property Name="Access_rights" Type="nvarchar" MaxLength="20" />
           <Property Name="Password" Type="smallint" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "myCreatePO_project.dbo.З_Договора Запрос" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
         <EntityType Name="Т_ВидыРабот">
           <Key>
             <PropertyRef Name="ID_Работы" />
@@ -29,45 +41,44 @@
 предупреждение 6002: В таблице или представлении "myCreatePO_project.dbo.Т_Договор_Этапы" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
         <EntityType Name="Т_Договор_Этапы">
           <Key>
-            <PropertyRef Name="ID_Договоры_Этапы" />
-            <PropertyRef Name="Код_Договора_Этапы" />
+            <PropertyRef Name="ID_договоры_этапы_врем" />
           </Key>
-          <Property Name="ID_Договоры_Этапы" Type="int" Nullable="false" />
-          <Property Name="Код_Договора_Этапы" Type="int" Nullable="false" />
+          <Property Name="ID_договоры_этапы_врем" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Код_Договора_Этапы" Type="int" />
           <Property Name="Код_Работы" Type="int" />
         </EntityType>
         <EntityType Name="Т_Договора">
           <Key>
             <PropertyRef Name="№_Договора" />
           </Key>
-          <Property Name="№_Договора" Type="int" Nullable="false" />
+          <Property Name="№_Договора" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Название_договора" Type="nvarchar" MaxLength="255" />
           <Property Name="Куратор_проекта" Type="int" />
           <Property Name="ФИО_Клиента" Type="int" />
+          <Property Name="Язык_разработки" Type="int" />
           <Property Name="Дата составления" Type="datetime" />
-          <Property Name="Язык разработки" Type="int" />
           <Property Name="Колво_дней" Type="int" />
           <Property Name="Плановая_дата" Type="datetime" />
-          <Property Name="Фактическа_Дата" Type="datetime" />
-          <Property Name="Примечание" Type="nvarchar" MaxLength="25" />
+          <Property Name="Фактическа_Дата" Type="nvarchar" MaxLength="255" />
           <Property Name="Штраф" Type="nvarchar" MaxLength="50" />
+          <Property Name="Примечание" Type="nvarchar" MaxLength="25" />
         </EntityType>
         <!--Ошибки, обнаруженные при создании:
-предупреждение 6002: В таблице или представлении "myCreatePO_project.dbo.Т_Договора Архив" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
-        <EntityType Name="Т_Договора Архив">
+предупреждение 6002: В таблице или представлении "myCreatePO_project.dbo.Т_Договора_Архив" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Т_Договора_Архив">
           <Key>
             <PropertyRef Name="№_Договора" />
           </Key>
-          <Property Name="№_Договора" Type="int" Nullable="false" />
+          <Property Name="№_Договора" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Название_договора" Type="nvarchar" MaxLength="255" />
           <Property Name="Куратор_проекта" Type="int" />
           <Property Name="ФИО_Клиента" Type="int" />
           <Property Name="Дата составления" Type="datetime" />
-          <Property Name="Язык разработки" Type="int" />
           <Property Name="Колво_дней" Type="int" />
           <Property Name="Плановая_дата" Type="datetime" />
-          <Property Name="Фактическа_Дата" Type="datetime" />
+          <Property Name="Фактическа_Дата" Type="nvarchar" MaxLength="255" />
           <Property Name="Примечание" Type="nvarchar" MaxLength="25" />
+          <Property Name="Язык_разработки" Type="int" />
           <Property Name="Штраф" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Т_Должность">
@@ -95,21 +106,21 @@
           <Property Name="ФИО" Type="nvarchar" MaxLength="255" />
           <Property Name="Должность" Type="int" />
         </EntityType>
-        <EntityType Name="Т_Штат сотрудников">
+        <EntityType Name="Т_Штат_сотрудников">
           <Key>
             <PropertyRef Name="ID_сотрудника" />
           </Key>
           <Property Name="ID_сотрудника" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID_Куратора" Type="int" />
+          <Property Name="Язык программирования" Type="int" />
           <Property Name="ФИО" Type="nvarchar" MaxLength="255" />
           <Property Name="Должность" Type="int" />
-          <Property Name="Язык_Программирования" Type="int" />
         </EntityType>
         <EntityType Name="Т_Языки_прог">
           <Key>
             <PropertyRef Name="КодЯзыка" />
           </Key>
-          <Property Name="КодЯзыка" Type="int" Nullable="false" />
+          <Property Name="КодЯзыка" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Язык" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_Т_Договор_Этапы_Т_ВидыРабот">
@@ -127,7 +138,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Т_Договор_Этапы_Т_Договора">
-          <End Role="Т_Договора" Type="Self.Т_Договора" Multiplicity="1">
+          <End Role="Т_Договора" Type="Self.Т_Договора" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
           <End Role="Т_Договор_Этапы" Type="Self.Т_Договор_Этапы" Multiplicity="*" />
@@ -140,332 +151,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Т_Договора_Т_Клиент">
-          <End Role="Т_Клиент" Type="Self.Т_Клиент" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="Т_Договора" Type="Self.Т_Договора" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Т_Клиент">
-              <PropertyRef Name="ID_Клиента" />
-            </Principal>
-            <Dependent Role="Т_Договора">
-              <PropertyRef Name="ФИО_Клиента" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Т_Договора_Т_Кураторы">
-          <End Role="Т_Кураторы" Type="Self.Т_Кураторы" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="Т_Договора" Type="Self.Т_Договора" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Т_Кураторы">
-              <PropertyRef Name="ID_Куратора" />
-            </Principal>
-            <Dependent Role="Т_Договора">
-              <PropertyRef Name="Куратор_проекта" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Т_Договора_Т_Языки_прог">
-          <End Role="Т_Языки_прог" Type="Self.Т_Языки_прог" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="Т_Договора" Type="Self.Т_Договора" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Т_Языки_прог">
-              <PropertyRef Name="КодЯзыка" />
-            </Principal>
-            <Dependent Role="Т_Договора">
-              <PropertyRef Name="Язык разработки" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Т_Кураторы_Т_Должность">
-          <End Role="Т_Должность" Type="Self.Т_Должность" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="Т_Кураторы" Type="Self.Т_Кураторы" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Т_Должность">
-              <PropertyRef Name="ID_Должности" />
-            </Principal>
-            <Dependent Role="Т_Кураторы">
-              <PropertyRef Name="Должность" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Т_Штат сотрудников_Т_Кураторы">
-          <End Role="Т_Кураторы" Type="Self.Т_Кураторы" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="Т_Штат сотрудников" Type="Self.Т_Штат сотрудников" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Т_Кураторы">
-              <PropertyRef Name="ID_Куратора" />
-            </Principal>
-            <Dependent Role="Т_Штат сотрудников">
-              <PropertyRef Name="ID_Куратора" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Т_Штат сотрудников_Т_Языки_прог">
-          <End Role="Т_Языки_прог" Type="Self.Т_Языки_прог" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="Т_Штат сотрудников" Type="Self.Т_Штат сотрудников" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Т_Языки_прог">
-              <PropertyRef Name="КодЯзыка" />
-            </Principal>
-            <Dependent Role="Т_Штат сотрудников">
-              <PropertyRef Name="Язык_Программирования" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Function Name="DelPosition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="ID" Type="int" Mode="In" />
-        </Function>
-        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
-        <Function Name="InsertClient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="Фото" Type="image" Mode="In" />
-          <Parameter Name="Фио" Type="nvarchar" Mode="In" />
-          <Parameter Name="Адрес" Type="nvarchar" Mode="In" />
-          <Parameter Name="Реквизиты_банка" Type="nvarchar" Mode="In" />
-          <Parameter Name="ID" Type="int" Mode="InOut" />
-        </Function>
-        <Function Name="InsertLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="Acces_rights" Type="nvarchar" Mode="In" />
-          <Parameter Name="Password" Type="int" Mode="In" />
-          <Parameter Name="ID" Type="int" Mode="InOut" />
-        </Function>
-        <Function Name="InsertPosition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="position" Type="nvarchar" Mode="In" />
-          <Parameter Name="ID" Type="int" Mode="InOut" />
-        </Function>
-        <Function Name="LoadAllTables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="version" Type="int" Mode="In" />
-          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-        </Function>
-        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="version" Type="int" Mode="In" />
-          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-        </Function>
-        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
-        </Function>
-        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <Function Name="UpdateClient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="IDClienta" Type="int" Mode="In" />
-          <Parameter Name="Фото" Type="image" Mode="In" />
-          <Parameter Name="ФИО" Type="nvarchar" Mode="In" />
-          <Parameter Name="Адрес" Type="nvarchar" Mode="In" />
-          <Parameter Name="Реквизиты_банка" Type="nvarchar" Mode="In" />
-        </Function>
-        <Function Name="UpdatePosition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="IDPosition" Type="int" Mode="In" />
-          <Parameter Name="Position" Type="nvarchar" Mode="In" />
-        </Function>
-        <EntityContainer Name="Хранилище myCreatePO_projectModel1Container">
-          <EntitySet Name="Т_ВидыРабот" EntityType="Self.Т_ВидыРабот" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Т_Договора" EntityType="Self.Т_Договора" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Т_Должность" EntityType="Self.Т_Должность" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Т_Клиент" EntityType="Self.Т_Клиент" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Т_Кураторы" EntityType="Self.Т_Кураторы" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Т_Штат сотрудников" EntityType="Self.Т_Штат сотрудников" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Т_Языки_прог" EntityType="Self.Т_Языки_прог" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Login" EntityType="Self.Login" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Login].[ID_rights] AS [ID_rights], 
-    [Login].[Access_rights] AS [Access_rights], 
-    [Login].[Password] AS [Password]
-    FROM [dbo].[Login] AS [Login]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Т_Договор_Этапы" EntityType="Self.Т_Договор_Этапы" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Т_Договор_Этапы].[ID_Договоры_Этапы] AS [ID_Договоры_Этапы], 
-    [Т_Договор_Этапы].[Код_Договора_Этапы] AS [Код_Договора_Этапы], 
-    [Т_Договор_Этапы].[Код_Работы] AS [Код_Работы]
-    FROM [dbo].[Т_Договор_Этапы] AS [Т_Договор_Этапы]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Т_Договора Архив" EntityType="Self.Т_Договора Архив" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Т_Договора Архив].[№_Договора] AS [№_Договора], 
-    [Т_Договора Архив].[Название_договора] AS [Название_договора], 
-    [Т_Договора Архив].[Куратор_проекта] AS [Куратор_проекта], 
-    [Т_Договора Архив].[ФИО_Клиента] AS [ФИО_Клиента], 
-    [Т_Договора Архив].[Дата составления] AS [Дата составления], 
-    [Т_Договора Архив].[Язык разработки] AS [Язык разработки], 
-    [Т_Договора Архив].[Колво_дней] AS [Колво_дней], 
-    [Т_Договора Архив].[Плановая_дата] AS [Плановая_дата], 
-    [Т_Договора Архив].[Фактическа_Дата] AS [Фактическа_Дата], 
-    [Т_Договора Архив].[Примечание] AS [Примечание], 
-    [Т_Договора Архив].[Штраф] AS [Штраф]
-    FROM [dbo].[Т_Договора Архив] AS [Т_Договора Архив]</DefiningQuery>
-          </EntitySet>
-          <AssociationSet Name="FK_Т_Договор_Этапы_Т_ВидыРабот" Association="Self.FK_Т_Договор_Этапы_Т_ВидыРабот">
-            <End Role="Т_ВидыРабот" EntitySet="Т_ВидыРабот" />
-            <End Role="Т_Договор_Этапы" EntitySet="Т_Договор_Этапы" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Т_Договор_Этапы_Т_Договора" Association="Self.FK_Т_Договор_Этапы_Т_Договора">
-            <End Role="Т_Договора" EntitySet="Т_Договора" />
-            <End Role="Т_Договор_Этапы" EntitySet="Т_Договор_Этапы" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Т_Договора_Т_Клиент" Association="Self.FK_Т_Договора_Т_Клиент">
-            <End Role="Т_Клиент" EntitySet="Т_Клиент" />
-            <End Role="Т_Договора" EntitySet="Т_Договора" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Т_Договора_Т_Кураторы" Association="Self.FK_Т_Договора_Т_Кураторы">
-            <End Role="Т_Кураторы" EntitySet="Т_Кураторы" />
-            <End Role="Т_Договора" EntitySet="Т_Договора" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Т_Договора_Т_Языки_прог" Association="Self.FK_Т_Договора_Т_Языки_прог">
-            <End Role="Т_Языки_прог" EntitySet="Т_Языки_прог" />
-            <End Role="Т_Договора" EntitySet="Т_Договора" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Т_Кураторы_Т_Должность" Association="Self.FK_Т_Кураторы_Т_Должность">
-            <End Role="Т_Должность" EntitySet="Т_Должность" />
-            <End Role="Т_Кураторы" EntitySet="Т_Кураторы" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Т_Штат сотрудников_Т_Кураторы" Association="Self.FK_Т_Штат сотрудников_Т_Кураторы">
-            <End Role="Т_Кураторы" EntitySet="Т_Кураторы" />
-            <End Role="Т_Штат сотрудников" EntitySet="Т_Штат сотрудников" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Т_Штат сотрудников_Т_Языки_прог" Association="Self.FK_Т_Штат сотрудников_Т_Языки_прог">
-            <End Role="Т_Языки_прог" EntitySet="Т_Языки_прог" />
-            <End Role="Т_Штат сотрудников" EntitySet="Т_Штат сотрудников" />
-          </AssociationSet>
-        </EntityContainer>
-      </Schema></edmx:StorageModels>
-    <!-- CSDL content -->
-    <edmx:ConceptualModels>
-      <Schema Namespace="myCreatePO_projectModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Т_ВидыРабот">
-          <Key>
-            <PropertyRef Name="ID_Работы" />
-          </Key>
-          <Property Name="ID_Работы" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Этапы_разработки" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Нормо_часов" Type="Int32" />
-          <Property Name="Стоимость_часа_руб" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Сумма_руб" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="Т_Договор_Этапы" Relationship="myCreatePO_projectModel1.FK_Т_Договор_Этапы_Т_ВидыРабот" FromRole="Т_ВидыРабот" ToRole="Т_Договор_Этапы" />
-        </EntityType>
-        <EntityType Name="Т_Договора">
-          <Key>
-            <PropertyRef Name="C__Договора" />
-          </Key>
-          <Property Name="C__Договора" Type="Int32" Nullable="false" />
-          <Property Name="Название_договора" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Куратор_проекта" Type="Int32" />
-          <Property Name="ФИО_Клиента" Type="Int32" />
-          <Property Name="Дата_составления" Type="DateTime" Precision="3" />
-          <Property Name="Язык_разработки" Type="Int32" />
-          <Property Name="Колво_дней" Type="Int32" />
-          <Property Name="Плановая_дата" Type="DateTime" Precision="3" />
-          <Property Name="Фактическа_Дата" Type="DateTime" Precision="3" />
-          <Property Name="Примечание" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="Штраф" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Т_Клиент" Relationship="Self.FK_Т_Договора_Т_Клиент" FromRole="Т_Договора" ToRole="Т_Клиент" />
-          <NavigationProperty Name="Т_Кураторы" Relationship="Self.FK_Т_Договора_Т_Кураторы" FromRole="Т_Договора" ToRole="Т_Кураторы" />
-          <NavigationProperty Name="Т_Языки_прог" Relationship="Self.FK_Т_Договора_Т_Языки_прог" FromRole="Т_Договора" ToRole="Т_Языки_прог" />
-          <NavigationProperty Name="Т_Договор_Этапы" Relationship="myCreatePO_projectModel1.FK_Т_Договор_Этапы_Т_Договора" FromRole="Т_Договора" ToRole="Т_Договор_Этапы" />
-        </EntityType>
-        <EntityType Name="Т_Должность">
-          <Key>
-            <PropertyRef Name="ID_Должности" />
-          </Key>
-          <Property Name="ID_Должности" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Должность" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Т_Кураторы" Relationship="Self.FK_Т_Кураторы_Т_Должность" FromRole="Т_Должность" ToRole="Т_Кураторы" />
-        </EntityType>
-        <EntityType Name="Т_Клиент">
-          <Key>
-            <PropertyRef Name="ID_Клиента" />
-          </Key>
-          <Property Name="ID_Клиента" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Фото" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <Property Name="ФИО" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Адрес" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Реквизиты_банка" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Т_Договора" Relationship="Self.FK_Т_Договора_Т_Клиент" FromRole="Т_Клиент" ToRole="Т_Договора" />
-        </EntityType>
-        <EntityType Name="Т_Кураторы">
-          <Key>
-            <PropertyRef Name="ID_Куратора" />
-          </Key>
-          <Property Name="ID_Куратора" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ФИО" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Должность" Type="Int32" />
-          <NavigationProperty Name="Т_Договора" Relationship="Self.FK_Т_Договора_Т_Кураторы" FromRole="Т_Кураторы" ToRole="Т_Договора" />
-          <NavigationProperty Name="Т_Должность" Relationship="Self.FK_Т_Кураторы_Т_Должность" FromRole="Т_Кураторы" ToRole="Т_Должность" />
-          <NavigationProperty Name="Т_Штат_сотрудников" Relationship="Self.FK_Т_Штат_сотрудников_Т_Кураторы" FromRole="Т_Кураторы" ToRole="Т_Штат_сотрудников" />
-        </EntityType>
-        <EntityType Name="Т_Штат_сотрудников">
-          <Key>
-            <PropertyRef Name="ID_сотрудника" />
-          </Key>
-          <Property Name="ID_сотрудника" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ID_Куратора" Type="Int32" />
-          <Property Name="ФИО" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Должность" Type="Int32" />
-          <NavigationProperty Name="Т_Кураторы" Relationship="Self.FK_Т_Штат_сотрудников_Т_Кураторы" FromRole="Т_Штат_сотрудников" ToRole="Т_Кураторы" />
-          <Property Name="Язык_Программирования" Type="Int32" />
-          <NavigationProperty Name="Т_Языки_прог" Relationship="myCreatePO_projectModel1.FK_Т_Штат_сотрудников_Т_Языки_прог" FromRole="Т_Штат_сотрудников" ToRole="Т_Языки_прог" />
-        </EntityType>
-        <EntityType Name="Т_Языки_прог">
-          <Key>
-            <PropertyRef Name="КодЯзыка" />
-          </Key>
-          <Property Name="КодЯзыка" Type="Int32" Nullable="false" />
-          <Property Name="Язык" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Т_Договора" Relationship="Self.FK_Т_Договора_Т_Языки_прог" FromRole="Т_Языки_прог" ToRole="Т_Договора" />
-          <NavigationProperty Name="Т_Штат_сотрудников" Relationship="myCreatePO_projectModel1.FK_Т_Штат_сотрудников_Т_Языки_прог" FromRole="Т_Языки_прог" ToRole="Т_Штат_сотрудников" />
-        </EntityType>
-        <EntityType Name="Login">
-          <Key>
-            <PropertyRef Name="ID_rights" />
-          </Key>
-          <Property Name="ID_rights" Type="Int32" Nullable="false" />
-          <Property Name="Access_rights" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Password" Type="Int16" />
-        </EntityType>
-        <EntityType Name="Т_Договора_Архив">
-          <Key>
-            <PropertyRef Name="C__Договора" />
-          </Key>
-          <Property Name="C__Договора" Type="Int32" Nullable="false" />
-          <Property Name="Название_договора" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Куратор_проекта" Type="Int32" />
-          <Property Name="ФИО_Клиента" Type="Int32" />
-          <Property Name="Дата_составления" Type="DateTime" Precision="3" />
-          <Property Name="Язык_разработки" Type="Int32" />
-          <Property Name="Колво_дней" Type="Int32" />
-          <Property Name="Плановая_дата" Type="DateTime" Precision="3" />
-          <Property Name="Фактическа_Дата" Type="DateTime" Precision="3" />
-          <Property Name="Примечание" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="Штраф" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
         <Association Name="FK_Т_Договора_Т_Клиент">
           <End Role="Т_Клиент" Type="Self.Т_Клиент" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
@@ -522,10 +207,22 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Т_Штат_сотрудников_Т_Кураторы">
-          <End Role="Т_Кураторы" Type="Self.Т_Кураторы" Multiplicity="0..1">
+        <Association Name="FK_Т_Штат сотрудников_Т_Должность">
+          <End Role="Т_Должность" Type="Self.Т_Должность" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
+          <End Role="Т_Штат_сотрудников" Type="Self.Т_Штат_сотрудников" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Т_Должность">
+              <PropertyRef Name="ID_Должности" />
+            </Principal>
+            <Dependent Role="Т_Штат_сотрудников">
+              <PropertyRef Name="Должность" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Т_Штат сотрудников_Т_Кураторы">
+          <End Role="Т_Кураторы" Type="Self.Т_Кураторы" Multiplicity="0..1" />
           <End Role="Т_Штат_сотрудников" Type="Self.Т_Штат_сотрудников" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Т_Кураторы">
@@ -536,16 +233,66 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="myCreatePO_projectEntities2" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Т_ВидыРабот" EntityType="Self.Т_ВидыРабот" />
-          <EntitySet Name="Т_Договора" EntityType="Self.Т_Договора" />
-          <EntitySet Name="Т_Должность" EntityType="Self.Т_Должность" />
-          <EntitySet Name="Т_Клиент" EntityType="Self.Т_Клиент" />
-          <EntitySet Name="Т_Кураторы" EntityType="Self.Т_Кураторы" />
-          <EntitySet Name="Т_Штат_сотрудников" EntityType="Self.Т_Штат_сотрудников" />
-          <EntitySet Name="Т_Языки_прог" EntityType="Self.Т_Языки_прог" />
-          <EntitySet Name="Login" EntityType="Self.Login" />
-          <EntitySet Name="Т_Договора_Архив" EntityType="Self.Т_Договора_Архив" />
+        <Association Name="FK_Т_Штат сотрудников_Т_Языки_прог">
+          <End Role="Т_Языки_прог" Type="Self.Т_Языки_прог" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Т_Штат_сотрудников" Type="Self.Т_Штат_сотрудников" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Т_Языки_прог">
+              <PropertyRef Name="КодЯзыка" />
+            </Principal>
+            <Dependent Role="Т_Штат_сотрудников">
+              <PropertyRef Name="Язык программирования" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище myCreatePO_projectModelContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Т_ВидыРабот" EntityType="Self.Т_ВидыРабот" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Т_Договора" EntityType="Self.Т_Договора" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Т_Должность" EntityType="Self.Т_Должность" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Т_Клиент" EntityType="Self.Т_Клиент" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Т_Кураторы" EntityType="Self.Т_Кураторы" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Т_Штат_сотрудников" EntityType="Self.Т_Штат_сотрудников" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Т_Языки_прог" EntityType="Self.Т_Языки_прог" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Login" EntityType="Self.Login" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Login].[ID_rights] AS [ID_rights], 
+    [Login].[Access_rights] AS [Access_rights], 
+    [Login].[Password] AS [Password]
+    FROM [dbo].[Login] AS [Login]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Т_Договор_Этапы" EntityType="Self.Т_Договор_Этапы" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Т_Договор_Этапы].[ID_договоры_этапы_врем] AS [ID_договоры_этапы_врем], 
+    [Т_Договор_Этапы].[Код_Договора_Этапы] AS [Код_Договора_Этапы], 
+    [Т_Договор_Этапы].[Код_Работы] AS [Код_Работы]
+    FROM [dbo].[Т_Договор_Этапы] AS [Т_Договор_Этапы]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Т_Договора_Архив" EntityType="Self.Т_Договора_Архив" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Т_Договора_Архив].[№_Договора] AS [№_Договора], 
+    [Т_Договора_Архив].[Название_договора] AS [Название_договора], 
+    [Т_Договора_Архив].[Куратор_проекта] AS [Куратор_проекта], 
+    [Т_Договора_Архив].[ФИО_Клиента] AS [ФИО_Клиента], 
+    [Т_Договора_Архив].[Дата составления] AS [Дата составления], 
+    [Т_Договора_Архив].[Колво_дней] AS [Колво_дней], 
+    [Т_Договора_Архив].[Плановая_дата] AS [Плановая_дата], 
+    [Т_Договора_Архив].[Фактическа_Дата] AS [Фактическа_Дата], 
+    [Т_Договора_Архив].[Примечание] AS [Примечание], 
+    [Т_Договора_Архив].[Язык_разработки] AS [Язык_разработки], 
+    [Т_Договора_Архив].[Штраф] AS [Штраф]
+    FROM [dbo].[Т_Договора_Архив] AS [Т_Договора_Архив]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Т_Договор_Этапы_Т_ВидыРабот" Association="Self.FK_Т_Договор_Этапы_Т_ВидыРабот">
+            <End Role="Т_ВидыРабот" EntitySet="Т_ВидыРабот" />
+            <End Role="Т_Договор_Этапы" EntitySet="Т_Договор_Этапы" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Т_Договор_Этапы_Т_Договора" Association="Self.FK_Т_Договор_Этапы_Т_Договора">
+            <End Role="Т_Договора" EntitySet="Т_Договора" />
+            <End Role="Т_Договор_Этапы" EntitySet="Т_Договор_Этапы" />
+          </AssociationSet>
           <AssociationSet Name="FK_Т_Договора_Т_Клиент" Association="Self.FK_Т_Договора_Т_Клиент">
             <End Role="Т_Клиент" EntitySet="Т_Клиент" />
             <End Role="Т_Договора" EntitySet="Т_Договора" />
@@ -562,157 +309,157 @@
             <End Role="Т_Должность" EntitySet="Т_Должность" />
             <End Role="Т_Кураторы" EntitySet="Т_Кураторы" />
           </AssociationSet>
-          <AssociationSet Name="FK_Т_Штат_сотрудников_Т_Кураторы" Association="Self.FK_Т_Штат_сотрудников_Т_Кураторы">
+          <AssociationSet Name="FK_Т_Штат сотрудников_Т_Должность" Association="Self.FK_Т_Штат сотрудников_Т_Должность">
+            <End Role="Т_Должность" EntitySet="Т_Должность" />
+            <End Role="Т_Штат_сотрудников" EntitySet="Т_Штат_сотрудников" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Т_Штат сотрудников_Т_Кураторы" Association="Self.FK_Т_Штат сотрудников_Т_Кураторы">
             <End Role="Т_Кураторы" EntitySet="Т_Кураторы" />
             <End Role="Т_Штат_сотрудников" EntitySet="Т_Штат_сотрудников" />
           </AssociationSet>
-          <FunctionImport Name="DelPosition" ReturnType="Collection(myCreatePO_projectModel1.DelPosition_Result)">
-          <Parameter Name="ID" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="InsertClient" ReturnType="Collection(myCreatePO_projectModel1.InsertClient_Result)">
-            <Parameter Name="Фото" Mode="In" Type="Binary" />
-            <Parameter Name="Фио" Mode="In" Type="String" />
-            <Parameter Name="Адрес" Mode="In" Type="String" />
-            <Parameter Name="Реквизиты_банка" Mode="In" Type="String" />
-            <Parameter Name="ID" Mode="InOut" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="InsertLogin" ReturnType="Collection(myCreatePO_projectModel1.InsertLogin_Result)">
-            <Parameter Name="Acces_rights" Mode="In" Type="String" />
-            <Parameter Name="Password" Mode="In" Type="Int32" />
-            <Parameter Name="ID" Mode="InOut" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="InsertPosition" ReturnType="Collection(myCreatePO_projectModel1.InsertPosition_Result)">
-            <Parameter Name="position" Mode="In" Type="String" />
-            <Parameter Name="ID" Mode="InOut" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="LoadAllTables" ReturnType="Collection(String)" />
-          <FunctionImport Name="sp_alterdiagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-            <Parameter Name="version" Mode="In" Type="Int32" />
-            <Parameter Name="definition" Mode="In" Type="Binary" />
-          </FunctionImport>
-          <FunctionImport Name="sp_creatediagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-            <Parameter Name="version" Mode="In" Type="Int32" />
-            <Parameter Name="definition" Mode="In" Type="Binary" />
-          </FunctionImport>
-          <FunctionImport Name="sp_dropdiagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(myCreatePO_projectModel1.sp_helpdiagramdefinition_Result)">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(myCreatePO_projectModel1.sp_helpdiagrams_Result)">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_renamediagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-            <Parameter Name="new_diagramname" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="sp_upgraddiagrams" />
-          <FunctionImport Name="UpdateClient" ReturnType="Collection(myCreatePO_projectModel1.UpdateClient_Result)">
-            <Parameter Name="IDClienta" Mode="In" Type="Int32" />
-            <Parameter Name="Фото" Mode="In" Type="Binary" />
-            <Parameter Name="ФИО" Mode="In" Type="String" />
-            <Parameter Name="Адрес" Mode="In" Type="String" />
-            <Parameter Name="Реквизиты_банка" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="UpdatePosition" ReturnType="Collection(myCreatePO_projectModel1.UpdatePosition_Result)">
-            <Parameter Name="IDPosition" Mode="In" Type="Int32" />
-            <Parameter Name="Position" Mode="In" Type="String" />
-          </FunctionImport>
-          <AssociationSet Name="FK_Т_Штат_сотрудников_Т_Языки_прог" Association="myCreatePO_projectModel1.FK_Т_Штат_сотрудников_Т_Языки_прог">
+          <AssociationSet Name="FK_Т_Штат сотрудников_Т_Языки_прог" Association="Self.FK_Т_Штат сотрудников_Т_Языки_прог">
             <End Role="Т_Языки_прог" EntitySet="Т_Языки_прог" />
             <End Role="Т_Штат_сотрудников" EntitySet="Т_Штат_сотрудников" />
           </AssociationSet>
-          <EntitySet Name="Т_Договор_Этапы" EntityType="myCreatePO_projectModel1.Т_Договор_Этапы" />
-          <AssociationSet Name="FK_Т_Договор_Этапы_Т_ВидыРабот" Association="myCreatePO_projectModel1.FK_Т_Договор_Этапы_Т_ВидыРабот">
-            <End Role="Т_ВидыРабот" EntitySet="Т_ВидыРабот" />
-            <End Role="Т_Договор_Этапы" EntitySet="Т_Договор_Этапы" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Т_Договор_Этапы_Т_Договора" Association="myCreatePO_projectModel1.FK_Т_Договор_Этапы_Т_Договора">
-            <End Role="Т_Договора" EntitySet="Т_Договора" />
-            <End Role="Т_Договор_Этапы" EntitySet="Т_Договор_Этапы" />
-          </AssociationSet>
         </EntityContainer>
-        <ComplexType Name="DelPosition_Result">
-          <Property Type="Int32" Name="ID_Должности" Nullable="false" />
-          <Property Type="String" Name="Должность" Nullable="true" MaxLength="255" />
-        </ComplexType>
-        <ComplexType Name="InsertClient_Result">
-          <Property Type="Int32" Name="ID_Клиента" Nullable="false" />
-          <Property Type="Binary" Name="Фото" Nullable="true" MaxLength="Max" />
-          <Property Type="String" Name="ФИО" Nullable="false" MaxLength="255" />
-          <Property Type="String" Name="Адрес" Nullable="true" MaxLength="255" />
-          <Property Type="String" Name="Реквизиты_банка" Nullable="true" MaxLength="50" />
-        </ComplexType>
-        <ComplexType Name="InsertLogin_Result">
-          <Property Type="Int32" Name="ID_rights" Nullable="false" />
-          <Property Type="String" Name="Access_rights" Nullable="true" MaxLength="20" />
-          <Property Type="Int16" Name="Password" Nullable="true" />
-        </ComplexType>
-        <ComplexType Name="InsertPosition_Result">
-          <Property Type="Int32" Name="ID_Должности" Nullable="false" />
-          <Property Type="String" Name="Должность" Nullable="true" MaxLength="255" />
-        </ComplexType>
-        <ComplexType Name="sp_helpdiagramdefinition_Result">
-          <Property Type="Int32" Name="version" Nullable="true" />
-          <Property Type="Binary" Name="definition" Nullable="true" />
-        </ComplexType>
-        <ComplexType Name="sp_helpdiagrams_Result">
-          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
-          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
-          <Property Type="Int32" Name="ID" Nullable="false" />
-          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
-          <Property Type="Int32" Name="OwnerID" Nullable="false" />
-        </ComplexType>
-        <ComplexType Name="UpdateClient_Result">
-          <Property Type="Int32" Name="ID_Клиента" Nullable="false" />
-          <Property Type="Binary" Name="Фото" Nullable="true" MaxLength="Max" />
-          <Property Type="String" Name="ФИО" Nullable="false" MaxLength="255" />
-          <Property Type="String" Name="Адрес" Nullable="true" MaxLength="255" />
-          <Property Type="String" Name="Реквизиты_банка" Nullable="true" MaxLength="50" />
-        </ComplexType>
-        <ComplexType Name="UpdatePosition_Result">
-          <Property Type="Int32" Name="ID_Должности" Nullable="false" />
-          <Property Type="String" Name="Должность" Nullable="true" MaxLength="255" />
-        </ComplexType>
-        <Association Name="FK_Т_Штат_сотрудников_Т_Языки_прог">
-          <End Type="myCreatePO_projectModel1.Т_Языки_прог" Role="Т_Языки_прог" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Type="myCreatePO_projectModel1.Т_Штат_сотрудников" Role="Т_Штат_сотрудников" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Т_Языки_прог">
-              <PropertyRef Name="КодЯзыка" />
-            </Principal>
-            <Dependent Role="Т_Штат_сотрудников">
-              <PropertyRef Name="Язык_Программирования" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="myCreatePO_projectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Т_ВидыРабот">
+          <Key>
+            <PropertyRef Name="ID_Работы" />
+          </Key>
+          <Property Name="ID_Работы" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Этапы_разработки" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Нормо_часов" Type="Int32" />
+          <Property Name="Стоимость_часа_руб" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Сумма_руб" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="Т_Договор_Этапы" Relationship="Self.FK_Т_Договор_Этапы_Т_ВидыРабот" FromRole="Т_ВидыРабот" ToRole="Т_Договор_Этапы" />
+        </EntityType>
+        <EntityType Name="Т_Договора">
+          <Key>
+            <PropertyRef Name="C__Договора" />
+          </Key>
+          <Property Name="C__Договора" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Название_договора" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Куратор_проекта" Type="Int32" />
+          <Property Name="ФИО_Клиента" Type="Int32" />
+          <Property Name="Язык_разработки" Type="Int32" />
+          <Property Name="Дата_составления" Type="DateTime" Precision="3" />
+          <Property Name="Колво_дней" Type="Int32" />
+          <Property Name="Плановая_дата" Type="DateTime" Precision="3" />
+          <Property Name="Фактическа_Дата" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Штраф" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Примечание" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Т_Договор_Этапы" Relationship="Self.FK_Т_Договор_Этапы_Т_Договора" FromRole="Т_Договора" ToRole="Т_Договор_Этапы" />
+          <NavigationProperty Name="Т_Клиент" Relationship="Self.FK_Т_Договора_Т_Клиент" FromRole="Т_Договора" ToRole="Т_Клиент" />
+          <NavigationProperty Name="Т_Кураторы" Relationship="Self.FK_Т_Договора_Т_Кураторы" FromRole="Т_Договора" ToRole="Т_Кураторы" />
+          <NavigationProperty Name="Т_Языки_прог" Relationship="Self.FK_Т_Договора_Т_Языки_прог" FromRole="Т_Договора" ToRole="Т_Языки_прог" />
+        </EntityType>
+        <EntityType Name="Т_Должность">
+          <Key>
+            <PropertyRef Name="ID_Должности" />
+          </Key>
+          <Property Name="ID_Должности" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Должность" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Т_Кураторы" Relationship="Self.FK_Т_Кураторы_Т_Должность" FromRole="Т_Должность" ToRole="Т_Кураторы" />
+          <NavigationProperty Name="Т_Штат_сотрудников" Relationship="Self.FK_Т_Штат_сотрудников_Т_Должность" FromRole="Т_Должность" ToRole="Т_Штат_сотрудников" />
+        </EntityType>
+        <EntityType Name="Т_Клиент">
+          <Key>
+            <PropertyRef Name="ID_Клиента" />
+          </Key>
+          <Property Name="ID_Клиента" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Фото" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ФИО" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Адрес" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Реквизиты_банка" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Т_Договора" Relationship="Self.FK_Т_Договора_Т_Клиент" FromRole="Т_Клиент" ToRole="Т_Договора" />
+        </EntityType>
+        <EntityType Name="Т_Кураторы">
+          <Key>
+            <PropertyRef Name="ID_Куратора" />
+          </Key>
+          <Property Name="ID_Куратора" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ФИО" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Должность" Type="Int32" />
+          <NavigationProperty Name="Т_Договора" Relationship="Self.FK_Т_Договора_Т_Кураторы" FromRole="Т_Кураторы" ToRole="Т_Договора" />
+          <NavigationProperty Name="Т_Должность" Relationship="Self.FK_Т_Кураторы_Т_Должность" FromRole="Т_Кураторы" ToRole="Т_Должность" />
+          <NavigationProperty Name="Т_Штат_сотрудников" Relationship="Self.FK_Т_Штат_сотрудников_Т_Кураторы" FromRole="Т_Кураторы" ToRole="Т_Штат_сотрудников" />
+        </EntityType>
+        <EntityType Name="Т_Штат_сотрудников">
+          <Key>
+            <PropertyRef Name="ID_сотрудника" />
+          </Key>
+          <Property Name="ID_сотрудника" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Куратора" Type="Int32" />
+          <Property Name="Язык_программирования" Type="Int32" />
+          <Property Name="ФИО" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Должность" Type="Int32" />
+          <NavigationProperty Name="Т_Должность" Relationship="Self.FK_Т_Штат_сотрудников_Т_Должность" FromRole="Т_Штат_сотрудников" ToRole="Т_Должность" />
+          <NavigationProperty Name="Т_Кураторы" Relationship="Self.FK_Т_Штат_сотрудников_Т_Кураторы" FromRole="Т_Штат_сотрудников" ToRole="Т_Кураторы" />
+          <NavigationProperty Name="Т_Языки_прог" Relationship="Self.FK_Т_Штат_сотрудников_Т_Языки_прог" FromRole="Т_Штат_сотрудников" ToRole="Т_Языки_прог" />
+        </EntityType>
+        <EntityType Name="Т_Языки_прог">
+          <Key>
+            <PropertyRef Name="КодЯзыка" />
+          </Key>
+          <Property Name="КодЯзыка" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Язык" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Т_Договора" Relationship="Self.FK_Т_Договора_Т_Языки_прог" FromRole="Т_Языки_прог" ToRole="Т_Договора" />
+          <NavigationProperty Name="Т_Штат_сотрудников" Relationship="Self.FK_Т_Штат_сотрудников_Т_Языки_прог" FromRole="Т_Языки_прог" ToRole="Т_Штат_сотрудников" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="ID_rights" />
+          </Key>
+          <Property Name="ID_rights" Type="Int32" Nullable="false" />
+          <Property Name="Access_rights" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="Int16" />
+        </EntityType>
         <EntityType Name="Т_Договор_Этапы">
           <Key>
-            <PropertyRef Name="ID_Договоры_Этапы" />
-            <PropertyRef Name="Код_Договора_Этапы" />
+            <PropertyRef Name="ID_договоры_этапы_врем" />
           </Key>
-          <Property Name="ID_Договоры_Этапы" Type="Int32" Nullable="false" />
-          <Property Name="Код_Договора_Этапы" Type="Int32" Nullable="false" />
+          <Property Name="ID_договоры_этапы_врем" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Код_Договора_Этапы" Type="Int32" />
           <Property Name="Код_Работы" Type="Int32" />
-          <NavigationProperty Name="Т_ВидыРабот" Relationship="myCreatePO_projectModel1.FK_Т_Договор_Этапы_Т_ВидыРабот" FromRole="Т_Договор_Этапы" ToRole="Т_ВидыРабот" />
-          <NavigationProperty Name="Т_Договора" Relationship="myCreatePO_projectModel1.FK_Т_Договор_Этапы_Т_Договора" FromRole="Т_Договор_Этапы" ToRole="Т_Договора" />
+          <NavigationProperty Name="Т_ВидыРабот" Relationship="Self.FK_Т_Договор_Этапы_Т_ВидыРабот" FromRole="Т_Договор_Этапы" ToRole="Т_ВидыРабот" />
+          <NavigationProperty Name="Т_Договора" Relationship="Self.FK_Т_Договор_Этапы_Т_Договора" FromRole="Т_Договор_Этапы" ToRole="Т_Договора" />
+        </EntityType>
+        <EntityType Name="Т_Договора_Архив">
+          <Key>
+            <PropertyRef Name="C__Договора" />
+          </Key>
+          <Property Name="C__Договора" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Название_договора" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Куратор_проекта" Type="Int32" />
+          <Property Name="ФИО_Клиента" Type="Int32" />
+          <Property Name="Дата_составления" Type="DateTime" Precision="3" />
+          <Property Name="Колво_дней" Type="Int32" />
+          <Property Name="Плановая_дата" Type="DateTime" Precision="3" />
+          <Property Name="Фактическа_Дата" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Примечание" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Язык_разработки" Type="Int32" />
+          <Property Name="Штраф" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_Т_Договор_Этапы_Т_ВидыРабот">
-          <End Type="myCreatePO_projectModel1.Т_ВидыРабот" Role="Т_ВидыРабот" Multiplicity="0..1">
+          <End Role="Т_ВидыРабот" Type="Self.Т_ВидыРабот" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Type="myCreatePO_projectModel1.Т_Договор_Этапы" Role="Т_Договор_Этапы" Multiplicity="*" />
+          <End Role="Т_Договор_Этапы" Type="Self.Т_Договор_Этапы" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Т_ВидыРабот">
               <PropertyRef Name="ID_Работы" />
@@ -723,10 +470,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Т_Договор_Этапы_Т_Договора">
-          <End Type="myCreatePO_projectModel1.Т_Договора" Role="Т_Договора" Multiplicity="1">
+          <End Role="Т_Договора" Type="Self.Т_Договора" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Type="myCreatePO_projectModel1.Т_Договор_Этапы" Role="Т_Договор_Этапы" Multiplicity="*" />
+          <End Role="Т_Договор_Этапы" Type="Self.Т_Договор_Этапы" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Т_Договора">
               <PropertyRef Name="C__Договора" />
@@ -736,14 +483,170 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Т_Договора_Т_Клиент">
+          <End Role="Т_Клиент" Type="Self.Т_Клиент" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Т_Договора" Type="Self.Т_Договора" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Т_Клиент">
+              <PropertyRef Name="ID_Клиента" />
+            </Principal>
+            <Dependent Role="Т_Договора">
+              <PropertyRef Name="ФИО_Клиента" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Т_Договора_Т_Кураторы">
+          <End Role="Т_Кураторы" Type="Self.Т_Кураторы" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Т_Договора" Type="Self.Т_Договора" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Т_Кураторы">
+              <PropertyRef Name="ID_Куратора" />
+            </Principal>
+            <Dependent Role="Т_Договора">
+              <PropertyRef Name="Куратор_проекта" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Т_Договора_Т_Языки_прог">
+          <End Role="Т_Языки_прог" Type="Self.Т_Языки_прог" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Т_Договора" Type="Self.Т_Договора" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Т_Языки_прог">
+              <PropertyRef Name="КодЯзыка" />
+            </Principal>
+            <Dependent Role="Т_Договора">
+              <PropertyRef Name="Язык_разработки" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Т_Кураторы_Т_Должность">
+          <End Role="Т_Должность" Type="Self.Т_Должность" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Т_Кураторы" Type="Self.Т_Кураторы" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Т_Должность">
+              <PropertyRef Name="ID_Должности" />
+            </Principal>
+            <Dependent Role="Т_Кураторы">
+              <PropertyRef Name="Должность" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Т_Штат_сотрудников_Т_Должность">
+          <End Role="Т_Должность" Type="Self.Т_Должность" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Т_Штат_сотрудников" Type="Self.Т_Штат_сотрудников" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Т_Должность">
+              <PropertyRef Name="ID_Должности" />
+            </Principal>
+            <Dependent Role="Т_Штат_сотрудников">
+              <PropertyRef Name="Должность" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Т_Штат_сотрудников_Т_Кураторы">
+          <End Role="Т_Кураторы" Type="Self.Т_Кураторы" Multiplicity="0..1" />
+          <End Role="Т_Штат_сотрудников" Type="Self.Т_Штат_сотрудников" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Т_Кураторы">
+              <PropertyRef Name="ID_Куратора" />
+            </Principal>
+            <Dependent Role="Т_Штат_сотрудников">
+              <PropertyRef Name="ID_Куратора" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Т_Штат_сотрудников_Т_Языки_прог">
+          <End Role="Т_Языки_прог" Type="Self.Т_Языки_прог" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Т_Штат_сотрудников" Type="Self.Т_Штат_сотрудников" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Т_Языки_прог">
+              <PropertyRef Name="КодЯзыка" />
+            </Principal>
+            <Dependent Role="Т_Штат_сотрудников">
+              <PropertyRef Name="Язык_программирования" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="myCreatePO_projectEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Т_ВидыРабот" EntityType="Self.Т_ВидыРабот" />
+          <EntitySet Name="Т_Договора" EntityType="Self.Т_Договора" />
+          <EntitySet Name="Т_Должность" EntityType="Self.Т_Должность" />
+          <EntitySet Name="Т_Клиент" EntityType="Self.Т_Клиент" />
+          <EntitySet Name="Т_Кураторы" EntityType="Self.Т_Кураторы" />
+          <EntitySet Name="Т_Штат_сотрудников" EntityType="Self.Т_Штат_сотрудников" />
+          <EntitySet Name="Т_Языки_прог" EntityType="Self.Т_Языки_прог" />
+          <EntitySet Name="Login" EntityType="Self.Login" />
+          <EntitySet Name="Т_Договор_Этапы" EntityType="Self.Т_Договор_Этапы" />
+          <EntitySet Name="Т_Договора_Архив" EntityType="Self.Т_Договора_Архив" />
+          <AssociationSet Name="FK_Т_Договор_Этапы_Т_ВидыРабот" Association="Self.FK_Т_Договор_Этапы_Т_ВидыРабот">
+            <End Role="Т_ВидыРабот" EntitySet="Т_ВидыРабот" />
+            <End Role="Т_Договор_Этапы" EntitySet="Т_Договор_Этапы" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Т_Договор_Этапы_Т_Договора" Association="Self.FK_Т_Договор_Этапы_Т_Договора">
+            <End Role="Т_Договора" EntitySet="Т_Договора" />
+            <End Role="Т_Договор_Этапы" EntitySet="Т_Договор_Этапы" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Т_Договора_Т_Клиент" Association="Self.FK_Т_Договора_Т_Клиент">
+            <End Role="Т_Клиент" EntitySet="Т_Клиент" />
+            <End Role="Т_Договора" EntitySet="Т_Договора" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Т_Договора_Т_Кураторы" Association="Self.FK_Т_Договора_Т_Кураторы">
+            <End Role="Т_Кураторы" EntitySet="Т_Кураторы" />
+            <End Role="Т_Договора" EntitySet="Т_Договора" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Т_Договора_Т_Языки_прог" Association="Self.FK_Т_Договора_Т_Языки_прог">
+            <End Role="Т_Языки_прог" EntitySet="Т_Языки_прог" />
+            <End Role="Т_Договора" EntitySet="Т_Договора" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Т_Кураторы_Т_Должность" Association="Self.FK_Т_Кураторы_Т_Должность">
+            <End Role="Т_Должность" EntitySet="Т_Должность" />
+            <End Role="Т_Кураторы" EntitySet="Т_Кураторы" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Т_Штат_сотрудников_Т_Должность" Association="Self.FK_Т_Штат_сотрудников_Т_Должность">
+            <End Role="Т_Должность" EntitySet="Т_Должность" />
+            <End Role="Т_Штат_сотрудников" EntitySet="Т_Штат_сотрудников" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Т_Штат_сотрудников_Т_Кураторы" Association="Self.FK_Т_Штат_сотрудников_Т_Кураторы">
+            <End Role="Т_Кураторы" EntitySet="Т_Кураторы" />
+            <End Role="Т_Штат_сотрудников" EntitySet="Т_Штат_сотрудников" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Т_Штат_сотрудников_Т_Языки_прог" Association="Self.FK_Т_Штат_сотрудников_Т_Языки_прог">
+            <End Role="Т_Языки_прог" EntitySet="Т_Языки_прог" />
+            <End Role="Т_Штат_сотрудников" EntitySet="Т_Штат_сотрудников" />
+          </AssociationSet>
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище myCreatePO_projectModel1Container" CdmEntityContainer="myCreatePO_projectEntities2">
+        <EntityContainerMapping StorageEntityContainer="Хранилище myCreatePO_projectModelContainer" CdmEntityContainer="myCreatePO_projectEntities">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="myCreatePO_projectModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Т_ВидыРабот">
-            <EntityTypeMapping TypeName="myCreatePO_projectModel1.Т_ВидыРабот">
+            <EntityTypeMapping TypeName="myCreatePO_projectModel.Т_ВидыРабот">
               <MappingFragment StoreEntitySet="Т_ВидыРабот">
                 <ScalarProperty Name="ID_Работы" ColumnName="ID_Работы" />
                 <ScalarProperty Name="Этапы_разработки" ColumnName="Этапы_разработки" />
@@ -754,24 +657,24 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Т_Договора">
-            <EntityTypeMapping TypeName="myCreatePO_projectModel1.Т_Договора">
+            <EntityTypeMapping TypeName="myCreatePO_projectModel.Т_Договора">
               <MappingFragment StoreEntitySet="Т_Договора">
                 <ScalarProperty Name="C__Договора" ColumnName="№_Договора" />
                 <ScalarProperty Name="Название_договора" ColumnName="Название_договора" />
                 <ScalarProperty Name="Куратор_проекта" ColumnName="Куратор_проекта" />
                 <ScalarProperty Name="ФИО_Клиента" ColumnName="ФИО_Клиента" />
+                <ScalarProperty Name="Язык_разработки" ColumnName="Язык_разработки" />
                 <ScalarProperty Name="Дата_составления" ColumnName="Дата составления" />
-                <ScalarProperty Name="Язык_разработки" ColumnName="Язык разработки" />
                 <ScalarProperty Name="Колво_дней" ColumnName="Колво_дней" />
                 <ScalarProperty Name="Плановая_дата" ColumnName="Плановая_дата" />
                 <ScalarProperty Name="Фактическа_Дата" ColumnName="Фактическа_Дата" />
-                <ScalarProperty Name="Примечание" ColumnName="Примечание" />
                 <ScalarProperty Name="Штраф" ColumnName="Штраф" />
+                <ScalarProperty Name="Примечание" ColumnName="Примечание" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Т_Должность">
-            <EntityTypeMapping TypeName="myCreatePO_projectModel1.Т_Должность">
+            <EntityTypeMapping TypeName="myCreatePO_projectModel.Т_Должность">
               <MappingFragment StoreEntitySet="Т_Должность">
                 <ScalarProperty Name="ID_Должности" ColumnName="ID_Должности" />
                 <ScalarProperty Name="Должность" ColumnName="Должность" />
@@ -779,7 +682,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Т_Клиент">
-            <EntityTypeMapping TypeName="myCreatePO_projectModel1.Т_Клиент">
+            <EntityTypeMapping TypeName="myCreatePO_projectModel.Т_Клиент">
               <MappingFragment StoreEntitySet="Т_Клиент">
                 <ScalarProperty Name="ID_Клиента" ColumnName="ID_Клиента" />
                 <ScalarProperty Name="Фото" ColumnName="Фото" />
@@ -790,7 +693,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Т_Кураторы">
-            <EntityTypeMapping TypeName="myCreatePO_projectModel1.Т_Кураторы">
+            <EntityTypeMapping TypeName="myCreatePO_projectModel.Т_Кураторы">
               <MappingFragment StoreEntitySet="Т_Кураторы">
                 <ScalarProperty Name="ID_Куратора" ColumnName="ID_Куратора" />
                 <ScalarProperty Name="ФИО" ColumnName="ФИО" />
@@ -799,18 +702,18 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Т_Штат_сотрудников">
-            <EntityTypeMapping TypeName="myCreatePO_projectModel1.Т_Штат_сотрудников">
-              <MappingFragment StoreEntitySet="Т_Штат сотрудников">
-                <ScalarProperty Name="Язык_Программирования" ColumnName="Язык_Программирования" />
+            <EntityTypeMapping TypeName="myCreatePO_projectModel.Т_Штат_сотрудников">
+              <MappingFragment StoreEntitySet="Т_Штат_сотрудников">
                 <ScalarProperty Name="ID_сотрудника" ColumnName="ID_сотрудника" />
                 <ScalarProperty Name="ID_Куратора" ColumnName="ID_Куратора" />
+                <ScalarProperty Name="Язык_программирования" ColumnName="Язык программирования" />
                 <ScalarProperty Name="ФИО" ColumnName="ФИО" />
                 <ScalarProperty Name="Должность" ColumnName="Должность" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Т_Языки_прог">
-            <EntityTypeMapping TypeName="myCreatePO_projectModel1.Т_Языки_прог">
+            <EntityTypeMapping TypeName="myCreatePO_projectModel.Т_Языки_прог">
               <MappingFragment StoreEntitySet="Т_Языки_прог">
                 <ScalarProperty Name="КодЯзыка" ColumnName="КодЯзыка" />
                 <ScalarProperty Name="Язык" ColumnName="Язык" />
@@ -818,7 +721,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Login">
-            <EntityTypeMapping TypeName="myCreatePO_projectModel1.Login">
+            <EntityTypeMapping TypeName="myCreatePO_projectModel.Login">
               <MappingFragment StoreEntitySet="Login">
                 <ScalarProperty Name="ID_rights" ColumnName="ID_rights" />
                 <ScalarProperty Name="Access_rights" ColumnName="Access_rights" />
@@ -826,109 +729,29 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Т_Договор_Этапы">
+            <EntityTypeMapping TypeName="myCreatePO_projectModel.Т_Договор_Этапы">
+              <MappingFragment StoreEntitySet="Т_Договор_Этапы">
+                <ScalarProperty Name="ID_договоры_этапы_врем" ColumnName="ID_договоры_этапы_врем" />
+                <ScalarProperty Name="Код_Договора_Этапы" ColumnName="Код_Договора_Этапы" />
+                <ScalarProperty Name="Код_Работы" ColumnName="Код_Работы" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Т_Договора_Архив">
-            <EntityTypeMapping TypeName="myCreatePO_projectModel1.Т_Договора_Архив">
-              <MappingFragment StoreEntitySet="Т_Договора Архив">
+            <EntityTypeMapping TypeName="myCreatePO_projectModel.Т_Договора_Архив">
+              <MappingFragment StoreEntitySet="Т_Договора_Архив">
                 <ScalarProperty Name="C__Договора" ColumnName="№_Договора" />
                 <ScalarProperty Name="Название_договора" ColumnName="Название_договора" />
                 <ScalarProperty Name="Куратор_проекта" ColumnName="Куратор_проекта" />
                 <ScalarProperty Name="ФИО_Клиента" ColumnName="ФИО_Клиента" />
                 <ScalarProperty Name="Дата_составления" ColumnName="Дата составления" />
-                <ScalarProperty Name="Язык_разработки" ColumnName="Язык разработки" />
                 <ScalarProperty Name="Колво_дней" ColumnName="Колво_дней" />
                 <ScalarProperty Name="Плановая_дата" ColumnName="Плановая_дата" />
                 <ScalarProperty Name="Фактическа_Дата" ColumnName="Фактическа_Дата" />
                 <ScalarProperty Name="Примечание" ColumnName="Примечание" />
+                <ScalarProperty Name="Язык_разработки" ColumnName="Язык_разработки" />
                 <ScalarProperty Name="Штраф" ColumnName="Штраф" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="DelPosition" FunctionName="Хранилище myCreatePO_projectModel1.DelPosition">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="myCreatePO_projectModel1.DelPosition_Result">
-                <ScalarProperty Name="ID_Должности" ColumnName="ID_Должности" />
-                <ScalarProperty Name="Должность" ColumnName="Должность" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="InsertClient" FunctionName="Хранилище myCreatePO_projectModel1.InsertClient">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="myCreatePO_projectModel1.InsertClient_Result">
-                <ScalarProperty Name="ID_Клиента" ColumnName="ID_Клиента" />
-                <ScalarProperty Name="Фото" ColumnName="Фото" />
-                <ScalarProperty Name="ФИО" ColumnName="ФИО" />
-                <ScalarProperty Name="Адрес" ColumnName="Адрес" />
-                <ScalarProperty Name="Реквизиты_банка" ColumnName="Реквизиты банка" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="InsertLogin" FunctionName="Хранилище myCreatePO_projectModel1.InsertLogin">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="myCreatePO_projectModel1.InsertLogin_Result">
-                <ScalarProperty Name="ID_rights" ColumnName="ID_rights" />
-                <ScalarProperty Name="Access_rights" ColumnName="Access_rights" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="InsertPosition" FunctionName="Хранилище myCreatePO_projectModel1.InsertPosition">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="myCreatePO_projectModel1.InsertPosition_Result">
-                <ScalarProperty Name="ID_Должности" ColumnName="ID_Должности" />
-                <ScalarProperty Name="Должность" ColumnName="Должность" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="LoadAllTables" FunctionName="Хранилище myCreatePO_projectModel1.LoadAllTables" />
-          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище myCreatePO_projectModel1.sp_alterdiagram" />
-          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище myCreatePO_projectModel1.sp_creatediagram" />
-          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище myCreatePO_projectModel1.sp_dropdiagram" />
-          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище myCreatePO_projectModel1.sp_helpdiagramdefinition">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="myCreatePO_projectModel1.sp_helpdiagramdefinition_Result">
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище myCreatePO_projectModel1.sp_helpdiagrams">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="myCreatePO_projectModel1.sp_helpdiagrams_Result">
-                <ScalarProperty Name="Database" ColumnName="Database" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Owner" ColumnName="Owner" />
-                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище myCreatePO_projectModel1.sp_renamediagram" />
-          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище myCreatePO_projectModel1.sp_upgraddiagrams" />
-          <FunctionImportMapping FunctionImportName="UpdateClient" FunctionName="Хранилище myCreatePO_projectModel1.UpdateClient">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="myCreatePO_projectModel1.UpdateClient_Result">
-                <ScalarProperty Name="ID_Клиента" ColumnName="ID_Клиента" />
-                <ScalarProperty Name="Фото" ColumnName="Фото" />
-                <ScalarProperty Name="ФИО" ColumnName="ФИО" />
-                <ScalarProperty Name="Адрес" ColumnName="Адрес" />
-                <ScalarProperty Name="Реквизиты_банка" ColumnName="Реквизиты банка" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="UpdatePosition" FunctionName="Хранилище myCreatePO_projectModel1.UpdatePosition">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="myCreatePO_projectModel1.UpdatePosition_Result">
-                <ScalarProperty Name="ID_Должности" ColumnName="ID_Должности" />
-                <ScalarProperty Name="Должность" ColumnName="Должность" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <EntitySetMapping Name="Т_Договор_Этапы">
-            <EntityTypeMapping TypeName="myCreatePO_projectModel1.Т_Договор_Этапы">
-              <MappingFragment StoreEntitySet="Т_Договор_Этапы">
-                <ScalarProperty Name="Код_Работы" ColumnName="Код_Работы" />
-                <ScalarProperty Name="Код_Договора_Этапы" ColumnName="Код_Договора_Этапы" />
-                <ScalarProperty Name="ID_Договоры_Этапы" ColumnName="ID_Договоры_Этапы" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

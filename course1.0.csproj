@@ -146,85 +146,66 @@
     <Compile Include="Application Data\Functional\test_insert_position.Designer.cs">
       <DependentUpon>test_insert_position.cs</DependentUpon>
     </Compile>
-    <Compile Include="contextstudent.cs" />
-    <Compile Include="DelPosition_Result.cs">
-      <DependentUpon>Model_Entity.tt</DependentUpon>
-    </Compile>
     <Compile Include="Geo%28%29\Geo.cs" />
-    <Compile Include="InsertClient_Result.cs">
-      <DependentUpon>Model_Entity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="InsertLogin_Result.cs">
-      <DependentUpon>Model_Entity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="InsertPosition_Result.cs">
-      <DependentUpon>Model_Entity.tt</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
-      <DependentUpon>Model_Entity.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model_Entity.Context.cs">
+    <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model_Entity.Context.tt</DependentUpon>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model_Entity.cs">
+    <Compile Include="Model1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model_Entity.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model_Entity.Designer.cs">
+    <Compile Include="Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model_Entity.edmx</DependentUpon>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>Model_Entity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>Model_Entity.tt</DependentUpon>
-    </Compile>
     <Compile Include="Student.cs" />
     <Compile Include="Style\GridViewStyles.cs" />
     <Compile Include="Style\Setting_Application.cs" />
-    <Compile Include="UpdateClient_Result.cs">
-      <DependentUpon>Model_Entity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="UpdatePosition_Result.cs">
-      <DependentUpon>Model_Entity.tt</DependentUpon>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Use_BD\DB.cs" />
     <Compile Include="Use_BD\dbHelper.cs" />
     <Compile Include="Use_BD\Parametrs_command.cs" />
     <Compile Include="Use_BD\QuiclyChangeBD.cs" />
+    <Compile Include="З_Договора_Запрос.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Т_ВидыРабот.cs">
-      <DependentUpon>Model_Entity.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Т_Договор_Этапы.cs">
-      <DependentUpon>Model_Entity.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Т_Договора.cs">
-      <DependentUpon>Model_Entity.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Т_Договора_Архив.cs">
-      <DependentUpon>Model_Entity.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Т_Должность.cs">
-      <DependentUpon>Model_Entity.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Т_Клиент.cs">
-      <DependentUpon>Model_Entity.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Т_Кураторы.cs">
-      <DependentUpon>Model_Entity.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Т_Штат_сотрудников.cs">
-      <DependentUpon>Model_Entity.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Т_Языки_прог.cs">
-      <DependentUpon>Model_Entity.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Application Data\Form%27s for acces rights\Curator.resx">
       <DependentUpon>Curator.cs</DependentUpon>
@@ -274,12 +255,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="Model_Entity.edmx">
+    <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model_Entity.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model_Entity.edmx.diagram">
-      <DependentUpon>Model_Entity.edmx</DependentUpon>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -308,15 +289,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Magic_helper.tt</DependentUpon>
     </Content>
-    <Content Include="Model_Entity.Context.tt">
+    <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model_Entity.edmx</DependentUpon>
-      <LastGenOutput>Model_Entity.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model_Entity.tt">
+    <Content Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model_Entity.edmx</DependentUpon>
-      <LastGenOutput>Model_Entity.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup />

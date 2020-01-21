@@ -19,7 +19,7 @@ namespace course1._0.Application_Data.Functional
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
-            using (myCreatePO_projectEntities2 context = new myCreatePO_projectEntities2())
+            using (myCreatePO_projectEntities context = new myCreatePO_projectEntities())
             {
                 var q = from z in context.Т_Клиент.Include(combo_criterion.Text)
                         where z.ФИО.StartsWith(textBox_search.Text)

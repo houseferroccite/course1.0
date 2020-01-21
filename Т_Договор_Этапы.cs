@@ -14,8 +14,8 @@ namespace course1._0
     
     public partial class Т_Договор_Этапы
     {
-        public int ID_Договоры_Этапы { get; set; }
-        public int Код_Договора_Этапы { get; set; }
+        public int ID_договоры_этапы_врем { get; set; }
+        public Nullable<int> Код_Договора_Этапы { get; set; }
         public Nullable<int> Код_Работы { get; set; }
     
         public virtual Т_ВидыРабот Т_ВидыРабот { get; set; }

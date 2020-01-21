@@ -16,10 +16,11 @@ namespace course1._0
     {
         public int ID_сотрудника { get; set; }
         public Nullable<int> ID_Куратора { get; set; }
+        public Nullable<int> Язык_программирования { get; set; }
         public string ФИО { get; set; }
         public Nullable<int> Должность { get; set; }
-        public Nullable<int> Язык_Программирования { get; set; }
     
+        public virtual Т_Должность Т_Должность { get; set; }
         public virtual Т_Кураторы Т_Кураторы { get; set; }
         public virtual Т_Языки_прог Т_Языки_прог { get; set; }
     }

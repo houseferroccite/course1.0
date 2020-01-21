@@ -14,7 +14,7 @@ namespace Course_project
     {
 
         //Settings connection
-        static string connectionString = course1._0.Properties.Settings.Default.myDB;
+        static string connectionString = course1._0.Properties.Settings.Default.CONN;
         static SqlConnection conn;
 
         //Create Data

@@ -24,18 +24,18 @@ namespace course1._0
         public string Название_договора { get; set; }
         public Nullable<int> Куратор_проекта { get; set; }
         public Nullable<int> ФИО_Клиента { get; set; }
-        public Nullable<System.DateTime> Дата_составления { get; set; }
         public Nullable<int> Язык_разработки { get; set; }
+        public Nullable<System.DateTime> Дата_составления { get; set; }
         public Nullable<int> Колво_дней { get; set; }
         public Nullable<System.DateTime> Плановая_дата { get; set; }
-        public Nullable<System.DateTime> Фактическа_Дата { get; set; }
-        public string Примечание { get; set; }
+        public string Фактическа_Дата { get; set; }
         public string Штраф { get; set; }
+        public string Примечание { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Т_Договор_Этапы> Т_Договор_Этапы { get; set; }
         public virtual Т_Клиент Т_Клиент { get; set; }
         public virtual Т_Кураторы Т_Кураторы { get; set; }
         public virtual Т_Языки_прог Т_Языки_прог { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Т_Договор_Этапы> Т_Договор_Этапы { get; set; }
     }
 }
