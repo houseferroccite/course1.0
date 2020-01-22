@@ -57,11 +57,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.loadAllTablesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.myCreatePO_projectDataSet1 = new course1._0.myCreatePO_projectDataSet1();
-            //this.myCreatePO_projectDataSet = new course1._0.myCreatePO_projectDataSet();
-            this.myCreatePOprojectDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.loadAllTablesTableAdapter = new course1._0.myCreatePO_projectDataSet1TableAdapters.LoadAllTablesTableAdapter();
             this.button_search_butn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -74,20 +69,23 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2_Arch_edit = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.group_analytics = new System.Windows.Forms.GroupBox();
+            this.button_diag_analytics = new System.Windows.Forms.Button();
+            this.loadAllTablesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.myCreatePOprojectDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_for_all)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loadAllTablesBindingSource)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.myCreatePO_projectDataSet1)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.myCreatePO_projectDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myCreatePOprojectDataSetBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.group_analytics.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loadAllTablesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myCreatePOprojectDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button_otch_Adm
@@ -254,7 +252,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(61, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(55, 24);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
@@ -294,7 +292,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -379,37 +376,13 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // loadAllTablesBindingSource
-            // 
-            this.loadAllTablesBindingSource.DataMember = "LoadAllTables";
-            //this.loadAllTablesBindingSource.DataSource = this.myCreatePO_projectDataSet1;
-            // 
-            // myCreatePO_projectDataSet1
-            // 
-            //this.myCreatePO_projectDataSet1.DataSetName = "myCreatePO_projectDataSet1";
-            //this.myCreatePO_projectDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // myCreatePO_projectDataSet
-            // 
-            //this.myCreatePO_projectDataSet.DataSetName = "myCreatePO_projectDataSet";
-            //this.myCreatePO_projectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            //// 
-            //// myCreatePOprojectDataSetBindingSource
-            //// 
-            //this.myCreatePOprojectDataSetBindingSource.DataSource = this.myCreatePO_projectDataSet;
-            //this.myCreatePOprojectDataSetBindingSource.Position = 0;
-            //// 
-            //// loadAllTablesTableAdapter
-            //// 
-            //this.loadAllTablesTableAdapter.ClearBeforeFill = true;
-            // 
             // button_search_butn
             // 
             this.button_search_butn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_search_butn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_search_butn.Location = new System.Drawing.Point(722, 452);
+            this.button_search_butn.Location = new System.Drawing.Point(216, 51);
             this.button_search_butn.Name = "button_search_butn";
-            this.button_search_butn.Size = new System.Drawing.Size(277, 50);
+            this.button_search_butn.Size = new System.Drawing.Size(266, 50);
             this.button_search_butn.TabIndex = 10;
             this.button_search_butn.Text = "Поиск";
             this.button_search_butn.UseVisualStyleBackColor = true;
@@ -419,6 +392,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.button_search_butn);
+            this.panel1.Controls.Add(this.check_serach_activate);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1421, 104);
@@ -428,9 +403,9 @@
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 25F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(171, 0);
+            this.label1.Location = new System.Drawing.Point(488, 1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1247, 104);
+            this.label1.Size = new System.Drawing.Size(934, 104);
             this.label1.TabIndex = 0;
             this.label1.Text = "Администратор";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -439,12 +414,13 @@
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(1142, 383);
+            this.button5.Location = new System.Drawing.Point(1145, 360);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(273, 88);
+            this.button5.Size = new System.Drawing.Size(269, 68);
             this.button5.TabIndex = 12;
             this.button5.Text = "Администрирование сотрудников";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // button_create_Dog
             // 
@@ -452,7 +428,7 @@
             this.button_create_Dog.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_create_Dog.Location = new System.Drawing.Point(4, 10);
             this.button_create_Dog.Name = "button_create_Dog";
-            this.button_create_Dog.Size = new System.Drawing.Size(266, 87);
+            this.button_create_Dog.Size = new System.Drawing.Size(266, 101);
             this.button_create_Dog.TabIndex = 12;
             this.button_create_Dog.Text = "Сформировать договор для нового клиента";
             this.button_create_Dog.UseVisualStyleBackColor = true;
@@ -489,9 +465,9 @@
             // check_serach_activate
             // 
             this.check_serach_activate.Font = new System.Drawing.Font("Segoe UI Semilight", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.check_serach_activate.Location = new System.Drawing.Point(722, 412);
+            this.check_serach_activate.Location = new System.Drawing.Point(216, 12);
             this.check_serach_activate.Name = "check_serach_activate";
-            this.check_serach_activate.Size = new System.Drawing.Size(277, 29);
+            this.check_serach_activate.Size = new System.Drawing.Size(266, 29);
             this.check_serach_activate.TabIndex = 14;
             this.check_serach_activate.Text = "Активировать поиск";
             this.check_serach_activate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -517,9 +493,9 @@
             // 
             this.button2_Arch_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2_Arch_edit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2_Arch_edit.Location = new System.Drawing.Point(4, 103);
+            this.button2_Arch_edit.Location = new System.Drawing.Point(4, 117);
             this.button2_Arch_edit.Name = "button2_Arch_edit";
-            this.button2_Arch_edit.Size = new System.Drawing.Size(266, 95);
+            this.button2_Arch_edit.Size = new System.Drawing.Size(266, 114);
             this.button2_Arch_edit.TabIndex = 12;
             this.button2_Arch_edit.Text = "Корректировка договора и сдача в архив\r\n";
             this.button2_Arch_edit.UseVisualStyleBackColor = true;
@@ -531,8 +507,33 @@
             this.panel4.Controls.Add(this.button2_Arch_edit);
             this.panel4.Location = new System.Drawing.Point(1145, 119);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(273, 241);
+            this.panel4.Size = new System.Drawing.Size(273, 236);
             this.panel4.TabIndex = 16;
+            // 
+            // group_analytics
+            // 
+            this.group_analytics.Controls.Add(this.button_diag_analytics);
+            this.group_analytics.Location = new System.Drawing.Point(562, 366);
+            this.group_analytics.Name = "group_analytics";
+            this.group_analytics.Size = new System.Drawing.Size(575, 155);
+            this.group_analytics.TabIndex = 17;
+            this.group_analytics.TabStop = false;
+            this.group_analytics.Text = "Аналитика";
+            // 
+            // button_diag_analytics
+            // 
+            this.button_diag_analytics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_diag_analytics.Location = new System.Drawing.Point(97, 24);
+            this.button_diag_analytics.Name = "button_diag_analytics";
+            this.button_diag_analytics.Size = new System.Drawing.Size(376, 52);
+            this.button_diag_analytics.TabIndex = 2;
+            this.button_diag_analytics.Text = "Анализ языков программирования";
+            this.button_diag_analytics.UseVisualStyleBackColor = true;
+            this.button_diag_analytics.Click += new System.EventHandler(this.Button_diag_analytics_Click);
+            // 
+            // loadAllTablesBindingSource
+            // 
+            this.loadAllTablesBindingSource.DataMember = "LoadAllTables";
             // 
             // Adm
             // 
@@ -540,11 +541,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1422, 742);
+            this.Controls.Add(this.group_analytics);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.check_serach_activate);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button_search_butn);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grid_for_all);
@@ -561,16 +561,15 @@
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_for_all)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.loadAllTablesBindingSource)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.myCreatePO_projectDataSet1)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.myCreatePO_projectDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myCreatePOprojectDataSetBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.group_analytics.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.loadAllTablesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myCreatePOprojectDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -621,5 +620,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button2_Arch_edit;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.GroupBox group_analytics;
+        private System.Windows.Forms.Button button_diag_analytics;
     }
 }

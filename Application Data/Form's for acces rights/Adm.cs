@@ -20,6 +20,7 @@ using course1._0.Application_Data.Functional;
 using course1._0.Geo__;
 using System.Device.Location;
 using System.IO;
+using course1._0.Application_Data.Analytics;
 
 namespace course1._0.Forms
 {
@@ -429,6 +430,10 @@ namespace course1._0.Forms
                         grid_for_all.DataSource = q.ToList();
                         //grid_for_all.Rows.Remove(grid_for_all.Rows[id]);
                     }
+                    else
+                    {
+
+                    }
                 }
             }
         }
@@ -449,6 +454,17 @@ namespace course1._0.Forms
             {
                 button_search_butn.Visible = false;
             }
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_diag_analytics_Click(object sender, EventArgs e)
+        {
+            Language_ANL _ANL = new Language_ANL();
+            _ANL.ShowDialog();
         }
 
         private void Button_create_Dog_Click(object sender, EventArgs e)

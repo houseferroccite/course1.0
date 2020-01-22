@@ -21,9 +21,14 @@ namespace course1._0.Forms
         {
             InitializeComponent();
         }
-        
+        ToolTip mess = new ToolTip();
         private void button_add_user_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(text_Add_password.Text))
+            {
+                label_Ж_red.ForeColor = Color.Red;
+                mess.Show("Обязательное поле заполнения!",text_Add_password);
+            }
             try
             {
                 dbHelper.Insert_Login(text_Add_login.Text,int.Parse(text_Add_password.Text));
@@ -45,6 +50,11 @@ namespace course1._0.Forms
             {
                 text_Add_password.UseSystemPasswordChar = true;
             }
+        }
+
+        private void Add_user_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

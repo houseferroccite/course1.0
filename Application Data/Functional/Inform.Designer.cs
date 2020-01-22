@@ -41,9 +41,11 @@
             this.pic_client = new System.Windows.Forms.PictureBox();
             this.pictureBox_img_KL = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pic_client)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_img_KL)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -63,9 +65,9 @@
             this.button_add_new_KL.FlatAppearance.BorderSize = 2;
             this.button_add_new_KL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_add_new_KL.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.button_add_new_KL.Location = new System.Drawing.Point(638, 403);
+            this.button_add_new_KL.Location = new System.Drawing.Point(685, 387);
             this.button_add_new_KL.Name = "button_add_new_KL";
-            this.button_add_new_KL.Size = new System.Drawing.Size(234, 76);
+            this.button_add_new_KL.Size = new System.Drawing.Size(184, 76);
             this.button_add_new_KL.TabIndex = 12;
             this.button_add_new_KL.Text = "Добавть новую запись";
             this.button_add_new_KL.UseVisualStyleBackColor = true;
@@ -77,9 +79,9 @@
             this.button_save_inform_KL.FlatAppearance.BorderSize = 2;
             this.button_save_inform_KL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_save_inform_KL.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.button_save_inform_KL.Location = new System.Drawing.Point(380, 403);
+            this.button_save_inform_KL.Location = new System.Drawing.Point(497, 387);
             this.button_save_inform_KL.Name = "button_save_inform_KL";
-            this.button_save_inform_KL.Size = new System.Drawing.Size(252, 76);
+            this.button_save_inform_KL.Size = new System.Drawing.Size(182, 76);
             this.button_save_inform_KL.TabIndex = 13;
             this.button_save_inform_KL.Text = "Сохранить измнение";
             this.button_save_inform_KL.UseVisualStyleBackColor = true;
@@ -89,7 +91,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
-            this.label3.Location = new System.Drawing.Point(416, 301);
+            this.label3.Location = new System.Drawing.Point(492, 286);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(180, 25);
@@ -99,19 +101,21 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
-            this.label2.Location = new System.Drawing.Point(416, 218);
+            this.label2.Location = new System.Drawing.Point(492, 207);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 25);
             this.label2.TabIndex = 10;
             this.label2.Text = "Адрес:";
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
-            this.label1.Location = new System.Drawing.Point(416, 133);
+            this.label1.Location = new System.Drawing.Point(492, 142);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 25);
@@ -122,33 +126,33 @@
             // text_rec
             // 
             this.text_rec.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
-            this.text_rec.Location = new System.Drawing.Point(421, 343);
+            this.text_rec.Location = new System.Drawing.Point(497, 315);
             this.text_rec.Margin = new System.Windows.Forms.Padding(4);
             this.text_rec.Name = "text_rec";
-            this.text_rec.Size = new System.Drawing.Size(492, 32);
+            this.text_rec.Size = new System.Drawing.Size(372, 32);
             this.text_rec.TabIndex = 6;
             // 
             // text_adres
             // 
             this.text_adres.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
-            this.text_adres.Location = new System.Drawing.Point(421, 247);
+            this.text_adres.Location = new System.Drawing.Point(497, 236);
             this.text_adres.Margin = new System.Windows.Forms.Padding(4);
             this.text_adres.Name = "text_adres";
-            this.text_adres.Size = new System.Drawing.Size(492, 32);
+            this.text_adres.Size = new System.Drawing.Size(372, 32);
             this.text_adres.TabIndex = 7;
             // 
             // text_fio
             // 
             this.text_fio.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
-            this.text_fio.Location = new System.Drawing.Point(421, 162);
+            this.text_fio.Location = new System.Drawing.Point(497, 171);
             this.text_fio.Margin = new System.Windows.Forms.Padding(4);
             this.text_fio.Name = "text_fio";
-            this.text_fio.Size = new System.Drawing.Size(492, 32);
+            this.text_fio.Size = new System.Drawing.Size(372, 32);
             this.text_fio.TabIndex = 8;
             // 
             // pic_client
             // 
-            this.pic_client.Location = new System.Drawing.Point(13, 104);
+            this.pic_client.Location = new System.Drawing.Point(113, 90);
             this.pic_client.Margin = new System.Windows.Forms.Padding(4);
             this.pic_client.Name = "pic_client";
             this.pic_client.Size = new System.Drawing.Size(328, 375);
@@ -161,10 +165,10 @@
             // 
             this.pictureBox_img_KL.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox_img_KL.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_img_KL.Image")));
-            this.pictureBox_img_KL.Location = new System.Drawing.Point(50, -3);
+            this.pictureBox_img_KL.Location = new System.Drawing.Point(4, 108);
             this.pictureBox_img_KL.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox_img_KL.Name = "pictureBox_img_KL";
-            this.pictureBox_img_KL.Size = new System.Drawing.Size(139, 100);
+            this.pictureBox_img_KL.Size = new System.Drawing.Size(101, 100);
             this.pictureBox_img_KL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_img_KL.TabIndex = 5;
             this.pictureBox_img_KL.TabStop = false;
@@ -173,18 +177,27 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel1.Controls.Add(this.pictureBox_img_KL);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(961, 97);
+            this.panel1.Size = new System.Drawing.Size(926, 97);
             this.panel1.TabIndex = 15;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel2.Controls.Add(this.pictureBox_img_KL);
+            this.panel2.Location = new System.Drawing.Point(0, 86);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(109, 408);
+            this.panel2.TabIndex = 16;
             // 
             // Inform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(926, 494);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button_add_new_KL);
             this.Controls.Add(this.button_save_inform_KL);
@@ -204,6 +217,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_img_KL)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +237,6 @@
         private System.Windows.Forms.PictureBox pic_client;
         private System.Windows.Forms.PictureBox pictureBox_img_KL;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

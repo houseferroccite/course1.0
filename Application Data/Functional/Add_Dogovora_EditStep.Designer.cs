@@ -139,7 +139,7 @@
             // 
             this.button_save_Dog_end_arch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_save_Dog_end_arch.Font = new System.Drawing.Font("Segoe UI Semilight", 15F);
-            this.button_save_Dog_end_arch.Location = new System.Drawing.Point(275, 806);
+            this.button_save_Dog_end_arch.Location = new System.Drawing.Point(283, 835);
             this.button_save_Dog_end_arch.Name = "button_save_Dog_end_arch";
             this.button_save_Dog_end_arch.Size = new System.Drawing.Size(629, 60);
             this.button_save_Dog_end_arch.TabIndex = 32;

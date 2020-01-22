@@ -5,7 +5,6 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="c6a00f9f7c4b4bfba26f88c4f87542e4" Name="Diagram1">
-        <EntityTypeShape EntityType="myCreatePO_projectModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="8.125" IsExpanded="true" />
         <EntityTypeShape EntityType="myCreatePO_projectModel.Т_ВидыРабот" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
         <EntityTypeShape EntityType="myCreatePO_projectModel.Т_Договора" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
         <EntityTypeShape EntityType="myCreatePO_projectModel.Т_Должность" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
@@ -15,7 +14,7 @@
         <EntityTypeShape EntityType="myCreatePO_projectModel.Т_Языки_прог" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
         <EntityTypeShape EntityType="myCreatePO_projectModel.Login" Width="1.5" PointX="9.75" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="myCreatePO_projectModel.Т_Договор_Этапы" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="myCreatePO_projectModel.Т_Договора_Архив" Width="1.875" PointX="0.5" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="myCreatePO_projectModel.Т_Договора_Архив" Width="1.875" PointX="0.5" PointY="6.75" IsExpanded="true" />
         <AssociationConnector Association="myCreatePO_projectModel.FK_Т_Договор_Этапы_Т_ВидыРабот" ManuallyRouted="false" />
         <AssociationConnector Association="myCreatePO_projectModel.FK_Т_Договор_Этапы_Т_Договора" ManuallyRouted="false" />
         <AssociationConnector Association="myCreatePO_projectModel.FK_Т_Договора_Т_Клиент" ManuallyRouted="false" />
