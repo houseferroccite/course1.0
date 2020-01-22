@@ -60,12 +60,12 @@
             this.button_search_butn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.check_serach_activate = new System.Windows.Forms.CheckBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button_create_Dog = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.check_serach_activate = new System.Windows.Forms.CheckBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2_Arch_edit = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -380,9 +380,9 @@
             // 
             this.button_search_butn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_search_butn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_search_butn.Location = new System.Drawing.Point(216, 51);
+            this.button_search_butn.Location = new System.Drawing.Point(1145, 465);
             this.button_search_butn.Name = "button_search_butn";
-            this.button_search_butn.Size = new System.Drawing.Size(266, 50);
+            this.button_search_butn.Size = new System.Drawing.Size(269, 50);
             this.button_search_butn.TabIndex = 10;
             this.button_search_butn.Text = "Поиск";
             this.button_search_butn.UseVisualStyleBackColor = true;
@@ -392,8 +392,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button_search_butn);
-            this.panel1.Controls.Add(this.check_serach_activate);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1421, 104);
@@ -410,6 +408,18 @@
             this.label1.Text = "Администратор";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // check_serach_activate
+            // 
+            this.check_serach_activate.Font = new System.Drawing.Font("Segoe UI Semilight", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.check_serach_activate.Location = new System.Drawing.Point(1148, 436);
+            this.check_serach_activate.Name = "check_serach_activate";
+            this.check_serach_activate.Size = new System.Drawing.Size(266, 29);
+            this.check_serach_activate.TabIndex = 14;
+            this.check_serach_activate.Text = "Активировать поиск";
+            this.check_serach_activate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.check_serach_activate.UseVisualStyleBackColor = true;
+            this.check_serach_activate.CheckedChanged += new System.EventHandler(this.Check_serach_activate_CheckedChanged);
+            // 
             // button5
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -420,7 +430,7 @@
             this.button5.TabIndex = 12;
             this.button5.Text = "Администрирование сотрудников";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.Button5_Click);
+            //this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // button_create_Dog
             // 
@@ -461,18 +471,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // check_serach_activate
-            // 
-            this.check_serach_activate.Font = new System.Drawing.Font("Segoe UI Semilight", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.check_serach_activate.Location = new System.Drawing.Point(216, 12);
-            this.check_serach_activate.Name = "check_serach_activate";
-            this.check_serach_activate.Size = new System.Drawing.Size(266, 29);
-            this.check_serach_activate.TabIndex = 14;
-            this.check_serach_activate.Text = "Активировать поиск";
-            this.check_serach_activate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.check_serach_activate.UseVisualStyleBackColor = true;
-            this.check_serach_activate.CheckedChanged += new System.EventHandler(this.Check_serach_activate_CheckedChanged);
             // 
             // panel3
             // 
@@ -541,7 +539,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1422, 742);
+            this.Controls.Add(this.button_search_butn);
             this.Controls.Add(this.group_analytics);
+            this.Controls.Add(this.check_serach_activate);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

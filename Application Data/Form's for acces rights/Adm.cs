@@ -122,9 +122,10 @@ namespace course1._0.Forms
         {
             GridViewStyles.ButtonGrid("ChangeContext","Изменить","Изменить", grid_for_all, izm);
 
-            if (grid_for_all.Columns.Contains("Information"))
+            if (grid_for_all.Columns.Contains("Information") && grid_for_all.Columns.Contains("Del"))
             {
                 grid_for_all.Columns.Remove("Information");
+                grid_for_all.Columns.Remove("Del");
             }
             //For Tables T_Position
             bs_Dol.DataSource = DB.ds.Tables["Т_Должность"];
@@ -137,10 +138,11 @@ namespace course1._0.Forms
         private void button_language_Click(object sender, EventArgs e)
         {
             GridViewStyles.ChancheViewGrid(grid_for_all);
-            if (grid_for_all.Columns.Contains("Information") && grid_for_all.Columns.Contains("Del"))
+            if (grid_for_all.Columns.Contains("Information") && grid_for_all.Columns.Contains("Del") && grid_for_all.Columns.Contains("ChangeContext"))
             {
                 grid_for_all.Columns.Remove("Information");
                 grid_for_all.Columns.Remove("Del");
+                grid_for_all.Columns.Remove("ChangeContext");
             }
             //For Tables Т_Языки_прог
             
@@ -168,10 +170,11 @@ namespace course1._0.Forms
         private void buttonDog_Click(object sender, EventArgs e)
         {
             GridViewStyles.ChancheViewGrid(grid_for_all);
-            if (grid_for_all.Columns.Contains("Information") && grid_for_all.Columns.Contains("Del"))
+            if (grid_for_all.Columns.Contains("Information") && grid_for_all.Columns.Contains("Del") && grid_for_all.Columns.Contains("ChangeContext"))
             {
                 grid_for_all.Columns.Remove("Information");
                 grid_for_all.Columns.Remove("Del");
+                grid_for_all.Columns.Remove("ChangeContext");
             }
             //For Tables Т_Договора
             bs_Dog.DataSource = DB.ds.Tables["Т_Договора"];
@@ -198,10 +201,11 @@ namespace course1._0.Forms
 
         private void button_work_Click(object sender, EventArgs e)
         {
-            if (grid_for_all.Columns.Contains("Information") && grid_for_all.Columns.Contains("Del"))
+            if (grid_for_all.Columns.Contains("Information") && grid_for_all.Columns.Contains("Del") && grid_for_all.Columns.Contains("ChangeContext"))
             {
                 grid_for_all.Columns.Remove("Information");
                 grid_for_all.Columns.Remove("Del");
+                grid_for_all.Columns.Remove("ChangeContext");
             }
             //For Tables Т_Договора Архив
             bs_work.DataSource = DB.ds.Tables["Т_ВидыРабот"];
@@ -339,10 +343,11 @@ namespace course1._0.Forms
         {
             GridViewStyles.ChancheViewGrid(grid_for_all);
 
-            if (grid_for_all.Columns.Contains("Information") && grid_for_all.Columns.Contains("Del"))
+            if (grid_for_all.Columns.Contains("Information") && grid_for_all.Columns.Contains("Del") && grid_for_all.Columns.Contains("ChangeContext"))
             {
                 grid_for_all.Columns.Remove("Information");
                 grid_for_all.Columns.Remove("Del");
+                grid_for_all.Columns.Remove("ChangeContext");
             }
             grid_for_all.DataSource = bs_curator;
             bindingNavigator1.BindingSource = bs_curator;
@@ -454,11 +459,6 @@ namespace course1._0.Forms
             {
                 button_search_butn.Visible = false;
             }
-        }
-
-        private void Button5_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Button_diag_analytics_Click(object sender, EventArgs e)

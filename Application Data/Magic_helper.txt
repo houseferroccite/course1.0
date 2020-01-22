@@ -9,3 +9,12 @@
                 //Вывод в грид .Tolist();
 				
 			}
+
+			//Для заполнения combobox
+		combo_criterion.Items.Clear();
+            string s = "Model1.edmx" + combo_criterion.Text;
+            Type x = Type.GetType(s);
+            PropertyInfo[] prop = x.GetProperties();
+            string[] g = (from z in prop
+                          select z.Name).ToArray();
+            combo_criterion.Items.AddRange(g);

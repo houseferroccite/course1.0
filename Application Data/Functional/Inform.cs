@@ -34,6 +34,22 @@ namespace course1._0.Forms
             QuicklyChangeDB.TextBox(bs_Client, "Реквизиты банка", text_rec);
 
             QuicklyChangeDB.Picturebox("Image", pic_client, bs_Client, "Фото", true);
+
+            using (myCreatePO_projectEntities context = new myCreatePO_projectEntities())
+            {
+                try
+                {
+                         var q1 = from D in context.Т_Договора
+                         where D.ФИО_Клиента.Value == int.Parse(text_fio.Text)
+                         select D.Название_договора.Count();
+                    toolStripStatusLabel1.Text = $"Количесво договоров, заключенных клиентом: {q1}";
+                }
+                catch
+                {
+                    MessageBox.Show("" + 2);
+                }
+                
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
