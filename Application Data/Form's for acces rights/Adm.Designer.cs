@@ -73,6 +73,7 @@
             this.button_diag_analytics = new System.Windows.Forms.Button();
             this.loadAllTablesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.myCreatePOprojectDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_for_all)).BeginInit();
@@ -86,6 +87,7 @@
             this.group_analytics.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loadAllTablesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myCreatePOprojectDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // button_otch_Adm
@@ -391,6 +393,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -401,9 +404,9 @@
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 25F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(488, 1);
+            this.label1.Location = new System.Drawing.Point(122, 1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(934, 104);
+            this.label1.Size = new System.Drawing.Size(1292, 104);
             this.label1.TabIndex = 0;
             this.label1.Text = "Администратор";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -430,7 +433,6 @@
             this.button5.TabIndex = 12;
             this.button5.Text = "Администрирование сотрудников";
             this.button5.UseVisualStyleBackColor = true;
-            //this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // button_create_Dog
             // 
@@ -533,6 +535,18 @@
             // 
             this.loadAllTablesBindingSource.DataMember = "LoadAllTables";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.AliceBlue;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(15, 28);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(54, 55);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 19;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
+            // 
             // Adm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -570,6 +584,7 @@
             this.group_analytics.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.loadAllTablesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myCreatePOprojectDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -622,5 +637,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.GroupBox group_analytics;
         private System.Windows.Forms.Button button_diag_analytics;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

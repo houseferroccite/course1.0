@@ -101,6 +101,17 @@ namespace course1._0.Forms
         {
 
         }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Вы действительно хотите закрыть программу?", "Подтверждение", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+            if (result == DialogResult.OK)
+            {
+                this.Close();
+                
+            }
+            
+        }
     }
 }
 

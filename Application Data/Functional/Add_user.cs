@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -24,10 +25,19 @@ namespace course1._0.Forms
         ToolTip mess = new ToolTip();
         private void button_add_user_Click(object sender, EventArgs e)
         {
+            if(text_Add_password.Text == text_Add_password_replace.Text)
+            {
+                button_add_user.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Произошла ошибка, Входная строка имела неверный формат.", "Ошибка", MessageBoxButtons.OKCancel, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+            }
             if (String.IsNullOrEmpty(text_Add_password.Text))
             {
                 label_Ж_red.ForeColor = Color.Red;
-                mess.Show("Обязательное поле заполнения!",text_Add_password);
+                label_ж_red1.ForeColor = Color.Red;
+                MessageBox.Show("Обязательное поле для заполнения.", "Внимание!", MessageBoxButtons.OKCancel, MessageBoxIcon.Hand, MessageBoxDefaultButton.Button1);
             }
             try
             {
@@ -35,7 +45,7 @@ namespace course1._0.Forms
             }
             catch
             {
-                MessageBox.Show("Произошла ошибка, Входная строка имела неверный формат.", "Ошибка", buttons: MessageBoxButtons.OK);
+                MessageBox.Show("Произошла ошибка, Входная строка имела неверный формат.", "Ошибка", MessageBoxButtons.OKCancel, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
          
         }
@@ -54,7 +64,17 @@ namespace course1._0.Forms
 
         private void Add_user_Load(object sender, EventArgs e)
         {
-            
+            button_add_user.Enabled = true;
+        }
+
+        private void Text_Add_password_TextChanged(object sender, EventArgs e)
+        {
+            Regex.IsMatch(text_Add_password.Text, @"^(?:\d()|[A-Za-z]()){8,}\1\2$");
+        }
+
+        private void Text_Add_password_replace_TextChanged(object sender, EventArgs e)
+        {
+            Regex.IsMatch(text_Add_password_replace.Text, @"^(?:\d()|[A-Za-z]()){8,}\1\2$");
         }
     }
 }

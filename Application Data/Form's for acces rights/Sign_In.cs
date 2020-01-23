@@ -58,6 +58,7 @@ namespace course1._0
                         #endregion
                         Adm admin = new Adm();
                         admin.ShowDialog();
+                        this.Close();
                     }
                     else if (combo_login.Text == "Curator")
                     {
@@ -72,6 +73,7 @@ namespace course1._0
                         #endregion
                         Curator curator = new Curator(bs_Dol);
                         curator.ShowDialog();
+                        this.Close();
                     }
                     else
                     {
@@ -86,6 +88,7 @@ namespace course1._0
                         #endregion
                         Guest guest = new Guest();
                         guest.ShowDialog();
+                        this.Close();
                     }
                 }
             }

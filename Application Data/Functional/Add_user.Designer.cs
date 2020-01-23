@@ -62,18 +62,19 @@
             // text_Add_password
             // 
             this.text_Add_password.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
-            this.text_Add_password.Location = new System.Drawing.Point(352, 256);
+            this.text_Add_password.Location = new System.Drawing.Point(352, 243);
             this.text_Add_password.Name = "text_Add_password";
-            this.text_Add_password.Size = new System.Drawing.Size(480, 32);
+            this.text_Add_password.Size = new System.Drawing.Size(322, 32);
             this.text_Add_password.TabIndex = 7;
             this.text_Add_password.UseSystemPasswordChar = true;
+            this.text_Add_password.TextChanged += new System.EventHandler(this.Text_Add_password_TextChanged);
             // 
             // text_Add_login
             // 
             this.text_Add_login.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
-            this.text_Add_login.Location = new System.Drawing.Point(352, 169);
+            this.text_Add_login.Location = new System.Drawing.Point(352, 157);
             this.text_Add_login.Name = "text_Add_login";
-            this.text_Add_login.Size = new System.Drawing.Size(480, 32);
+            this.text_Add_login.Size = new System.Drawing.Size(322, 32);
             this.text_Add_login.TabIndex = 8;
             // 
             // label2
@@ -82,7 +83,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 11F, System.Drawing.FontStyle.Italic);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(349, 228);
+            this.label2.Location = new System.Drawing.Point(349, 215);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(150, 25);
             this.label2.TabIndex = 5;
@@ -94,7 +95,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 11F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(347, 141);
+            this.label1.Location = new System.Drawing.Point(349, 129);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 25);
             this.label1.TabIndex = 6;
@@ -103,9 +104,9 @@
             // button_add_user
             // 
             this.button_add_user.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_add_user.Location = new System.Drawing.Point(319, 401);
+            this.button_add_user.Location = new System.Drawing.Point(319, 443);
             this.button_add_user.Name = "button_add_user";
-            this.button_add_user.Size = new System.Drawing.Size(529, 62);
+            this.button_add_user.Size = new System.Drawing.Size(529, 96);
             this.button_add_user.TabIndex = 4;
             this.button_add_user.Text = "Добавить";
             this.button_add_user.UseVisualStyleBackColor = true;
@@ -126,13 +127,13 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(1, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(312, 375);
+            this.panel2.Size = new System.Drawing.Size(312, 452);
             this.panel2.TabIndex = 11;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(70, 83);
+            this.pictureBox1.Location = new System.Drawing.Point(67, 128);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(161, 156);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -143,9 +144,9 @@
             // 
             this.check_see_password.BackColor = System.Drawing.Color.Transparent;
             this.check_see_password.ForeColor = System.Drawing.Color.Black;
-            this.check_see_password.Location = new System.Drawing.Point(709, 370);
+            this.check_see_password.Location = new System.Drawing.Point(691, 286);
             this.check_see_password.Name = "check_see_password";
-            this.check_see_password.Size = new System.Drawing.Size(139, 25);
+            this.check_see_password.Size = new System.Drawing.Size(156, 25);
             this.check_see_password.TabIndex = 12;
             this.check_see_password.Text = "Показать пароль";
             this.check_see_password.UseVisualStyleBackColor = false;
@@ -154,11 +155,12 @@
             // text_Add_password_replace
             // 
             this.text_Add_password_replace.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
-            this.text_Add_password_replace.Location = new System.Drawing.Point(354, 322);
+            this.text_Add_password_replace.Location = new System.Drawing.Point(352, 327);
             this.text_Add_password_replace.Name = "text_Add_password_replace";
-            this.text_Add_password_replace.Size = new System.Drawing.Size(480, 32);
+            this.text_Add_password_replace.Size = new System.Drawing.Size(322, 32);
             this.text_Add_password_replace.TabIndex = 7;
             this.text_Add_password_replace.UseSystemPasswordChar = true;
+            this.text_Add_password_replace.TextChanged += new System.EventHandler(this.Text_Add_password_replace_TextChanged);
             // 
             // label4
             // 
@@ -166,7 +168,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semilight", 11F, System.Drawing.FontStyle.Italic);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(349, 304);
+            this.label4.Location = new System.Drawing.Point(349, 299);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(241, 25);
             this.label4.TabIndex = 5;
@@ -177,7 +179,7 @@
             this.label_Ж_red.BackColor = System.Drawing.Color.Transparent;
             this.label_Ж_red.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label_Ж_red.ForeColor = System.Drawing.Color.Black;
-            this.label_Ж_red.Location = new System.Drawing.Point(327, 303);
+            this.label_Ж_red.Location = new System.Drawing.Point(327, 298);
             this.label_Ж_red.Name = "label_Ж_red";
             this.label_Ж_red.Size = new System.Drawing.Size(25, 25);
             this.label_Ж_red.TabIndex = 13;
@@ -188,7 +190,7 @@
             // 
             this.label_ж_red1.BackColor = System.Drawing.Color.Transparent;
             this.label_ж_red1.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label_ж_red1.Location = new System.Drawing.Point(325, 228);
+            this.label_ж_red1.Location = new System.Drawing.Point(325, 215);
             this.label_ж_red1.Name = "label_ж_red1";
             this.label_ж_red1.Size = new System.Drawing.Size(25, 25);
             this.label_ж_red1.TabIndex = 13;
@@ -199,7 +201,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 475);
+            this.ClientSize = new System.Drawing.Size(859, 551);
             this.Controls.Add(this.label_ж_red1);
             this.Controls.Add(this.label_Ж_red);
             this.Controls.Add(this.check_see_password);

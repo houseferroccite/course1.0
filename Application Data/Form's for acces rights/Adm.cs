@@ -467,6 +467,17 @@ namespace course1._0.Forms
             _ANL.ShowDialog();
         }
 
+        private void PictureBox3_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Вы действительно хотите закрыть программу?", "Подтверждение", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+            if (result == DialogResult.OK)
+            {
+                this.Close();
+                Form1 login = new Form1();
+                login.Show();
+            }
+        }
+
         private void Button_create_Dog_Click(object sender, EventArgs e)
         {
             Add_Dogovora add_Dog = new Add_Dogovora();
