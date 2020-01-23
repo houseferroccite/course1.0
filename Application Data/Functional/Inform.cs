@@ -34,7 +34,7 @@ namespace course1._0.Forms
             QuicklyChangeDB.TextBox(bs_Client, "Реквизиты банка", text_rec);
 
             QuicklyChangeDB.Picturebox("Image", pic_client, bs_Client, "Фото", true);
-
+            toolStripStatusLabel1.Text = $"Количесво договоров, заключенных клиентом:";
             using (myCreatePO_projectEntities context = new myCreatePO_projectEntities())
             {
                 try
