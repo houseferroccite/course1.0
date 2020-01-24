@@ -59,9 +59,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button_search_butn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.check_serach_activate = new System.Windows.Forms.CheckBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.button_get_documents = new System.Windows.Forms.Button();
             this.button_create_Dog = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -73,12 +74,12 @@
             this.button_diag_analytics = new System.Windows.Forms.Button();
             this.loadAllTablesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.myCreatePOprojectDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_for_all)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,7 +88,6 @@
             this.group_analytics.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loadAllTablesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myCreatePOprojectDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // button_otch_Adm
@@ -400,6 +400,18 @@
             this.panel1.Size = new System.Drawing.Size(1421, 104);
             this.panel1.TabIndex = 11;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.AliceBlue;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(15, 28);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(54, 55);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 19;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 25F);
@@ -423,16 +435,17 @@
             this.check_serach_activate.UseVisualStyleBackColor = true;
             this.check_serach_activate.CheckedChanged += new System.EventHandler(this.Check_serach_activate_CheckedChanged);
             // 
-            // button5
+            // button_get_documents
             // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(1145, 360);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(269, 68);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "Администрирование сотрудников";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button_get_documents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_get_documents.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_get_documents.Location = new System.Drawing.Point(1145, 360);
+            this.button_get_documents.Name = "button_get_documents";
+            this.button_get_documents.Size = new System.Drawing.Size(269, 68);
+            this.button_get_documents.TabIndex = 12;
+            this.button_get_documents.Text = "Документация\r\n";
+            this.button_get_documents.UseVisualStyleBackColor = true;
+            this.button_get_documents.Click += new System.EventHandler(this.Button_get_documents_Click);
             // 
             // button_create_Dog
             // 
@@ -535,18 +548,6 @@
             // 
             this.loadAllTablesBindingSource.DataMember = "LoadAllTables";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.AliceBlue;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(15, 28);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(54, 55);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 19;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
-            // 
             // Adm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -559,7 +560,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button_get_documents);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grid_for_all);
             this.Controls.Add(this.groupBox1);
@@ -576,6 +577,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grid_for_all)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -584,7 +586,6 @@
             this.group_analytics.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.loadAllTablesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myCreatePOprojectDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -625,7 +626,7 @@
         private System.Windows.Forms.Button button_search_butn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button_get_documents;
         private System.Windows.Forms.Button button_create_Dog;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;

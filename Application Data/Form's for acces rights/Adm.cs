@@ -473,9 +473,14 @@ namespace course1._0.Forms
             if (result == DialogResult.OK)
             {
                 this.Close();
-                Form1 login = new Form1();
-                login.Show();
+               
             }
+        }
+
+        private void Button_get_documents_Click(object sender, EventArgs e)
+        {
+            Get_Documents_inf docum = new Get_Documents_inf();
+            docum.Show();
         }
 
         private void Button_create_Dog_Click(object sender, EventArgs e)

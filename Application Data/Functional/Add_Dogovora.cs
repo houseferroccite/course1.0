@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -77,11 +79,28 @@ namespace course1._0.Application_Data.Functional
             }
         }
 
+       
+        private void СохранитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StreamWriter writer = new StreamWriter("C:\\test_print.txt"); //указываем путь к файлу
+            writer.WriteLine($"{label1.Text} \n \n {label2.Text}: \n   {textBox_Dog.Text}  \n {label3.Text}: \n {comboBox_sotryd_dog.Text} \n {label4.Text}: \n {textBox_FIO_Client.Text}\n {label5.Text}: \n {dateTime_sostavl_dog.Text} \n {label6.Text}: \n {comboBox_language_dog.Text}\n {label7.Text}: \n {numeric_kol_days.Value} \n {label8.Text}: \n {label_plan_date.Text} \n {label11.Text}:\n {dateTime_fact_date.Text}\n {label12.Text}: \n {textBox_primech.Text}");
+            writer.Close();
+        }
+
+        private void ПечатьToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            PrintDocument PrintD = new PrintDocument();
+            PrintD.DocumentName = "C:\\test_print.txt";
+            PrintD.Print();
+        }
+
         private void numeric_kol_days_ValueChanged(object sender, EventArgs e)
         {
-            var dd = dateTime_sostavl_dog.Value.AddDays((double)numeric_kol_days.Value);
-            label8.Text += $"{dd.Date.Day}." + $"{ dd.Date.Month }." + $"{dd.Date.Year}";
-            label8.Text = "";
+            label_plan_date.Text = "";
+           var dd = dateTime_sostavl_dog.Value.AddDays((double)numeric_kol_days.Value);
+            label_plan_date.Text += $"{dd.Date.Day}." + $"{ dd.Date.Month }." + $"{dd.Date.Year}";
+            
         }
 
         private void TextBox_Dog_TextChanged(object sender, EventArgs e)

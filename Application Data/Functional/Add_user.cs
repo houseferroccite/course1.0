@@ -27,11 +27,11 @@ namespace course1._0.Forms
         {
             if(text_Add_password.Text == text_Add_password_replace.Text)
             {
-                button_add_user.Enabled = false;
+                button_add_user.Enabled = true;
             }
             else
             {
-                MessageBox.Show("Произошла ошибка, Входная строка имела неверный формат.", "Ошибка", MessageBoxButtons.OKCancel, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("Произошла ошибка, пароли не совпадают.", "Ошибка", MessageBoxButtons.OKCancel, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
             if (String.IsNullOrEmpty(text_Add_password.Text))
             {
@@ -64,7 +64,7 @@ namespace course1._0.Forms
 
         private void Add_user_Load(object sender, EventArgs e)
         {
-            button_add_user.Enabled = true;
+            button_add_user.Enabled = false;
         }
 
         private void Text_Add_password_TextChanged(object sender, EventArgs e)

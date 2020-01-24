@@ -56,10 +56,16 @@
             this.dateTime_fact_date = new System.Windows.Forms.DateTimePicker();
             this.textBox_primech = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.печатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.печатьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_kol_days)).BeginInit();
             this.panel1_bck.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -69,7 +75,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 25F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(249, 8);
+            this.label1.Location = new System.Drawing.Point(249, -6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(652, 61);
             this.label1.TabIndex = 0;
@@ -177,7 +183,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(286, 564);
+            this.label8.Location = new System.Drawing.Point(287, 564);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(279, 25);
             this.label8.TabIndex = 1;
@@ -295,8 +301,8 @@
             this.label_plan_date.AutoSize = true;
             this.label_plan_date.BackColor = System.Drawing.Color.Transparent;
             this.label_plan_date.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label_plan_date.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label_plan_date.Location = new System.Drawing.Point(288, 589);
+            this.label_plan_date.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label_plan_date.Location = new System.Drawing.Point(620, 564);
             this.label_plan_date.Name = "label_plan_date";
             this.label_plan_date.Size = new System.Drawing.Size(0, 25);
             this.label_plan_date.TabIndex = 8;
@@ -325,9 +331,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 1);
+            this.panel1.Location = new System.Drawing.Point(3, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(901, 78);
+            this.panel1.Size = new System.Drawing.Size(901, 51);
             this.panel1.TabIndex = 10;
             // 
             // label10
@@ -361,6 +367,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Enabled = false;
             this.label11.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label11.Location = new System.Drawing.Point(287, 621);
@@ -371,6 +378,7 @@
             // 
             // dateTime_fact_date
             // 
+            this.dateTime_fact_date.Enabled = false;
             this.dateTime_fact_date.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
             this.dateTime_fact_date.Location = new System.Drawing.Point(452, 619);
             this.dateTime_fact_date.Name = "dateTime_fact_date";
@@ -379,6 +387,7 @@
             // 
             // textBox_primech
             // 
+            this.textBox_primech.Enabled = false;
             this.textBox_primech.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
             this.textBox_primech.Location = new System.Drawing.Point(452, 674);
             this.textBox_primech.Name = "textBox_primech";
@@ -393,6 +402,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Enabled = false;
             this.label12.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label12.Location = new System.Drawing.Point(286, 674);
@@ -400,6 +410,49 @@
             this.label12.Size = new System.Drawing.Size(117, 25);
             this.label12.TabIndex = 1;
             this.label12.Text = "Примечание";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.файлToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(905, 28);
+            this.menuStrip1.TabIndex = 13;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // файлToolStripMenuItem
+            // 
+            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.печатьToolStripMenuItem});
+            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
+            this.файлToolStripMenuItem.Text = "Файл";
+            // 
+            // печатьToolStripMenuItem
+            // 
+            this.печатьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.сохранитьToolStripMenuItem,
+            this.печатьToolStripMenuItem1});
+            this.печатьToolStripMenuItem.Name = "печатьToolStripMenuItem";
+            this.печатьToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.печатьToolStripMenuItem.Text = "Печать";
+           // this.печатьToolStripMenuItem.Click += new System.EventHandler(this.ПечатьToolStripMenuItem_Click);
+            // 
+            // сохранитьToolStripMenuItem
+            // 
+            this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.сохранитьToolStripMenuItem.Text = "сохранить";
+            this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.СохранитьToolStripMenuItem_Click);
+            // 
+            // печатьToolStripMenuItem1
+            // 
+            this.печатьToolStripMenuItem1.Name = "печатьToolStripMenuItem1";
+            this.печатьToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.печатьToolStripMenuItem1.Text = "печать";
+            this.печатьToolStripMenuItem1.Click += new System.EventHandler(this.ПечатьToolStripMenuItem1_Click);
             // 
             // Add_Dogovora
             // 
@@ -431,7 +484,9 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Add_Dogovora";
             this.Text = "Добавление договора";
@@ -440,6 +495,8 @@
             this.panel1_bck.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,5 +531,10 @@
         private System.Windows.Forms.DateTimePicker dateTime_fact_date;
         private System.Windows.Forms.TextBox textBox_primech;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem печатьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem печатьToolStripMenuItem1;
     }
 }
