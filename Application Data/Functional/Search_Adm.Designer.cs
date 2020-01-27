@@ -51,8 +51,6 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.button_start_serach = new System.Windows.Forms.Button();
-            this.rich = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grid_search_adm)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -64,39 +62,42 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label1.Location = new System.Drawing.Point(8, 131);
+            this.label1.Location = new System.Drawing.Point(6, 100);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 20);
+            this.label1.Size = new System.Drawing.Size(89, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Объект поиска\r\n";
             // 
             // combo_objectSearch
             // 
             this.combo_objectSearch.FormattingEnabled = true;
-            this.combo_objectSearch.Location = new System.Drawing.Point(12, 154);
+            this.combo_objectSearch.Location = new System.Drawing.Point(9, 118);
+            this.combo_objectSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.combo_objectSearch.Name = "combo_objectSearch";
-            this.combo_objectSearch.Size = new System.Drawing.Size(178, 25);
+            this.combo_objectSearch.Size = new System.Drawing.Size(134, 21);
             this.combo_objectSearch.TabIndex = 1;
             this.combo_objectSearch.SelectedIndexChanged += new System.EventHandler(this.Combo_objectSearch_SelectedIndexChanged);
-            this.combo_objectSearch.TextChanged += new System.EventHandler(this.Combo_objectSearch_TextChanged);
-            // 
+           
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label2.Location = new System.Drawing.Point(228, 131);
+            this.label2.Location = new System.Drawing.Point(171, 100);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 20);
+            this.label2.Size = new System.Drawing.Size(102, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "Критерий поиска";
             // 
             // combo_criterion
             // 
             this.combo_criterion.FormattingEnabled = true;
-            this.combo_criterion.Location = new System.Drawing.Point(232, 154);
+            this.combo_criterion.Location = new System.Drawing.Point(174, 118);
+            this.combo_criterion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.combo_criterion.Name = "combo_criterion";
-            this.combo_criterion.Size = new System.Drawing.Size(268, 25);
+            this.combo_criterion.Size = new System.Drawing.Size(202, 21);
             this.combo_criterion.TabIndex = 1;
             // 
             // label3
@@ -104,9 +105,10 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label3.Location = new System.Drawing.Point(551, 131);
+            this.label3.Location = new System.Drawing.Point(413, 100);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 20);
+            this.label3.Size = new System.Drawing.Size(42, 15);
             this.label3.TabIndex = 0;
             this.label3.Text = "Поиск";
             // 
@@ -114,17 +116,19 @@
             // 
             this.grid_search_adm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_search_adm.GridColor = System.Drawing.SystemColors.Info;
-            this.grid_search_adm.Location = new System.Drawing.Point(1, 185);
+            this.grid_search_adm.Location = new System.Drawing.Point(1, 141);
+            this.grid_search_adm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grid_search_adm.Name = "grid_search_adm";
             this.grid_search_adm.RowTemplate.Height = 27;
-            this.grid_search_adm.Size = new System.Drawing.Size(499, 216);
+            this.grid_search_adm.Size = new System.Drawing.Size(661, 203);
             this.grid_search_adm.TabIndex = 2;
             // 
             // textBox_search
             // 
-            this.textBox_search.Location = new System.Drawing.Point(555, 154);
+            this.textBox_search.Location = new System.Drawing.Point(416, 118);
+            this.textBox_search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_search.Name = "textBox_search";
-            this.textBox_search.Size = new System.Drawing.Size(316, 25);
+            this.textBox_search.Size = new System.Drawing.Size(238, 22);
             this.textBox_search.TabIndex = 3;
             this.textBox_search.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
@@ -133,8 +137,9 @@
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(883, 93);
+            this.panel1.Size = new System.Drawing.Size(662, 80);
             this.panel1.TabIndex = 4;
             // 
             // label4
@@ -142,9 +147,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semilight", 25F);
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(379, 27);
+            this.label4.Location = new System.Drawing.Point(284, 21);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 57);
+            this.label4.Size = new System.Drawing.Size(113, 46);
             this.label4.TabIndex = 0;
             this.label4.Text = "Поиск";
             // 
@@ -173,7 +179,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(883, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(662, 27);
             this.bindingNavigator1.TabIndex = 5;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -189,7 +195,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(55, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 24);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
@@ -230,7 +236,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
@@ -262,32 +268,11 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // button_start_serach
-            // 
-            this.button_start_serach.Location = new System.Drawing.Point(1, 402);
-            this.button_start_serach.Name = "button_start_serach";
-            this.button_start_serach.Size = new System.Drawing.Size(882, 52);
-            this.button_start_serach.TabIndex = 1;
-            this.button_start_serach.Text = "Начать поиск";
-            this.button_start_serach.UseVisualStyleBackColor = true;
-            this.button_start_serach.Click += new System.EventHandler(this.Button_start_serach_Click);
-            // 
-            // rich
-            // 
-            this.rich.Location = new System.Drawing.Point(555, 194);
-            this.rich.Name = "rich";
-            this.rich.Size = new System.Drawing.Size(316, 193);
-            this.rich.TabIndex = 6;
-            this.rich.Text = "";
-            // 
             // Search_Adm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 450);
-            this.Controls.Add(this.rich);
-            this.Controls.Add(this.button_start_serach);
-            this.Controls.Add(this.bindingNavigator1);
+            this.ClientSize = new System.Drawing.Size(662, 344);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox_search);
             this.Controls.Add(this.grid_search_adm);
@@ -296,6 +281,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.combo_objectSearch);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.bindingNavigator1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Search_Adm";
             this.Text = "Search_Adm";
@@ -334,7 +321,5 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.Button button_start_serach;
-        private System.Windows.Forms.RichTextBox rich;
     }
 }

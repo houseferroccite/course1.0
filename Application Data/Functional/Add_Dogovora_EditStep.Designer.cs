@@ -66,18 +66,20 @@
             // textBox_notation
             // 
             this.textBox_notation.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
-            this.textBox_notation.Location = new System.Drawing.Point(417, 687);
+            this.textBox_notation.Location = new System.Drawing.Point(313, 525);
+            this.textBox_notation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_notation.Name = "textBox_notation";
-            this.textBox_notation.Size = new System.Drawing.Size(128, 32);
+            this.textBox_notation.Size = new System.Drawing.Size(97, 27);
             this.textBox_notation.TabIndex = 37;
             this.textBox_notation.Text = "Не закончен";
             // 
             // dateTime_fact_date
             // 
             this.dateTime_fact_date.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
-            this.dateTime_fact_date.Location = new System.Drawing.Point(468, 629);
+            this.dateTime_fact_date.Location = new System.Drawing.Point(351, 481);
+            this.dateTime_fact_date.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTime_fact_date.Name = "dateTime_fact_date";
-            this.dateTime_fact_date.Size = new System.Drawing.Size(368, 32);
+            this.dateTime_fact_date.Size = new System.Drawing.Size(277, 27);
             this.dateTime_fact_date.TabIndex = 36;
             // 
             // panel1
@@ -85,8 +87,9 @@
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(1, 1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(923, 86);
+            this.panel1.Size = new System.Drawing.Size(692, 66);
             this.panel1.TabIndex = 35;
             // 
             // label1
@@ -96,9 +99,10 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 25F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(11, 8);
+            this.label1.Location = new System.Drawing.Point(8, 6);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(900, 61);
+            this.label1.Size = new System.Drawing.Size(675, 47);
             this.label1.TabIndex = 0;
             this.label1.Text = "Корректировка договора и сдача в архив ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -107,9 +111,10 @@
             // 
             this.panel1_bck.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1_bck.Controls.Add(this.pictureBox1);
-            this.panel1_bck.Location = new System.Drawing.Point(1, 82);
+            this.panel1_bck.Location = new System.Drawing.Point(1, 63);
+            this.panel1_bck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1_bck.Name = "panel1_bck";
-            this.panel1_bck.Size = new System.Drawing.Size(248, 848);
+            this.panel1_bck.Size = new System.Drawing.Size(186, 648);
             this.panel1_bck.TabIndex = 34;
             // 
             // pictureBox1
@@ -117,8 +122,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(248, 848);
+            this.pictureBox1.Size = new System.Drawing.Size(186, 648);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -127,30 +133,31 @@
             // 
             this.label_plan_date.AutoSize = true;
             this.label_plan_date.BackColor = System.Drawing.Color.Transparent;
-            this.label_plan_date.Enabled = false;
             this.label_plan_date.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.label_plan_date.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label_plan_date.Location = new System.Drawing.Point(568, 572);
+            this.label_plan_date.Location = new System.Drawing.Point(426, 437);
+            this.label_plan_date.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_plan_date.Name = "label_plan_date";
-            this.label_plan_date.Size = new System.Drawing.Size(0, 25);
+            this.label_plan_date.Size = new System.Drawing.Size(0, 20);
             this.label_plan_date.TabIndex = 33;
             // 
             // button_save_Dog_end_arch
             // 
             this.button_save_Dog_end_arch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_save_Dog_end_arch.Font = new System.Drawing.Font("Segoe UI Semilight", 15F);
-            this.button_save_Dog_end_arch.Location = new System.Drawing.Point(283, 835);
+            this.button_save_Dog_end_arch.Location = new System.Drawing.Point(212, 639);
+            this.button_save_Dog_end_arch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_save_Dog_end_arch.Name = "button_save_Dog_end_arch";
-            this.button_save_Dog_end_arch.Size = new System.Drawing.Size(629, 60);
+            this.button_save_Dog_end_arch.Size = new System.Drawing.Size(472, 46);
             this.button_save_Dog_end_arch.TabIndex = 32;
             this.button_save_Dog_end_arch.Text = "Сохранить договор сдать в архив";
             this.button_save_Dog_end_arch.UseVisualStyleBackColor = true;
             // 
             // numeric_kol_days
             // 
-            this.numeric_kol_days.Enabled = false;
             this.numeric_kol_days.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
-            this.numeric_kol_days.Location = new System.Drawing.Point(295, 524);
+            this.numeric_kol_days.Location = new System.Drawing.Point(221, 401);
+            this.numeric_kol_days.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numeric_kol_days.Maximum = new decimal(new int[] {
             400,
             0,
@@ -162,7 +169,7 @@
             0,
             0});
             this.numeric_kol_days.Name = "numeric_kol_days";
-            this.numeric_kol_days.Size = new System.Drawing.Size(541, 32);
+            this.numeric_kol_days.Size = new System.Drawing.Size(406, 27);
             this.numeric_kol_days.TabIndex = 30;
             this.numeric_kol_days.Value = new decimal(new int[] {
             365,
@@ -172,60 +179,60 @@
             // 
             // dateTime_sostavl_dog
             // 
-            this.dateTime_sostavl_dog.Enabled = false;
             this.dateTime_sostavl_dog.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
-            this.dateTime_sostavl_dog.Location = new System.Drawing.Point(294, 382);
+            this.dateTime_sostavl_dog.Location = new System.Drawing.Point(220, 292);
+            this.dateTime_sostavl_dog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTime_sostavl_dog.Name = "dateTime_sostavl_dog";
-            this.dateTime_sostavl_dog.Size = new System.Drawing.Size(541, 32);
+            this.dateTime_sostavl_dog.Size = new System.Drawing.Size(407, 27);
             this.dateTime_sostavl_dog.TabIndex = 29;
             // 
             // comboBox_language_dog
             // 
-            this.comboBox_language_dog.Enabled = false;
             this.comboBox_language_dog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox_language_dog.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
             this.comboBox_language_dog.FormattingEnabled = true;
-            this.comboBox_language_dog.Location = new System.Drawing.Point(294, 450);
+            this.comboBox_language_dog.Location = new System.Drawing.Point(220, 344);
+            this.comboBox_language_dog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox_language_dog.Name = "comboBox_language_dog";
-            this.comboBox_language_dog.Size = new System.Drawing.Size(541, 33);
+            this.comboBox_language_dog.Size = new System.Drawing.Size(407, 28);
             this.comboBox_language_dog.TabIndex = 27;
             // 
             // combo_Curator
             // 
-            this.combo_Curator.Enabled = false;
             this.combo_Curator.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
             this.combo_Curator.FormattingEnabled = true;
-            this.combo_Curator.Location = new System.Drawing.Point(292, 187);
+            this.combo_Curator.Location = new System.Drawing.Point(219, 143);
+            this.combo_Curator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.combo_Curator.Name = "combo_Curator";
-            this.combo_Curator.Size = new System.Drawing.Size(543, 33);
+            this.combo_Curator.Size = new System.Drawing.Size(408, 28);
             this.combo_Curator.TabIndex = 26;
             // 
             // comboBox_sotryd_dog
             // 
-            this.comboBox_sotryd_dog.Enabled = false;
             this.comboBox_sotryd_dog.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
             this.comboBox_sotryd_dog.FormattingEnabled = true;
-            this.comboBox_sotryd_dog.Location = new System.Drawing.Point(292, 251);
+            this.comboBox_sotryd_dog.Location = new System.Drawing.Point(219, 192);
+            this.comboBox_sotryd_dog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox_sotryd_dog.Name = "comboBox_sotryd_dog";
-            this.comboBox_sotryd_dog.Size = new System.Drawing.Size(543, 33);
+            this.comboBox_sotryd_dog.Size = new System.Drawing.Size(408, 28);
             this.comboBox_sotryd_dog.TabIndex = 28;
             // 
             // textBox_FIO_Client
             // 
-            this.textBox_FIO_Client.Enabled = false;
             this.textBox_FIO_Client.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
-            this.textBox_FIO_Client.Location = new System.Drawing.Point(292, 316);
+            this.textBox_FIO_Client.Location = new System.Drawing.Point(219, 242);
+            this.textBox_FIO_Client.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_FIO_Client.Name = "textBox_FIO_Client";
-            this.textBox_FIO_Client.Size = new System.Drawing.Size(543, 32);
+            this.textBox_FIO_Client.Size = new System.Drawing.Size(408, 27);
             this.textBox_FIO_Client.TabIndex = 25;
             // 
             // textBox_Dog
             // 
-            this.textBox_Dog.Enabled = false;
             this.textBox_Dog.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
-            this.textBox_Dog.Location = new System.Drawing.Point(292, 120);
+            this.textBox_Dog.Location = new System.Drawing.Point(219, 92);
+            this.textBox_Dog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_Dog.Name = "textBox_Dog";
-            this.textBox_Dog.Size = new System.Drawing.Size(543, 32);
+            this.textBox_Dog.Size = new System.Drawing.Size(408, 27);
             this.textBox_Dog.TabIndex = 24;
             // 
             // label8
@@ -235,12 +242,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Enabled = false;
             this.label8.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(289, 572);
+            this.label8.Location = new System.Drawing.Point(217, 437);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(279, 25);
+            this.label8.Size = new System.Drawing.Size(218, 20);
             this.label8.TabIndex = 22;
             this.label8.Text = "Плановая дата сдачи договора -\r\n";
             // 
@@ -251,12 +258,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Enabled = false;
             this.label7.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(290, 496);
+            this.label7.Location = new System.Drawing.Point(218, 379);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(359, 25);
+            this.label7.Size = new System.Drawing.Size(284, 20);
             this.label7.TabIndex = 21;
             this.label7.Text = "Количество дней разработки приложения";
             // 
@@ -269,9 +276,10 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(294, 690);
+            this.label12.Location = new System.Drawing.Point(220, 528);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(117, 25);
+            this.label12.Size = new System.Drawing.Size(92, 20);
             this.label12.TabIndex = 20;
             this.label12.Text = "Примечание";
             // 
@@ -282,12 +290,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Enabled = false;
             this.label5.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(289, 354);
+            this.label5.Location = new System.Drawing.Point(217, 271);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(238, 25);
+            this.label5.Size = new System.Drawing.Size(187, 20);
             this.label5.TabIndex = 19;
             this.label5.Text = "Дата составления договора";
             // 
@@ -295,12 +303,12 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Enabled = false;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(842, 524);
+            this.label9.Location = new System.Drawing.Point(632, 401);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 25);
+            this.label9.Size = new System.Drawing.Size(41, 20);
             this.label9.TabIndex = 18;
             this.label9.Text = "дней";
             // 
@@ -311,12 +319,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Enabled = false;
             this.label4.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(287, 288);
+            this.label4.Location = new System.Drawing.Point(215, 220);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 25);
+            this.label4.Size = new System.Drawing.Size(99, 20);
             this.label4.TabIndex = 17;
             this.label4.Text = "ФИО Клиента";
             // 
@@ -327,12 +335,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Enabled = false;
             this.label10.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(287, 159);
+            this.label10.Location = new System.Drawing.Point(215, 122);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(161, 25);
+            this.label10.Size = new System.Drawing.Size(124, 20);
             this.label10.TabIndex = 16;
             this.label10.Text = "Куратор договора";
             // 
@@ -343,12 +351,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Enabled = false;
             this.label3.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(287, 223);
+            this.label3.Location = new System.Drawing.Point(215, 171);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 25);
+            this.label3.Size = new System.Drawing.Size(77, 20);
             this.label3.TabIndex = 15;
             this.label3.Text = "Сотрудник";
             // 
@@ -360,13 +368,13 @@
             this.label2.AutoEllipsis = true;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Enabled = false;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(285, 92);
+            this.label2.Location = new System.Drawing.Point(214, 70);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 25);
+            this.label2.Size = new System.Drawing.Size(134, 20);
             this.label2.TabIndex = 14;
             this.label2.Text = "Название договора";
             // 
@@ -379,9 +387,10 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(292, 629);
+            this.label11.Location = new System.Drawing.Point(219, 481);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(158, 25);
+            this.label11.Size = new System.Drawing.Size(128, 20);
             this.label11.TabIndex = 23;
             this.label11.Text = "Фактическая дата ";
             // 
@@ -392,21 +401,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Enabled = false;
             this.label6.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(287, 422);
+            this.label6.Location = new System.Drawing.Point(215, 323);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(258, 25);
+            this.label6.Size = new System.Drawing.Size(204, 20);
             this.label6.TabIndex = 13;
             this.label6.Text = "Язык разработки приложения";
             // 
             // textBox_fine
             // 
             this.textBox_fine.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
-            this.textBox_fine.Location = new System.Drawing.Point(688, 687);
+            this.textBox_fine.Location = new System.Drawing.Point(516, 525);
+            this.textBox_fine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_fine.Name = "textBox_fine";
-            this.textBox_fine.Size = new System.Drawing.Size(128, 32);
+            this.textBox_fine.Size = new System.Drawing.Size(97, 27);
             this.textBox_fine.TabIndex = 39;
             this.textBox_fine.Text = "Не имеется";
             // 
@@ -419,17 +429,18 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(603, 690);
+            this.label13.Location = new System.Drawing.Point(452, 528);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(79, 25);
+            this.label13.Size = new System.Drawing.Size(63, 20);
             this.label13.TabIndex = 38;
             this.label13.Text = "Штрафы";
             // 
             // Add_Dogovora_EditStep
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 925);
+            this.ClientSize = new System.Drawing.Size(693, 707);
             this.Controls.Add(this.textBox_fine);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.textBox_notation);
@@ -456,6 +467,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label6);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Add_Dogovora_EditStep";
             this.Text = "Add_Dogovora_EditStep";
             this.panel1.ResumeLayout(false);

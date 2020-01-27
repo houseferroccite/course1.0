@@ -78,8 +78,6 @@ namespace course1._0.Application_Data.Functional
                 dateTime_sostavl_dog.Enabled = true;
             }
         }
-
-       
         private void СохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             StreamWriter writer = new StreamWriter("C:\\test_print.txt"); //указываем путь к файлу
@@ -105,17 +103,7 @@ namespace course1._0.Application_Data.Functional
 
         private void TextBox_Dog_TextChanged(object sender, EventArgs e)
         {
-            //using (myCreatePO_projectEntities2 context = new myCreatePO_projectEntities2())
-            //{
-            //    var q1 = from D in context.Т_Договора
-            //             select D.Название_договора;
-            //    //var q2 = from Z in q1
-            //    //         select Z.
-            //    if(textBox_Dog.Text == q1.ToString())
-            //    {
-            //        MessageBox.Show($"Договор с названием - {textBox_Dog.Text} уже емеется в базе. ");
-            //    }
-            //}
+
         }
     }
 }

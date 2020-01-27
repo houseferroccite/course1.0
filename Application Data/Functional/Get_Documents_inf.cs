@@ -19,28 +19,22 @@ namespace course1._0.Application_Data.Functional
         {
             InitializeComponent();
         }
-        DataTable dt,dt2;
-        private void Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        DataTable dt,dt2,dt3;
+        
         private void DateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             GridViewStyles.ChancheViewGrid(grid_info_all);
-            grid_info_all.Rows.Clear();
-            grid_info_all.Columns.Clear();
-            //    BindingSource bs_dog = new BindingSource();
-            //    bs_dog.DataSource = dt;
-            //    dt = DB.LoadTable($"SELECT Т_Договора.Название_договора as aa, Т_Договора.Дата составления as bb, Т_Договора.Штраф as yy,  Т_Договора.Примечание as zz   FROM Т_Договора  WHERE [Дата составления] = {dateTimePicker1.Value}", "Т_Договора");
-            //    grid_info_all.DataSource = dt;
+            BindingSource bs_dog = new BindingSource();
+            bs_dog.DataSource = dt;
+            dt3 = DB.LoadTable($"SELECT Т_Договора.Название_договора, Т_Договора.Дата составления, Т_Договора.Штраф,  Т_Договора.Примечание  FROM Т_Договора  WHERE [Дата составления] = {dateTimePicker1.Value}", "Tип_дог");
+            grid_info_all.DataSource = dt3;
             using (myCreatePO_projectEntities context = new myCreatePO_projectEntities())
             {
                 var x = from z in context.Т_Договора
                         select z;
                 var t = from r in x
                         where r.Дата_составления == dateTimePicker1.Value
-                        select r.ToString();
+                        select r;
                 grid_info_all.DataSource = t.ToList();
             }
         }

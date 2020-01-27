@@ -61,7 +61,7 @@ namespace Course_project.Методы
                 combo.DisplayMember = displayField;
                 combo.ValueMember = valueField;
 
-                //MessageBox.Show("Произошла ошибка, но не переживайте и продолжате работу дальше!", "tttt", buttons: MessageBoxButtons.OK);
+               
         }
         public static void ComboSettings(BindingSource bs, string displayField, string valueField, ComboBox combo, DataTable dt, string field)
         {

@@ -23,58 +23,42 @@ namespace course1._0.Application_Data.Functional
         DataTable dt,dtQuery;
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
-            //using (myCreatePO_projectEntities context = new myCreatePO_projectEntities())
-            //{
-            //    var q = from z in context.Т_Клиент.Include(combo_criterion.Text)
-            //            where z.ФИО.StartsWith(textBox_search.Text)
-            //            select z;
-            //    grid_search_adm.DataSource = q.ToList();
-            //}
+            
+            using (myCreatePO_projectEntities context = new myCreatePO_projectEntities())
+            {
+                var q = from z in context.Т_Клиент.Include(combo_criterion.Text)
+                        where z.ФИО.StartsWith(textBox_search.Text)
+                        select z;
+                grid_search_adm.DataSource = q.ToList();
+            }
         }
-        
-        
         private void Search_Adm_Load(object sender, EventArgs e)
         {
             bindingNavigator1.Visible = false;
 
             //Запрос для вытягивания списка таблиц
             dtQuery = DB.LoadTable($"select TABLE_NAME  from INFORMATION_SCHEMA.TABLES", "Load_all_tables");
-        }
-
-        private void Combo_objectSearch_TextChanged(object sender, EventArgs e)
-        {
-            //combo_criterion.Items.Clear();
-            //string s = "Model1.edmx" + combo_criterion.Text;
-            //Type x = Type.GetType(s);
-            //PropertyInfo[] prop = x.GetProperties();
-            //string[] g = (from z in prop
-            //              select z.Name).ToArray();
-            //combo_criterion.Items.AddRange(g);
-        }
-
-        private void Button_start_serach_Click(object sender, EventArgs e)
-        {
             //Заполнение combobox списком таблиц
             QuicklyChangeDB.ComboSettings(dtQuery, "TABLE_NAME", "TABLE_NAME", combo_objectSearch);
-
-            rich.Text += " -----> " + combo_objectSearch.Text.ToString();
-            ////dt = DB.LoadTable($"select * from {combo_obj}", combo_obj.ToString());
-            //grid_search_adm.DataSource = dt;
         }
+
         string s = "";
         private void Combo_objectSearch_SelectedIndexChanged(object sender, EventArgs e)
         {
             s = combo_objectSearch.Text;
+            combo_criterion.Items.Clear();
             //rich.Text = $" bs_all.DataSource = DB.ds.Tables[$"{ s} "]";
-            try{
-                
+            try
+            { 
                 dt = DB.LoadTable($"select * from {s}", s);
-                QuicklyChangeDB.ComboSettings(dt, $"{s}", $"{s}", combo_criterion);
-                combo_criterion.Items.Clear();
+                for (int i = 0; i < dt.Columns.Count; i++)
+                {
+                    combo_criterion.Items.Add(dt.Columns[i].ColumnName);
+                }
             }
             catch
             {
-                MessageBox.Show($" bs_all.DataSource = DB.ds.Tables[${ s}];");
+                
             }
         }
     }

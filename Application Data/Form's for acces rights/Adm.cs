@@ -32,6 +32,7 @@ namespace course1._0.Forms
         }
 
         DataSet ds = new DataSet();
+        DataTable dt1;
 
         public BindingSource bs_Client = new BindingSource();
         public BindingSource bs_Dol = new BindingSource();
@@ -176,12 +177,13 @@ namespace course1._0.Forms
                 grid_for_all.Columns.Remove("Del");
                 grid_for_all.Columns.Remove("ChangeContext");
             }
-            //For Tables Т_Договора
-            bs_Dog.DataSource = DB.ds.Tables["Т_Договора"];
-            grid_for_all.DataSource = bs_Dog;
-            //GridViewStyles.GridClear(grid_for_all);
-            bindingNavigator1.BindingSource = bs_Dog;
-            
+            dt1 = DB.LoadTable($"SELECT Т_Договора.Название_договора, Т_Договора.[Дата составления], Т_Договора.Фактическа_Дата, Т_Договора.Штраф,  Т_Договора.Примечание  FROM Т_Договора", "Tип_дог");
+            //QuicklyChangeDB.GridVisible(new string[] { "" }, grid_for_all);
+            ////For Tables Т_Договора
+            //bs_Dog.DataSource = DB.ds.Tables["Т_Договора"];
+            grid_for_all.DataSource = dt1;
+            //bindingNavigator1.BindingSource = bs_Dog;
+
         }
 
         private void buttonArhDog_Click(object sender, EventArgs e)
