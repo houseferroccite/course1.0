@@ -216,6 +216,7 @@
             this.Controls.Add(this.button_add_user);
             this.MaximizeBox = false;
             this.Name = "Add_user";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Форма добавления пользователя";
             this.Load += new System.EventHandler(this.Add_user_Load);
             this.panel1.ResumeLayout(false);

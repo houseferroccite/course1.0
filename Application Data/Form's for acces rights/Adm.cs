@@ -164,7 +164,7 @@ namespace course1._0.Forms
             grid_for_all.DataSource = bs_sotr;
             //GridViewStyles.GridClear(grid_for_all);
             bindingNavigator1.BindingSource = bs_sotr;
-            QuicklyChangeDB.GridVisible(new string[] { "ID_сотрудника", "ID_Куратора","Должность" }, grid_for_all);
+            //QuicklyChangeDB.GridVisible(new string[] { "ID_сотрудника", "ID_Куратора"}, grid_for_all);
         }
 
         private void buttonDog_Click(object sender, EventArgs e)
@@ -201,6 +201,11 @@ namespace course1._0.Forms
 
         private void button_work_Click(object sender, EventArgs e)
         {
+            using (myCreatePO_projectEntities context = new myCreatePO_projectEntities())
+            {
+                var x = from z in context.Т_ВидыРабот
+                        select z.Нормо_часов;
+            }
             if (grid_for_all.Columns.Contains("Information") && grid_for_all.Columns.Contains("Del") && grid_for_all.Columns.Contains("ChangeContext"))
             {
                 grid_for_all.Columns.Remove("Information");
@@ -240,10 +245,13 @@ namespace course1._0.Forms
             //}
         }
 
+        delegate int Summa(int stoim, int kol);
         private void button_arch_prim_Click(object sender, EventArgs e)
         {
+            
             using (myCreatePO_projectEntities context = new myCreatePO_projectEntities())
             {
+               
                 var q1 = from D in context.Т_Договора
                          select D.Название_договора;
 

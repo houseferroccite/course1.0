@@ -1,4 +1,5 @@
-﻿using Microsoft.Office.Interop.Excel;
+﻿using Course_project;
+using Microsoft.Office.Interop.Excel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,15 +21,9 @@ namespace course1._0.Application_Data.Analytics
 
         private void Button1_Click(object sender, EventArgs e)
         {
-           using(myCreatePO_projectEntities context = new myCreatePO_projectEntities())
-            {
-                Diag_language.DataSource = context.Т_Языки_прог.ToList();
-                Diag_language.Series["Т_Языки_прог"].XValueMember = "КодЯзыка";
-                Diag_language.Series["Т_Языки_прог"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int64;
-                Diag_language.Series["Т_Языки_прог"].YValueMembers = "Востребованность";
-                Diag_language.Series["Т_Языки_прог"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            DataView dv = new DataView(DB.ds.Tables["Т_Языки_прог"]);
+            Diag_language.Series["Т_Языки_прог"].Points.DataBindXY(dv,"Язык",dv, "Востребованность");
 
-            }
         }
     }
 }

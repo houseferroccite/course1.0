@@ -95,9 +95,10 @@
             this.button_otch_Adm.Dock = System.Windows.Forms.DockStyle.Top;
             this.button_otch_Adm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_otch_Adm.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_otch_Adm.Location = new System.Drawing.Point(3, 21);
+            this.button_otch_Adm.Location = new System.Drawing.Point(2, 17);
+            this.button_otch_Adm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_otch_Adm.Name = "button_otch_Adm";
-            this.button_otch_Adm.Size = new System.Drawing.Size(577, 74);
+            this.button_otch_Adm.Size = new System.Drawing.Size(433, 57);
             this.button_otch_Adm.TabIndex = 8;
             this.button_otch_Adm.Text = "Отчет по клиентуре\r\n";
             this.button_otch_Adm.UseVisualStyleBackColor = true;
@@ -108,9 +109,10 @@
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.button3.Location = new System.Drawing.Point(0, 45);
+            this.button3.Location = new System.Drawing.Point(0, 34);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(379, 50);
+            this.button3.Size = new System.Drawing.Size(284, 38);
             this.button3.TabIndex = 1;
             this.button3.Text = "Список кураторов";
             this.button3.UseVisualStyleBackColor = true;
@@ -121,9 +123,10 @@
             this.button_client.Dock = System.Windows.Forms.DockStyle.Top;
             this.button_client.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_client.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.button_client.Location = new System.Drawing.Point(0, 147);
+            this.button_client.Location = new System.Drawing.Point(0, 112);
+            this.button_client.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_client.Name = "button_client";
-            this.button_client.Size = new System.Drawing.Size(379, 54);
+            this.button_client.Size = new System.Drawing.Size(284, 41);
             this.button_client.TabIndex = 0;
             this.button_client.Text = "Список клиентов";
             this.button_client.UseVisualStyleBackColor = true;
@@ -134,9 +137,10 @@
             this.buttonArhDog.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonArhDog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonArhDog.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.buttonArhDog.Location = new System.Drawing.Point(0, 95);
+            this.buttonArhDog.Location = new System.Drawing.Point(0, 72);
+            this.buttonArhDog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonArhDog.Name = "buttonArhDog";
-            this.buttonArhDog.Size = new System.Drawing.Size(379, 52);
+            this.buttonArhDog.Size = new System.Drawing.Size(284, 40);
             this.buttonArhDog.TabIndex = 0;
             this.buttonArhDog.Text = "Список архивированных договоров";
             this.buttonArhDog.UseVisualStyleBackColor = true;
@@ -147,9 +151,10 @@
             this.button_Dol.Dock = System.Windows.Forms.DockStyle.Top;
             this.button_Dol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Dol.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.button_Dol.Location = new System.Drawing.Point(0, 201);
+            this.button_Dol.Location = new System.Drawing.Point(0, 153);
+            this.button_Dol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_Dol.Name = "button_Dol";
-            this.button_Dol.Size = new System.Drawing.Size(379, 51);
+            this.button_Dol.Size = new System.Drawing.Size(284, 39);
             this.button_Dol.TabIndex = 0;
             this.button_Dol.Text = "Список должностей";
             this.button_Dol.UseVisualStyleBackColor = true;
@@ -160,9 +165,10 @@
             this.button_Sotr.Dock = System.Windows.Forms.DockStyle.Top;
             this.button_Sotr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Sotr.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.button_Sotr.Location = new System.Drawing.Point(0, 357);
+            this.button_Sotr.Location = new System.Drawing.Point(0, 273);
+            this.button_Sotr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_Sotr.Name = "button_Sotr";
-            this.button_Sotr.Size = new System.Drawing.Size(379, 46);
+            this.button_Sotr.Size = new System.Drawing.Size(284, 35);
             this.button_Sotr.TabIndex = 0;
             this.button_Sotr.Text = "Список сотрудников";
             this.button_Sotr.UseVisualStyleBackColor = true;
@@ -173,9 +179,10 @@
             this.button_work.Dock = System.Windows.Forms.DockStyle.Top;
             this.button_work.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_work.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.button_work.Location = new System.Drawing.Point(0, 252);
+            this.button_work.Location = new System.Drawing.Point(0, 192);
+            this.button_work.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_work.Name = "button_work";
-            this.button_work.Size = new System.Drawing.Size(379, 52);
+            this.button_work.Size = new System.Drawing.Size(284, 40);
             this.button_work.TabIndex = 0;
             this.button_work.Text = "Список видов работ";
             this.button_work.UseVisualStyleBackColor = true;
@@ -186,9 +193,10 @@
             this.button_language.Dock = System.Windows.Forms.DockStyle.Top;
             this.button_language.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_language.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.button_language.Location = new System.Drawing.Point(0, 304);
+            this.button_language.Location = new System.Drawing.Point(0, 232);
+            this.button_language.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_language.Name = "button_language";
-            this.button_language.Size = new System.Drawing.Size(379, 53);
+            this.button_language.Size = new System.Drawing.Size(284, 41);
             this.button_language.TabIndex = 0;
             this.button_language.Text = "Список языков программирования";
             this.button_language.UseVisualStyleBackColor = true;
@@ -200,8 +208,9 @@
             this.buttonDog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDog.Font = new System.Drawing.Font("Segoe UI", 7.8F);
             this.buttonDog.Location = new System.Drawing.Point(0, 0);
+            this.buttonDog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDog.Name = "buttonDog";
-            this.buttonDog.Size = new System.Drawing.Size(379, 45);
+            this.buttonDog.Size = new System.Drawing.Size(284, 34);
             this.buttonDog.TabIndex = 0;
             this.buttonDog.Text = "Список договоров";
             this.buttonDog.UseVisualStyleBackColor = true;
@@ -238,7 +247,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1422, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1071, 27);
             this.bindingNavigator1.TabIndex = 3;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -254,7 +263,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(55, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 24);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
@@ -295,7 +304,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
@@ -331,34 +340,39 @@
             // 
             this.grid_for_all.BackgroundColor = System.Drawing.SystemColors.Info;
             this.grid_for_all.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_for_all.Location = new System.Drawing.Point(0, 528);
+            this.grid_for_all.Location = new System.Drawing.Point(0, 404);
+            this.grid_for_all.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grid_for_all.Name = "grid_for_all";
             this.grid_for_all.RowTemplate.Height = 27;
-            this.grid_for_all.Size = new System.Drawing.Size(1421, 204);
+            this.grid_for_all.Size = new System.Drawing.Size(1066, 156);
             this.grid_for_all.TabIndex = 8;
             this.grid_for_all.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_for_all_CellClick_1);
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.button_otch_Adm);
-            this.groupBox1.Location = new System.Drawing.Point(554, 108);
+            this.groupBox1.Location = new System.Drawing.Point(414, 80);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(583, 252);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.groupBox1.Size = new System.Drawing.Size(437, 193);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Формирование отчетов";
             // 
             // button4
             // 
+            this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(3, 179);
+            this.button4.Location = new System.Drawing.Point(2, 138);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(577, 68);
+            this.button4.Size = new System.Drawing.Size(433, 52);
             this.button4.TabIndex = 12;
             this.button4.Text = "Формирование договора";
             this.button4.UseVisualStyleBackColor = true;
@@ -369,9 +383,10 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(3, 95);
+            this.button1.Location = new System.Drawing.Point(2, 74);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(577, 84);
+            this.button1.Size = new System.Drawing.Size(433, 64);
             this.button1.TabIndex = 11;
             this.button1.Text = "Отчет по сотрудникам о их навыках в программировании \r\n(Используемый язык програм" +
     "мирования)";
@@ -382,9 +397,10 @@
             // 
             this.button_search_butn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_search_butn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_search_butn.Location = new System.Drawing.Point(1145, 465);
+            this.button_search_butn.Location = new System.Drawing.Point(859, 356);
+            this.button_search_butn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_search_butn.Name = "button_search_butn";
-            this.button_search_butn.Size = new System.Drawing.Size(269, 50);
+            this.button_search_butn.Size = new System.Drawing.Size(202, 38);
             this.button_search_butn.TabIndex = 10;
             this.button_search_butn.Text = "Поиск";
             this.button_search_butn.UseVisualStyleBackColor = true;
@@ -396,17 +412,19 @@
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1421, 104);
+            this.panel1.Size = new System.Drawing.Size(1066, 80);
             this.panel1.TabIndex = 11;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.AliceBlue;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(15, 28);
+            this.pictureBox3.Location = new System.Drawing.Point(11, 21);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(54, 55);
+            this.pictureBox3.Size = new System.Drawing.Size(40, 42);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 19;
             this.pictureBox3.TabStop = false;
@@ -416,9 +434,10 @@
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 25F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(122, 1);
+            this.label1.Location = new System.Drawing.Point(92, 1);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1292, 104);
+            this.label1.Size = new System.Drawing.Size(969, 80);
             this.label1.TabIndex = 0;
             this.label1.Text = "Администратор";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -426,9 +445,10 @@
             // check_serach_activate
             // 
             this.check_serach_activate.Font = new System.Drawing.Font("Segoe UI Semilight", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.check_serach_activate.Location = new System.Drawing.Point(1148, 436);
+            this.check_serach_activate.Location = new System.Drawing.Point(861, 333);
+            this.check_serach_activate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.check_serach_activate.Name = "check_serach_activate";
-            this.check_serach_activate.Size = new System.Drawing.Size(266, 29);
+            this.check_serach_activate.Size = new System.Drawing.Size(200, 22);
             this.check_serach_activate.TabIndex = 14;
             this.check_serach_activate.Text = "Активировать поиск";
             this.check_serach_activate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -439,9 +459,10 @@
             // 
             this.button_get_documents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_get_documents.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_get_documents.Location = new System.Drawing.Point(1145, 360);
+            this.button_get_documents.Location = new System.Drawing.Point(859, 275);
+            this.button_get_documents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_get_documents.Name = "button_get_documents";
-            this.button_get_documents.Size = new System.Drawing.Size(269, 68);
+            this.button_get_documents.Size = new System.Drawing.Size(202, 52);
             this.button_get_documents.TabIndex = 12;
             this.button_get_documents.Text = "Документация\r\n";
             this.button_get_documents.UseVisualStyleBackColor = true;
@@ -451,9 +472,10 @@
             // 
             this.button_create_Dog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_create_Dog.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_create_Dog.Location = new System.Drawing.Point(4, 10);
+            this.button_create_Dog.Location = new System.Drawing.Point(3, 8);
+            this.button_create_Dog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_create_Dog.Name = "button_create_Dog";
-            this.button_create_Dog.Size = new System.Drawing.Size(266, 101);
+            this.button_create_Dog.Size = new System.Drawing.Size(200, 77);
             this.button_create_Dog.TabIndex = 12;
             this.button_create_Dog.Text = "Сформировать договор для нового клиента";
             this.button_create_Dog.UseVisualStyleBackColor = true;
@@ -464,17 +486,19 @@
             this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(0, 103);
+            this.panel2.Location = new System.Drawing.Point(0, 79);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(165, 425);
+            this.panel2.Size = new System.Drawing.Size(124, 325);
             this.panel2.TabIndex = 13;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(2, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(159, 418);
+            this.pictureBox2.Size = new System.Drawing.Size(119, 320);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -482,8 +506,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(75, 38);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -497,18 +522,20 @@
             this.panel3.Controls.Add(this.buttonArhDog);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.buttonDog);
-            this.panel3.Location = new System.Drawing.Point(169, 108);
+            this.panel3.Location = new System.Drawing.Point(127, 83);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(379, 414);
+            this.panel3.Size = new System.Drawing.Size(284, 317);
             this.panel3.TabIndex = 15;
             // 
             // button2_Arch_edit
             // 
             this.button2_Arch_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2_Arch_edit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2_Arch_edit.Location = new System.Drawing.Point(4, 117);
+            this.button2_Arch_edit.Location = new System.Drawing.Point(3, 89);
+            this.button2_Arch_edit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2_Arch_edit.Name = "button2_Arch_edit";
-            this.button2_Arch_edit.Size = new System.Drawing.Size(266, 114);
+            this.button2_Arch_edit.Size = new System.Drawing.Size(200, 87);
             this.button2_Arch_edit.TabIndex = 12;
             this.button2_Arch_edit.Text = "Корректировка договора и сдача в архив\r\n";
             this.button2_Arch_edit.UseVisualStyleBackColor = true;
@@ -518,17 +545,20 @@
             // 
             this.panel4.Controls.Add(this.button_create_Dog);
             this.panel4.Controls.Add(this.button2_Arch_edit);
-            this.panel4.Location = new System.Drawing.Point(1145, 119);
+            this.panel4.Location = new System.Drawing.Point(859, 91);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(273, 236);
+            this.panel4.Size = new System.Drawing.Size(205, 180);
             this.panel4.TabIndex = 16;
             // 
             // group_analytics
             // 
             this.group_analytics.Controls.Add(this.button_diag_analytics);
-            this.group_analytics.Location = new System.Drawing.Point(562, 366);
+            this.group_analytics.Location = new System.Drawing.Point(422, 280);
+            this.group_analytics.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.group_analytics.Name = "group_analytics";
-            this.group_analytics.Size = new System.Drawing.Size(575, 155);
+            this.group_analytics.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.group_analytics.Size = new System.Drawing.Size(431, 119);
             this.group_analytics.TabIndex = 17;
             this.group_analytics.TabStop = false;
             this.group_analytics.Text = "Аналитика";
@@ -536,9 +566,10 @@
             // button_diag_analytics
             // 
             this.button_diag_analytics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_diag_analytics.Location = new System.Drawing.Point(97, 24);
+            this.button_diag_analytics.Location = new System.Drawing.Point(73, 18);
+            this.button_diag_analytics.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_diag_analytics.Name = "button_diag_analytics";
-            this.button_diag_analytics.Size = new System.Drawing.Size(376, 52);
+            this.button_diag_analytics.Size = new System.Drawing.Size(282, 40);
             this.button_diag_analytics.TabIndex = 2;
             this.button_diag_analytics.Text = "Анализ языков программирования";
             this.button_diag_analytics.UseVisualStyleBackColor = true;
@@ -550,10 +581,8 @@
             // 
             // Adm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1422, 742);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1071, 564);
             this.Controls.Add(this.button_search_butn);
             this.Controls.Add(this.group_analytics);
             this.Controls.Add(this.check_serach_activate);
@@ -566,10 +595,12 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bindingNavigator1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Adm";
+            this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Учетная запись зайдена через аккаунт - { Adm }";
+            this.Text = "Администратор";
             this.Load += new System.EventHandler(this.Adm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
