@@ -43,29 +43,26 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button_see_letter_imprisoned_Dogovorov = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNav_guest)).BeginInit();
             this.bindingNav_guest.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button_price_create_proc
             // 
-            this.button_price_create_proc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.button_price_create_proc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_price_create_proc.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.button_price_create_proc.Location = new System.Drawing.Point(16, 24);
+            this.button_price_create_proc.Location = new System.Drawing.Point(372, 225);
+            this.button_price_create_proc.Margin = new System.Windows.Forms.Padding(2);
             this.button_price_create_proc.Name = "button_price_create_proc";
-            this.button_price_create_proc.Size = new System.Drawing.Size(955, 64);
+            this.button_price_create_proc.Size = new System.Drawing.Size(751, 76);
             this.button_price_create_proc.TabIndex = 0;
-            this.button_price_create_proc.Text = "Ценовая политика этапов разработки";
+            this.button_price_create_proc.Text = "Ознакомиться с ценовой политикой компании\r\n";
             this.button_price_create_proc.UseVisualStyleBackColor = true;
             this.button_price_create_proc.Click += new System.EventHandler(this.button__Click);
             // 
@@ -94,7 +91,7 @@
             this.bindingNav_guest.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNav_guest.Name = "bindingNav_guest";
             this.bindingNav_guest.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNav_guest.Size = new System.Drawing.Size(989, 27);
+            this.bindingNav_guest.Size = new System.Drawing.Size(1123, 27);
             this.bindingNav_guest.TabIndex = 1;
             this.bindingNav_guest.Text = "bindingNavigator1";
             // 
@@ -110,7 +107,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(61, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 24);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
@@ -151,7 +148,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
@@ -183,30 +180,18 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.button_see_letter_imprisoned_Dogovorov);
-            this.groupBox1.Controls.Add(this.button_price_create_proc);
-            this.groupBox1.Location = new System.Drawing.Point(0, 106);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(977, 166);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Формирование отчета";
-            // 
             // button_see_letter_imprisoned_Dogovorov
             // 
             this.button_see_letter_imprisoned_Dogovorov.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button_see_letter_imprisoned_Dogovorov.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_see_letter_imprisoned_Dogovorov.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.button_see_letter_imprisoned_Dogovorov.Location = new System.Drawing.Point(16, 94);
+            this.button_see_letter_imprisoned_Dogovorov.Location = new System.Drawing.Point(372, 124);
+            this.button_see_letter_imprisoned_Dogovorov.Margin = new System.Windows.Forms.Padding(2);
             this.button_see_letter_imprisoned_Dogovorov.Name = "button_see_letter_imprisoned_Dogovorov";
-            this.button_see_letter_imprisoned_Dogovorov.Size = new System.Drawing.Size(955, 60);
+            this.button_see_letter_imprisoned_Dogovorov.Size = new System.Drawing.Size(751, 76);
             this.button_see_letter_imprisoned_Dogovorov.TabIndex = 1;
-            this.button_see_letter_imprisoned_Dogovorov.Text = "Просмотр ранее заключенных договоров";
+            this.button_see_letter_imprisoned_Dogovorov.Text = "О компании";
             this.button_see_letter_imprisoned_Dogovorov.UseVisualStyleBackColor = true;
             this.button_see_letter_imprisoned_Dogovorov.Click += new System.EventHandler(this.button_see_letter_imprisoned_Dogovorov_Click);
             // 
@@ -214,9 +199,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(104, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(885, 100);
+            this.panel1.Size = new System.Drawing.Size(1129, 76);
             this.panel1.TabIndex = 3;
             // 
             // label1
@@ -224,40 +210,43 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 25F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(308, 27);
+            this.label1.Location = new System.Drawing.Point(449, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(400, 57);
+            this.label1.Size = new System.Drawing.Size(320, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "Здравствуйте, Гость!";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -3);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 80);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(106, 103);
+            this.pictureBox1.Size = new System.Drawing.Size(368, 259);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // Guest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(989, 399);
+            this.ClientSize = new System.Drawing.Size(1123, 342);
+            this.Controls.Add(this.button_price_create_proc);
+            this.Controls.Add(this.button_see_letter_imprisoned_Dogovorov);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bindingNav_guest);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Guest";
-            this.Text = "Гостевая";
+            this.Text = "Гость";
             this.Load += new System.EventHandler(this.Guest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNav_guest)).EndInit();
             this.bindingNav_guest.ResumeLayout(false);
             this.bindingNav_guest.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -281,7 +270,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button_see_letter_imprisoned_Dogovorov;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;

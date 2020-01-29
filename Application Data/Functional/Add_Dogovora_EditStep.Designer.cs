@@ -67,7 +67,7 @@
             // 
             this.textBox_notation.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
             this.textBox_notation.Location = new System.Drawing.Point(313, 525);
-            this.textBox_notation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_notation.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_notation.Name = "textBox_notation";
             this.textBox_notation.Size = new System.Drawing.Size(97, 27);
             this.textBox_notation.TabIndex = 37;
@@ -77,7 +77,7 @@
             // 
             this.dateTime_fact_date.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
             this.dateTime_fact_date.Location = new System.Drawing.Point(351, 481);
-            this.dateTime_fact_date.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTime_fact_date.Margin = new System.Windows.Forms.Padding(2);
             this.dateTime_fact_date.Name = "dateTime_fact_date";
             this.dateTime_fact_date.Size = new System.Drawing.Size(277, 27);
             this.dateTime_fact_date.TabIndex = 36;
@@ -87,7 +87,7 @@
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(1, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(692, 66);
             this.panel1.TabIndex = 35;
@@ -112,7 +112,7 @@
             this.panel1_bck.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1_bck.Controls.Add(this.pictureBox1);
             this.panel1_bck.Location = new System.Drawing.Point(1, 63);
-            this.panel1_bck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1_bck.Margin = new System.Windows.Forms.Padding(2);
             this.panel1_bck.Name = "panel1_bck";
             this.panel1_bck.Size = new System.Drawing.Size(186, 648);
             this.panel1_bck.TabIndex = 34;
@@ -122,7 +122,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(186, 648);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -145,19 +145,20 @@
             // 
             this.button_save_Dog_end_arch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_save_Dog_end_arch.Font = new System.Drawing.Font("Segoe UI Semilight", 15F);
-            this.button_save_Dog_end_arch.Location = new System.Drawing.Point(212, 639);
-            this.button_save_Dog_end_arch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_save_Dog_end_arch.Location = new System.Drawing.Point(201, 580);
+            this.button_save_Dog_end_arch.Margin = new System.Windows.Forms.Padding(2);
             this.button_save_Dog_end_arch.Name = "button_save_Dog_end_arch";
             this.button_save_Dog_end_arch.Size = new System.Drawing.Size(472, 46);
             this.button_save_Dog_end_arch.TabIndex = 32;
-            this.button_save_Dog_end_arch.Text = "Сохранить договор сдать в архив";
+            this.button_save_Dog_end_arch.Text = "Архивировать";
             this.button_save_Dog_end_arch.UseVisualStyleBackColor = true;
+            this.button_save_Dog_end_arch.Click += new System.EventHandler(this.Button_save_Dog_end_arch_Click);
             // 
             // numeric_kol_days
             // 
             this.numeric_kol_days.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
             this.numeric_kol_days.Location = new System.Drawing.Point(221, 401);
-            this.numeric_kol_days.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numeric_kol_days.Margin = new System.Windows.Forms.Padding(2);
             this.numeric_kol_days.Maximum = new decimal(new int[] {
             400,
             0,
@@ -169,6 +170,7 @@
             0,
             0});
             this.numeric_kol_days.Name = "numeric_kol_days";
+            this.numeric_kol_days.ReadOnly = true;
             this.numeric_kol_days.Size = new System.Drawing.Size(406, 27);
             this.numeric_kol_days.TabIndex = 30;
             this.numeric_kol_days.Value = new decimal(new int[] {
@@ -181,7 +183,7 @@
             // 
             this.dateTime_sostavl_dog.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
             this.dateTime_sostavl_dog.Location = new System.Drawing.Point(220, 292);
-            this.dateTime_sostavl_dog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTime_sostavl_dog.Margin = new System.Windows.Forms.Padding(2);
             this.dateTime_sostavl_dog.Name = "dateTime_sostavl_dog";
             this.dateTime_sostavl_dog.Size = new System.Drawing.Size(407, 27);
             this.dateTime_sostavl_dog.TabIndex = 29;
@@ -192,7 +194,7 @@
             this.comboBox_language_dog.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
             this.comboBox_language_dog.FormattingEnabled = true;
             this.comboBox_language_dog.Location = new System.Drawing.Point(220, 344);
-            this.comboBox_language_dog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox_language_dog.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_language_dog.Name = "comboBox_language_dog";
             this.comboBox_language_dog.Size = new System.Drawing.Size(407, 28);
             this.comboBox_language_dog.TabIndex = 27;
@@ -202,7 +204,7 @@
             this.combo_Curator.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
             this.combo_Curator.FormattingEnabled = true;
             this.combo_Curator.Location = new System.Drawing.Point(219, 143);
-            this.combo_Curator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.combo_Curator.Margin = new System.Windows.Forms.Padding(2);
             this.combo_Curator.Name = "combo_Curator";
             this.combo_Curator.Size = new System.Drawing.Size(408, 28);
             this.combo_Curator.TabIndex = 26;
@@ -212,7 +214,7 @@
             this.comboBox_sotryd_dog.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
             this.comboBox_sotryd_dog.FormattingEnabled = true;
             this.comboBox_sotryd_dog.Location = new System.Drawing.Point(219, 192);
-            this.comboBox_sotryd_dog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox_sotryd_dog.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_sotryd_dog.Name = "comboBox_sotryd_dog";
             this.comboBox_sotryd_dog.Size = new System.Drawing.Size(408, 28);
             this.comboBox_sotryd_dog.TabIndex = 28;
@@ -221,8 +223,9 @@
             // 
             this.textBox_FIO_Client.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
             this.textBox_FIO_Client.Location = new System.Drawing.Point(219, 242);
-            this.textBox_FIO_Client.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_FIO_Client.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_FIO_Client.Name = "textBox_FIO_Client";
+            this.textBox_FIO_Client.ReadOnly = true;
             this.textBox_FIO_Client.Size = new System.Drawing.Size(408, 27);
             this.textBox_FIO_Client.TabIndex = 25;
             // 
@@ -230,8 +233,9 @@
             // 
             this.textBox_Dog.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
             this.textBox_Dog.Location = new System.Drawing.Point(219, 92);
-            this.textBox_Dog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_Dog.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Dog.Name = "textBox_Dog";
+            this.textBox_Dog.ReadOnly = true;
             this.textBox_Dog.Size = new System.Drawing.Size(408, 27);
             this.textBox_Dog.TabIndex = 24;
             // 
@@ -414,7 +418,7 @@
             // 
             this.textBox_fine.Font = new System.Drawing.Font("Segoe UI Semilight", 11F);
             this.textBox_fine.Location = new System.Drawing.Point(516, 525);
-            this.textBox_fine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_fine.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_fine.Name = "textBox_fine";
             this.textBox_fine.Size = new System.Drawing.Size(97, 27);
             this.textBox_fine.TabIndex = 39;
@@ -440,7 +444,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 707);
+            this.ClientSize = new System.Drawing.Size(693, 635);
             this.Controls.Add(this.textBox_fine);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.textBox_notation);
@@ -467,9 +471,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label6);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Add_Dogovora_EditStep";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Dogovora_EditStep";
+            this.Load += new System.EventHandler(this.Add_Dogovora_EditStep_Load);
             this.panel1.ResumeLayout(false);
             this.panel1_bck.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

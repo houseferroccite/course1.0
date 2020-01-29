@@ -23,13 +23,13 @@ namespace Course_project
         {
             //Install connection
             conn = new SqlConnection(connectionString);
-
+            
             //Load all Tables DB
             AddTableInDS();
         }
         public static DataTable LoadTable(string query, string nameTable)
         {
-
+            
             SqlCommand command = conn.CreateCommand();
             command.CommandText = query;
             SqlDataAdapter adapter = new SqlDataAdapter(command);
@@ -38,8 +38,26 @@ namespace Course_project
             {
                 adapter.Fill(ds, nameTable);
             }
+            
             return ds.Tables[nameTable];
         }
+
+        public static DataTable UpdateTable(string query, string tablename)
+        {
+
+            SqlCommand command = conn.CreateCommand();
+            command.CommandText = query;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+            if (ds.Tables.Contains(tablename))
+            {
+                ds.Tables[tablename].Clear();
+            }
+            adapter.Fill(ds, tablename);
+
+            return ds.Tables[tablename];
+        }
+
         public static void UpdateTable(SqlCommand command, string tablename)
         {
             SqlDataAdapter adapter = new SqlDataAdapter(command);
@@ -48,6 +66,7 @@ namespace Course_project
                 ds.Tables[tablename].Clear();
             }
             adapter.Fill(ds, tablename);
+
         }
         //Load list tables in DataSet
         public static void AddTableInDS()
@@ -55,7 +74,7 @@ namespace Course_project
             SqlCommand commnad = conn.CreateCommand();
             commnad.CommandType = CommandType.StoredProcedure;
             commnad.CommandText = "LoadAllTables";
-
+           
             //Load list tables our BD
             UpdateTable(commnad, "tables");
 
@@ -70,6 +89,7 @@ namespace Course_project
                     adapter.Fill(ds, tableName);
                 }
             }
+            
         }
 
         //INSERT COMMAND

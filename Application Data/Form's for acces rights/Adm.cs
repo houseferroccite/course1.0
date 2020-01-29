@@ -52,7 +52,7 @@ namespace course1._0.Forms
 
         private void Adm_Load(object sender, EventArgs e)
         {
-            
+            buttonDog_Click( sender,  e);
             button_search_butn.Visible = false;
             bs_login.DataSource = DB.ds.Tables["Login"];
             GridViewStyles.ChancheViewGrid(grid_for_all);
@@ -161,11 +161,8 @@ namespace course1._0.Forms
                 grid_for_all.Columns.Remove("Del");
             }
             //For Tables Т_Штат сотрудников
-            bs_sotr.DataSource = DB.ds.Tables["Т_Штат сотрудников"];
+            bs_sotr.DataSource = DB.LoadTable($"SELECT [Т_Штат_сотрудников].ФИО, Т_Языки_прог.Язык, Т_Должность.Должность FROM Т_Должность INNER JOIN(Т_Языки_прог INNER JOIN[Т_Штат_сотрудников] ON(Т_Языки_прог.КодЯзыка = [Т_Штат_сотрудников].[Язык программирования]) AND(Т_Языки_прог.КодЯзыка = [Т_Штат_сотрудников].[Язык программирования])) ON Т_Должность.ID_Должности = [Т_Штат_сотрудников].Должность","T_Sotrud");
             grid_for_all.DataSource = bs_sotr;
-            //GridViewStyles.GridClear(grid_for_all);
-            bindingNavigator1.BindingSource = bs_sotr;
-            //QuicklyChangeDB.GridVisible(new string[] { "ID_сотрудника", "ID_Куратора"}, grid_for_all);
         }
 
         private void buttonDog_Click(object sender, EventArgs e)
@@ -178,12 +175,7 @@ namespace course1._0.Forms
                 grid_for_all.Columns.Remove("ChangeContext");
             }
             dt1 = DB.LoadTable($"SELECT Т_Договора.Название_договора, Т_Договора.[Дата составления], Т_Договора.Фактическа_Дата, Т_Договора.Штраф,  Т_Договора.Примечание  FROM Т_Договора", "Tип_дог");
-            //QuicklyChangeDB.GridVisible(new string[] { "" }, grid_for_all);
-            ////For Tables Т_Договора
-            //bs_Dog.DataSource = DB.ds.Tables["Т_Договора"];
             grid_for_all.DataSource = dt1;
-            //bindingNavigator1.BindingSource = bs_Dog;
-
         }
 
         private void buttonArhDog_Click(object sender, EventArgs e)
@@ -219,7 +211,7 @@ namespace course1._0.Forms
             grid_for_all.DataSource = bs_work;
             
             bindingNavigator1.BindingSource = bs_work;
-            QuicklyChangeDB.GridVisible(new string[] { "ID_Работы" }, grid_for_all);
+            QuicklyChangeDB.GridVisible(new string[] { "ID_Работы", "Сумма_руб" }, grid_for_all);
         }
 
         Т_Должность g;
@@ -247,7 +239,6 @@ namespace course1._0.Forms
             //}
         }
 
-        delegate int Summa(int stoim, int kol);
         private void button_arch_prim_Click(object sender, EventArgs e)
         {
             
@@ -364,19 +355,19 @@ namespace course1._0.Forms
 
             QuicklyChangeDB.GridVisible(new string[] { "ID_Куратора","Должность" }, grid_for_all);
         }
+        //word.Application appW = new word.Application();
+        //word.Document documentW = appW.Documents.Open(Directory.GetCurrentDirectory() + @"\111.doc");
 
+        //documentW.Bookmarks["Текущая_дата_составления"].Range.Text = DateTime.Today.ToShortDateString().ToString();
+        //documentW.Bookmarks["Город"].Range.Text = "Челябинск";
+
+        //        documentW.Bookmarks["День_заключения_договора"].Range.Text = DateTime.Today.Day.ToString();
+        //        documentW.Bookmarks["Год_заключения_договора"].Range.Text = DateTime.Today.Year.ToString();
+
+        //        appW.Visible = true;
         private void button4_Click(object sender, EventArgs e)
         {
-                word.Application appW = new word.Application();
-                word.Document documentW = appW.Documents.Open(Directory.GetCurrentDirectory()+@"\111.doc");
-
-                documentW.Bookmarks["Текущая_дата_составления"].Range.Text = DateTime.Today.ToShortDateString().ToString();
-                documentW.Bookmarks["Город"].Range.Text = "Челябинск";
-
-                documentW.Bookmarks["День_заключения_договора"].Range.Text = DateTime.Today.Day.ToString();
-                documentW.Bookmarks["Год_заключения_договора"].Range.Text = DateTime.Today.Year.ToString();
-
-                appW.Visible = true;
+               
         }
 
         private void button_otch_Click(object sender, EventArgs e)
@@ -495,8 +486,8 @@ namespace course1._0.Forms
 
         private void Button_create_Dog_Click(object sender, EventArgs e)
         {
-            Add_Dogovora add_Dog = new Add_Dogovora();
-            add_Dog.Show();
+            Arch_Dogovora dd = new Arch_Dogovora();
+            dd.ShowDialog();
         }
 
     }

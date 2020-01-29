@@ -121,10 +121,11 @@ namespace course1._0
             tip.SetToolTip(text_password, "Обязательное поле для ввода!");
 
             BindingSource bs_login = new BindingSource();
-            bs_login.DataSource = dt;
-            dt = DB.LoadTable("SELECT Login.ID_rights as aa, Login.Access_rights as bb FROM Login", "Login");
             
+            dt = DB.LoadTable("SELECT * FROM Login", "Login");
+            bs_login.DataSource = dt;
             QuicklyChangeDB.ComboSettings(dt, "Access_rights", "ID_rights", combo_login);
         }
     }
 }
+//"SELECT Login.ID_rights as aa, Login.Access_rights as bb FROM Login"

@@ -52,14 +52,7 @@ namespace course1._0.Forms
 
         private void Check_see_password_CheckedChanged(object sender, EventArgs e)
         {
-            if (check_see_password.Checked)
-            {
-                text_Add_password.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                text_Add_password.UseSystemPasswordChar = true;
-            }
+            
         }
 
         private void Add_user_Load(object sender, EventArgs e)

@@ -26,9 +26,14 @@ namespace course1._0.Application_Data.Functional
             
             using (myCreatePO_projectEntities context = new myCreatePO_projectEntities())
             {
-                var q = from z in context.Т_Клиент.Include(combo_criterion.Text)
+                var q = from z in context.Т_Клиент
                         where z.ФИО.StartsWith(textBox_search.Text)
-                        select z;
+                        select new
+                        {
+                            z.ФИО,
+                            z.Адрес,
+                            z.Фото
+                        };
                 grid_search_adm.DataSource = q.ToList();
             }
         }

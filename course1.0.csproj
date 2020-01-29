@@ -93,11 +93,23 @@
     <Compile Include="Application Data\Functional\Add_Dogovora_EditStep.Designer.cs">
       <DependentUpon>Add_Dogovora_EditStep.cs</DependentUpon>
     </Compile>
+    <Compile Include="Application Data\Functional\Arch_Dogovora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application Data\Functional\Arch_Dogovora.Designer.cs">
+      <DependentUpon>Arch_Dogovora.cs</DependentUpon>
+    </Compile>
     <Compile Include="Application Data\Functional\Get_Documents_inf.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Application Data\Functional\Get_Documents_inf.Designer.cs">
       <DependentUpon>Get_Documents_inf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application Data\Functional\INFO_company.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application Data\Functional\INFO_company.Designer.cs">
+      <DependentUpon>INFO_company.cs</DependentUpon>
     </Compile>
     <Compile Include="Application Data\Functional\Search_Adm.cs">
       <SubType>Form</SubType>
@@ -140,12 +152,6 @@
     </Compile>
     <Compile Include="Application Data\Functional\Inform.Designer.cs">
       <DependentUpon>Inform.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Application Data\Functional\Seen_Dogovor_guest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Application Data\Functional\Seen_Dogovor_guest.Designer.cs">
-      <DependentUpon>Seen_Dogovor_guest.cs</DependentUpon>
     </Compile>
     <Compile Include="Application Data\Functional\test_insert_position.cs">
       <SubType>Form</SubType>
@@ -226,8 +232,14 @@
     <EmbeddedResource Include="Application Data\Functional\Add_Dogovora_EditStep.resx">
       <DependentUpon>Add_Dogovora_EditStep.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Application Data\Functional\Arch_Dogovora.resx">
+      <DependentUpon>Arch_Dogovora.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Application Data\Functional\Get_Documents_inf.resx">
       <DependentUpon>Get_Documents_inf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application Data\Functional\INFO_company.resx">
+      <DependentUpon>INFO_company.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Application Data\Functional\Search_Adm.resx">
       <DependentUpon>Search_Adm.cs</DependentUpon>
@@ -249,9 +261,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Application Data\Functional\Inform.resx">
       <DependentUpon>Inform.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application Data\Functional\Seen_Dogovor_guest.resx">
-      <DependentUpon>Seen_Dogovor_guest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Application Data\Functional\test_insert_position.resx">
       <DependentUpon>test_insert_position.cs</DependentUpon>

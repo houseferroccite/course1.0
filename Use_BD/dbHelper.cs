@@ -100,7 +100,7 @@ namespace Course_project.Method_s_for_quicly_use_DB
             //Run command and get value ID insert types
             return DB.changeData("InsertClient", "Т_Клиент", listParams, new Parametrs_command("@ID", SqlDbType.Int));
         }
-        public  static int InsertDogovor(string Название_договора,string Куратор_проекта,string ФИО_Клиента, DateTime Дата_составления, string Язык_разработки, int Колво_дней, DateTime Плановая_дата)
+        public  static int InsertDogovor(string Название_договора,string Куратор_проекта,string ФИО_Клиента, DateTime Дата_составления, string Язык_разработки, int Колво_дней, DateTime Плановая_дата, DateTime Фактическая_дата, string Штраф, string Примечание )
         {
             //Fill list input parametrs
             List<Parametrs_command> listParams = new List<Parametrs_command>
@@ -111,10 +111,14 @@ namespace Course_project.Method_s_for_quicly_use_DB
                 new Parametrs_command("@Дата_составления", Дата_составления),
                 new Parametrs_command("@Язык_разработки", Язык_разработки),
                 new Parametrs_command("@Колво_дней",Колво_дней),
-                new Parametrs_command("@Плановая_дата",Плановая_дата)
+                new Parametrs_command("@Плановая_дата",Плановая_дата),
+                new Parametrs_command("@Фактическа_Дата",Фактическая_дата),
+                new Parametrs_command("@Штраф",Штраф),
+                new Parametrs_command("@Примечание",Примечание)
+
             };
             //Run command and get value ID insert types
-            return DB.changeData("InsertDogovora", "Т_Договора", listParams, new Parametrs_command("@ID", SqlDbType.Int));
+            return DB.changeData("Insert_Dogovora", "Т_Договора", listParams, new Parametrs_command("@ID", SqlDbType.Int));
         }
 
         public static void UpdateClient(string ФИО, int IDClienta, string Адрес, string Реквизиты_банка,string filePhoto)

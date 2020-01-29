@@ -1,4 +1,5 @@
 ﻿using Course_project;
+using Course_project.Method_s_for_quicly_use_DB;
 using Course_project.Методы;
 using System;
 using System.Collections.Generic;
@@ -29,16 +30,7 @@ namespace course1._0.Application_Data.Functional
             this.bs_curator = bs_curator;
             this.bs_language = bs_language;
         }
-        private void button_save_Dog_MouseMove(object sender, MouseEventArgs e)
-        {
-            button_save_Dog.BackColor = Color.FromArgb(60, 179, 113);
-        }
-
-        private void button_save_Dog_MouseLeave(object sender, EventArgs e)
-        {
-            button_save_Dog.BackColor = Color.FromKnownColor(KnownColor.Control);
-        }
-
+        
         private void button_insert_Dog_MouseMove(object sender, MouseEventArgs e)
         {
             button_insert_Dog.BackColor = Color.FromArgb(0, 191, 255);
@@ -91,6 +83,17 @@ namespace course1._0.Application_Data.Functional
             PrintDocument PrintD = new PrintDocument();
             PrintD.DocumentName = "C:\\test_print.txt";
             PrintD.Print();
+        }
+
+        private void Button_save_Dog_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_insert_Dog_Click(object sender, EventArgs e)
+        {
+            dbHelper.InsertDogovor(textBox_Dog.Text, combo_Curator.Text, textBox_FIO_Client.Text, dateTime_sostavl_dog.Value, comboBox_language_dog.Text, 
+                (int)numeric_kol_days.Value, DateTime.Parse(label_plan_date.Text), dateTime_fact_date.Value, textBox_Straf.Text,textBox_primech.Text);
         }
 
         private void numeric_kol_days_ValueChanged(object sender, EventArgs e)

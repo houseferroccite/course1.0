@@ -31,7 +31,7 @@ namespace course1._0.Application_Data.Form_s_for_acces_rights
 
         }
         excel.Application app = new excel.Application();
-        public DataGridViewButtonColumn del, inf;
+        public DataGridViewButtonColumn inf;
         BindingSource bs_Client = new BindingSource();
         BindingSource bs_Dol = new BindingSource();
         BindingSource bs_language = new BindingSource();
@@ -39,6 +39,7 @@ namespace course1._0.Application_Data.Form_s_for_acces_rights
         BindingSource bs_Dog = new BindingSource();
         BindingSource bs_archDog = new BindingSource();
         BindingSource bs_work = new BindingSource();
+        DataTable dt1;
         private void button_change_position_Click(object sender, EventArgs e)
         {
             test_insert_position t = new test_insert_position(bs_Dol);
@@ -47,18 +48,14 @@ namespace course1._0.Application_Data.Form_s_for_acces_rights
 
         private void button_see_client_Click_1(object sender, EventArgs e)
         {
-            GridViewStyles.ButtonGrid("Information", "Inf", "Подробнее", grid_curator, inf);
-            
             if (grid_curator.Columns.Contains("Del"))
             {
                 grid_curator.Columns.Remove("Del");
-
             }
             //For Tables T_Client
             DataTable dt = DB.ds.Tables["Т_Клиент"];
             bs_Client.DataSource = DB.ds.Tables["Т_Клиент"];
             grid_curator.DataSource = bs_Client;
-            //GridViewStyles.GridClear(grid_for_all);
             bindingNavigator1.BindingSource = bs_Client;
             QuicklyChangeDB.GridVisible(new string[] { "Фото", "ID_Клиента" }, grid_curator);
         }
@@ -105,8 +102,6 @@ namespace course1._0.Application_Data.Form_s_for_acces_rights
 
         private void button2_Click(object sender, EventArgs e)
         {
-            GridViewStyles.ButtonGrid("Del", "удалить", "Удалить", grid_curator, del);
-
             if (grid_curator.Columns.Contains("Information"))
             {
                 grid_curator.Columns.Remove("Information");
@@ -122,10 +117,12 @@ namespace course1._0.Application_Data.Form_s_for_acces_rights
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (grid_curator.Columns.Contains("Information") && grid_curator.Columns.Contains("Del"))
+            GridViewStyles.ChancheViewGrid(grid_curator);
+            if (grid_curator.Columns.Contains("Information") && grid_curator.Columns.Contains("Del") && grid_curator.Columns.Contains("ChangeContext"))
             {
                 grid_curator.Columns.Remove("Information");
                 grid_curator.Columns.Remove("Del");
+                grid_curator.Columns.Remove("ChangeContext");
             }
             //For Tables Т_Языки_прог
 
@@ -143,54 +140,56 @@ namespace course1._0.Application_Data.Form_s_for_acces_rights
                 grid_curator.Columns.Remove("Del");
             }
             //For Tables Т_Штат сотрудников
-            bs_sotr.DataSource = DB.ds.Tables["Т_Штат сотрудников"];
+            bs_sotr.DataSource = DB.LoadTable($"SELECT [Т_Штат_сотрудников].ФИО, Т_Языки_прог.Язык, Т_Должность.Должность FROM Т_Должность INNER JOIN(Т_Языки_прог INNER JOIN[Т_Штат_сотрудников] ON(Т_Языки_прог.КодЯзыка = [Т_Штат_сотрудников].[Язык программирования]) AND(Т_Языки_прог.КодЯзыка = [Т_Штат_сотрудников].[Язык программирования])) ON Т_Должность.ID_Должности = [Т_Штат_сотрудников].Должность", "T_Sot");
             grid_curator.DataSource = bs_sotr;
-            //GridViewStyles.GridClear(grid_for_all);
-            bindingNavigator1.BindingSource = bs_sotr;
-            QuicklyChangeDB.GridVisible(new string[] { "ID_сотрудника", "ID_Куратора", "Должность" }, grid_curator);
         }
 
         private void button_Dog_Cur_Click(object sender, EventArgs e)
         {
-            if (grid_curator.Columns.Contains("Information") && grid_curator.Columns.Contains("Del"))
+            GridViewStyles.ChancheViewGrid(grid_curator);
+            if (grid_curator.Columns.Contains("Information") && grid_curator.Columns.Contains("Del") && grid_curator.Columns.Contains("ChangeContext"))
             {
                 grid_curator.Columns.Remove("Information");
                 grid_curator.Columns.Remove("Del");
+                grid_curator.Columns.Remove("ChangeContext");
             }
-            //For Tables Т_Договора
-            bs_Dog.DataSource = DB.ds.Tables["Т_Договора"];
-            grid_curator.DataSource = bs_Dog;
-            //GridViewStyles.GridClear(grid_for_all);
-            bindingNavigator1.BindingSource = bs_Dog;
+            dt1 = DB.LoadTable($"SELECT Т_Договора.Название_договора, Т_Договора.[Дата составления], Т_Договора.Фактическа_Дата, Т_Договора.Штраф,  Т_Договора.Примечание  FROM Т_Договора", "Tип_дог");
+            grid_curator.DataSource = dt1;
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            if (grid_curator.Columns.Contains("Information") && grid_curator.Columns.Contains("Del"))
-            {
-                grid_curator.Columns.Remove("Information");
-                grid_curator.Columns.Remove("Del");
-            }
-            //For Tables Т_Договора Архив
-            bs_archDog.DataSource = DB.ds.Tables["Т_Договора Архив"];
-            grid_curator.DataSource = bs_archDog;
-            //GridViewStyles.GridClear(grid_for_all);
-            bindingNavigator1.BindingSource = bs_archDog;
+        //    if (grid_curator.Columns.Contains("Information") && grid_curator.Columns.Contains("Del"))
+        //    {
+        //        grid_curator.Columns.Remove("Information");
+        //        grid_curator.Columns.Remove("Del");
+        //    }
+        //    //For Tables Т_Договора Архив
+        //    bs_archDog.DataSource = DB.ds.Tables["Т_Договора Архив"];
+        //    grid_curator.DataSource = bs_archDog;
+        //    //GridViewStyles.GridClear(grid_for_all);
+        //    bindingNavigator1.BindingSource = bs_archDog;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (grid_curator.Columns.Contains("Information") && grid_curator.Columns.Contains("Del"))
+            using (myCreatePO_projectEntities context = new myCreatePO_projectEntities())
+            {
+                var x = from z in context.Т_ВидыРабот
+                        select z.Нормо_часов;
+            }
+            if (grid_curator.Columns.Contains("Information") && grid_curator.Columns.Contains("Del") && grid_curator.Columns.Contains("ChangeContext"))
             {
                 grid_curator.Columns.Remove("Information");
                 grid_curator.Columns.Remove("Del");
+                grid_curator.Columns.Remove("ChangeContext");
             }
             //For Tables Т_Договора Архив
             bs_work.DataSource = DB.ds.Tables["Т_ВидыРабот"];
             grid_curator.DataSource = bs_work;
-            //GridViewStyles.GridClear(grid_for_all);
+
             bindingNavigator1.BindingSource = bs_work;
-            QuicklyChangeDB.GridVisible(new string[] { "ID_Работы" }, grid_curator);
+            QuicklyChangeDB.GridVisible(new string[] { "ID_Работы", "Сумма_руб" }, grid_curator);
         }
 
         private void button_del_client_Click(object sender, EventArgs e)
@@ -210,6 +209,18 @@ namespace course1._0.Application_Data.Form_s_for_acces_rights
                 button_search_butn.Visible = false;
                 check_serach_activate.FlatAppearance.BorderColor = SystemColors.Desktop;
             }
+        }
+
+        private void Button_search_butn_Click(object sender, EventArgs e)
+        {
+            Search_Adm search_Adm = new Search_Adm();
+            search_Adm.ShowDialog();
+        }
+
+        private void Curator_Load(object sender, EventArgs e)
+        {
+            GridViewStyles.ChancheViewGrid(grid_curator);
+            button_see_client_Click_1(sender, e);
         }
 
         private void button_arch_count_prim_Curator_Click(object sender, EventArgs e)

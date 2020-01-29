@@ -55,14 +55,11 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.grid_for_all = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button_search_butn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.check_serach_activate = new System.Windows.Forms.CheckBox();
-            this.button_get_documents = new System.Windows.Forms.Button();
             this.button_create_Dog = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -79,7 +76,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.grid_for_all)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -96,11 +92,11 @@
             this.button_otch_Adm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_otch_Adm.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_otch_Adm.Location = new System.Drawing.Point(2, 17);
-            this.button_otch_Adm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_otch_Adm.Margin = new System.Windows.Forms.Padding(2);
             this.button_otch_Adm.Name = "button_otch_Adm";
             this.button_otch_Adm.Size = new System.Drawing.Size(433, 57);
             this.button_otch_Adm.TabIndex = 8;
-            this.button_otch_Adm.Text = "Отчет по клиентуре\r\n";
+            this.button_otch_Adm.Text = "Отчет по клиентам с действующими договорами";
             this.button_otch_Adm.UseVisualStyleBackColor = true;
             this.button_otch_Adm.Click += new System.EventHandler(this.button_otch_Click);
             // 
@@ -110,7 +106,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.button3.Location = new System.Drawing.Point(0, 34);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(284, 38);
             this.button3.TabIndex = 1;
@@ -124,7 +120,7 @@
             this.button_client.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_client.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.button_client.Location = new System.Drawing.Point(0, 112);
-            this.button_client.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_client.Margin = new System.Windows.Forms.Padding(2);
             this.button_client.Name = "button_client";
             this.button_client.Size = new System.Drawing.Size(284, 41);
             this.button_client.TabIndex = 0;
@@ -138,7 +134,7 @@
             this.buttonArhDog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonArhDog.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.buttonArhDog.Location = new System.Drawing.Point(0, 72);
-            this.buttonArhDog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonArhDog.Margin = new System.Windows.Forms.Padding(2);
             this.buttonArhDog.Name = "buttonArhDog";
             this.buttonArhDog.Size = new System.Drawing.Size(284, 40);
             this.buttonArhDog.TabIndex = 0;
@@ -152,7 +148,7 @@
             this.button_Dol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Dol.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.button_Dol.Location = new System.Drawing.Point(0, 153);
-            this.button_Dol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Dol.Margin = new System.Windows.Forms.Padding(2);
             this.button_Dol.Name = "button_Dol";
             this.button_Dol.Size = new System.Drawing.Size(284, 39);
             this.button_Dol.TabIndex = 0;
@@ -166,7 +162,7 @@
             this.button_Sotr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Sotr.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.button_Sotr.Location = new System.Drawing.Point(0, 273);
-            this.button_Sotr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Sotr.Margin = new System.Windows.Forms.Padding(2);
             this.button_Sotr.Name = "button_Sotr";
             this.button_Sotr.Size = new System.Drawing.Size(284, 35);
             this.button_Sotr.TabIndex = 0;
@@ -180,7 +176,7 @@
             this.button_work.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_work.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.button_work.Location = new System.Drawing.Point(0, 192);
-            this.button_work.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_work.Margin = new System.Windows.Forms.Padding(2);
             this.button_work.Name = "button_work";
             this.button_work.Size = new System.Drawing.Size(284, 40);
             this.button_work.TabIndex = 0;
@@ -194,7 +190,7 @@
             this.button_language.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_language.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.button_language.Location = new System.Drawing.Point(0, 232);
-            this.button_language.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_language.Margin = new System.Windows.Forms.Padding(2);
             this.button_language.Name = "button_language";
             this.button_language.Size = new System.Drawing.Size(284, 41);
             this.button_language.TabIndex = 0;
@@ -208,7 +204,7 @@
             this.buttonDog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDog.Font = new System.Drawing.Font("Segoe UI", 7.8F);
             this.buttonDog.Location = new System.Drawing.Point(0, 0);
-            this.buttonDog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDog.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDog.Name = "buttonDog";
             this.buttonDog.Size = new System.Drawing.Size(284, 34);
             this.buttonDog.TabIndex = 0;
@@ -341,7 +337,7 @@
             this.grid_for_all.BackgroundColor = System.Drawing.SystemColors.Info;
             this.grid_for_all.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_for_all.Location = new System.Drawing.Point(0, 404);
-            this.grid_for_all.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grid_for_all.Margin = new System.Windows.Forms.Padding(2);
             this.grid_for_all.Name = "grid_for_all";
             this.grid_for_all.RowTemplate.Height = 27;
             this.grid_for_all.Size = new System.Drawing.Size(1066, 156);
@@ -350,33 +346,17 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.button_otch_Adm);
             this.groupBox1.Location = new System.Drawing.Point(414, 80);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox1.Size = new System.Drawing.Size(437, 193);
+            this.groupBox1.Size = new System.Drawing.Size(437, 156);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Формирование отчетов";
-            // 
-            // button4
-            // 
-            this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(2, 138);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(433, 52);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Формирование договора";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
@@ -384,7 +364,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(2, 74);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(433, 64);
             this.button1.TabIndex = 11;
@@ -398,7 +378,7 @@
             this.button_search_butn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_search_butn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_search_butn.Location = new System.Drawing.Point(859, 356);
-            this.button_search_butn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_search_butn.Margin = new System.Windows.Forms.Padding(2);
             this.button_search_butn.Name = "button_search_butn";
             this.button_search_butn.Size = new System.Drawing.Size(202, 38);
             this.button_search_butn.TabIndex = 10;
@@ -409,35 +389,21 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1066, 80);
             this.panel1.TabIndex = 11;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.AliceBlue;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(11, 21);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 42);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 19;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 25F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(92, 1);
+            this.label1.Location = new System.Drawing.Point(0, 1);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(969, 80);
+            this.label1.Size = new System.Drawing.Size(1061, 80);
             this.label1.TabIndex = 0;
             this.label1.Text = "Администратор";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -446,7 +412,7 @@
             // 
             this.check_serach_activate.Font = new System.Drawing.Font("Segoe UI Semilight", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.check_serach_activate.Location = new System.Drawing.Point(861, 333);
-            this.check_serach_activate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.check_serach_activate.Margin = new System.Windows.Forms.Padding(2);
             this.check_serach_activate.Name = "check_serach_activate";
             this.check_serach_activate.Size = new System.Drawing.Size(200, 22);
             this.check_serach_activate.TabIndex = 14;
@@ -455,27 +421,15 @@
             this.check_serach_activate.UseVisualStyleBackColor = true;
             this.check_serach_activate.CheckedChanged += new System.EventHandler(this.Check_serach_activate_CheckedChanged);
             // 
-            // button_get_documents
-            // 
-            this.button_get_documents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_get_documents.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_get_documents.Location = new System.Drawing.Point(859, 275);
-            this.button_get_documents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button_get_documents.Name = "button_get_documents";
-            this.button_get_documents.Size = new System.Drawing.Size(202, 52);
-            this.button_get_documents.TabIndex = 12;
-            this.button_get_documents.Text = "Документация\r\n";
-            this.button_get_documents.UseVisualStyleBackColor = true;
-            this.button_get_documents.Click += new System.EventHandler(this.Button_get_documents_Click);
-            // 
             // button_create_Dog
             // 
+            this.button_create_Dog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_create_Dog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_create_Dog.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_create_Dog.Location = new System.Drawing.Point(3, 8);
-            this.button_create_Dog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_create_Dog.Location = new System.Drawing.Point(0, 0);
+            this.button_create_Dog.Margin = new System.Windows.Forms.Padding(2);
             this.button_create_Dog.Name = "button_create_Dog";
-            this.button_create_Dog.Size = new System.Drawing.Size(200, 77);
+            this.button_create_Dog.Size = new System.Drawing.Size(205, 151);
             this.button_create_Dog.TabIndex = 12;
             this.button_create_Dog.Text = "Сформировать договор для нового клиента";
             this.button_create_Dog.UseVisualStyleBackColor = true;
@@ -487,7 +441,7 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(0, 79);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(124, 325);
             this.panel2.TabIndex = 13;
@@ -496,7 +450,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(2, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(119, 320);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -506,7 +460,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 38);
             this.pictureBox1.TabIndex = 0;
@@ -523,19 +477,20 @@
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.buttonDog);
             this.panel3.Location = new System.Drawing.Point(127, 83);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(284, 317);
             this.panel3.TabIndex = 15;
             // 
             // button2_Arch_edit
             // 
+            this.button2_Arch_edit.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button2_Arch_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2_Arch_edit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2_Arch_edit.Location = new System.Drawing.Point(3, 89);
-            this.button2_Arch_edit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2_Arch_edit.Location = new System.Drawing.Point(0, 151);
+            this.button2_Arch_edit.Margin = new System.Windows.Forms.Padding(2);
             this.button2_Arch_edit.Name = "button2_Arch_edit";
-            this.button2_Arch_edit.Size = new System.Drawing.Size(200, 87);
+            this.button2_Arch_edit.Size = new System.Drawing.Size(205, 87);
             this.button2_Arch_edit.TabIndex = 12;
             this.button2_Arch_edit.Text = "Корректировка договора и сдача в архив\r\n";
             this.button2_Arch_edit.UseVisualStyleBackColor = true;
@@ -546,32 +501,33 @@
             this.panel4.Controls.Add(this.button_create_Dog);
             this.panel4.Controls.Add(this.button2_Arch_edit);
             this.panel4.Location = new System.Drawing.Point(859, 91);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(205, 180);
+            this.panel4.Size = new System.Drawing.Size(205, 238);
             this.panel4.TabIndex = 16;
             // 
             // group_analytics
             // 
             this.group_analytics.Controls.Add(this.button_diag_analytics);
-            this.group_analytics.Location = new System.Drawing.Point(422, 280);
-            this.group_analytics.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.group_analytics.Location = new System.Drawing.Point(416, 222);
+            this.group_analytics.Margin = new System.Windows.Forms.Padding(2);
             this.group_analytics.Name = "group_analytics";
-            this.group_analytics.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.group_analytics.Size = new System.Drawing.Size(431, 119);
+            this.group_analytics.Padding = new System.Windows.Forms.Padding(2);
+            this.group_analytics.Size = new System.Drawing.Size(437, 177);
             this.group_analytics.TabIndex = 17;
             this.group_analytics.TabStop = false;
             this.group_analytics.Text = "Аналитика";
             // 
             // button_diag_analytics
             // 
+            this.button_diag_analytics.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_diag_analytics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_diag_analytics.Location = new System.Drawing.Point(73, 18);
-            this.button_diag_analytics.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_diag_analytics.Location = new System.Drawing.Point(2, 17);
+            this.button_diag_analytics.Margin = new System.Windows.Forms.Padding(2);
             this.button_diag_analytics.Name = "button_diag_analytics";
-            this.button_diag_analytics.Size = new System.Drawing.Size(282, 40);
+            this.button_diag_analytics.Size = new System.Drawing.Size(433, 158);
             this.button_diag_analytics.TabIndex = 2;
-            this.button_diag_analytics.Text = "Анализ языков программирования";
+            this.button_diag_analytics.Text = "Аналитика";
             this.button_diag_analytics.UseVisualStyleBackColor = true;
             this.button_diag_analytics.Click += new System.EventHandler(this.Button_diag_analytics_Click);
             // 
@@ -589,13 +545,12 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button_get_documents);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grid_for_all);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bindingNavigator1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Adm";
             this.RightToLeftLayout = true;
@@ -608,7 +563,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.grid_for_all)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -647,7 +601,6 @@
         private System.Windows.Forms.Button button_otch_Adm;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.BindingSource myCreatePOprojectDataSetBindingSource;
         //private myCreatePO_projectDataSet myCreatePO_projectDataSet;
         //private myCreatePO_projectDataSet1 myCreatePO_projectDataSet1;
@@ -657,7 +610,6 @@
         private System.Windows.Forms.Button button_search_butn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button_get_documents;
         private System.Windows.Forms.Button button_create_Dog;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
@@ -669,6 +621,5 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.GroupBox group_analytics;
         private System.Windows.Forms.Button button_diag_analytics;
-        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
