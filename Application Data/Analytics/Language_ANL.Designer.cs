@@ -232,7 +232,7 @@
             this.MaximizeBox = false;
             this.Name = "Language_ANL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Language_ANL";
+            this.Text = "Аналитика";
             this.Load += new System.EventHandler(this.Language_ANL_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Diag_language)).EndInit();
             this.panel1.ResumeLayout(false);

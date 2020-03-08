@@ -484,9 +484,15 @@ namespace course1._0.Forms
             docum.Show();
         }
 
+        private void Button2_Click_2(object sender, EventArgs e)
+        {
+            Arch_Dogovora arch = new Arch_Dogovora();
+            arch.Show();
+        }
+
         private void Button_create_Dog_Click(object sender, EventArgs e)
         {
-            Arch_Dogovora dd = new Arch_Dogovora();
+            Add_Dogovora dd = new Add_Dogovora();
             dd.ShowDialog();
         }
 

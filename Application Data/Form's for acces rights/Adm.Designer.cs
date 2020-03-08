@@ -65,8 +65,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2_Arch_edit = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.group_analytics = new System.Windows.Forms.GroupBox();
             this.button_diag_analytics = new System.Windows.Forms.Button();
             this.loadAllTablesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -140,6 +140,7 @@
             this.buttonArhDog.TabIndex = 0;
             this.buttonArhDog.Text = "Список архивированных договоров";
             this.buttonArhDog.UseVisualStyleBackColor = true;
+            this.buttonArhDog.Visible = false;
             this.buttonArhDog.Click += new System.EventHandler(this.buttonArhDog_Click);
             // 
             // button_Dol
@@ -253,13 +254,13 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(55, 24);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
@@ -269,7 +270,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
@@ -278,7 +279,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem
@@ -287,7 +288,7 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator
@@ -315,7 +316,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -324,7 +325,7 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
@@ -336,9 +337,10 @@
             // 
             this.grid_for_all.BackgroundColor = System.Drawing.SystemColors.Info;
             this.grid_for_all.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_for_all.Location = new System.Drawing.Point(0, 404);
+            this.grid_for_all.Location = new System.Drawing.Point(0, 410);
             this.grid_for_all.Margin = new System.Windows.Forms.Padding(2);
             this.grid_for_all.Name = "grid_for_all";
+            this.grid_for_all.RowHeadersWidth = 51;
             this.grid_for_all.RowTemplate.Height = 27;
             this.grid_for_all.Size = new System.Drawing.Size(1066, 156);
             this.grid_for_all.TabIndex = 8;
@@ -377,7 +379,7 @@
             // 
             this.button_search_butn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_search_butn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_search_butn.Location = new System.Drawing.Point(859, 356);
+            this.button_search_butn.Location = new System.Drawing.Point(859, 366);
             this.button_search_butn.Margin = new System.Windows.Forms.Padding(2);
             this.button_search_butn.Name = "button_search_butn";
             this.button_search_butn.Size = new System.Drawing.Size(202, 38);
@@ -414,7 +416,7 @@
             this.check_serach_activate.Location = new System.Drawing.Point(861, 333);
             this.check_serach_activate.Margin = new System.Windows.Forms.Padding(2);
             this.check_serach_activate.Name = "check_serach_activate";
-            this.check_serach_activate.Size = new System.Drawing.Size(200, 22);
+            this.check_serach_activate.Size = new System.Drawing.Size(200, 29);
             this.check_serach_activate.TabIndex = 14;
             this.check_serach_activate.Text = "Активировать поиск";
             this.check_serach_activate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -423,13 +425,12 @@
             // 
             // button_create_Dog
             // 
-            this.button_create_Dog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_create_Dog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_create_Dog.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_create_Dog.Location = new System.Drawing.Point(0, 0);
             this.button_create_Dog.Margin = new System.Windows.Forms.Padding(2);
             this.button_create_Dog.Name = "button_create_Dog";
-            this.button_create_Dog.Size = new System.Drawing.Size(205, 151);
+            this.button_create_Dog.Size = new System.Drawing.Size(205, 127);
             this.button_create_Dog.TabIndex = 12;
             this.button_create_Dog.Text = "Сформировать договор для нового клиента";
             this.button_create_Dog.UseVisualStyleBackColor = true;
@@ -482,29 +483,26 @@
             this.panel3.Size = new System.Drawing.Size(284, 317);
             this.panel3.TabIndex = 15;
             // 
-            // button2_Arch_edit
-            // 
-            this.button2_Arch_edit.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button2_Arch_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2_Arch_edit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2_Arch_edit.Location = new System.Drawing.Point(0, 151);
-            this.button2_Arch_edit.Margin = new System.Windows.Forms.Padding(2);
-            this.button2_Arch_edit.Name = "button2_Arch_edit";
-            this.button2_Arch_edit.Size = new System.Drawing.Size(205, 87);
-            this.button2_Arch_edit.TabIndex = 12;
-            this.button2_Arch_edit.Text = "Корректировка договора и сдача в архив\r\n";
-            this.button2_Arch_edit.UseVisualStyleBackColor = true;
-            this.button2_Arch_edit.Click += new System.EventHandler(this.Button_create_Dog_Click);
-            // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.button2);
             this.panel4.Controls.Add(this.button_create_Dog);
-            this.panel4.Controls.Add(this.button2_Arch_edit);
             this.panel4.Location = new System.Drawing.Point(859, 91);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(205, 238);
             this.panel4.TabIndex = 16;
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(0, 131);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(205, 104);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Корректировка договоров и сдача в архив";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click_2);
             // 
             // group_analytics
             // 
@@ -538,7 +536,7 @@
             // Adm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1071, 564);
+            this.ClientSize = new System.Drawing.Size(1071, 577);
             this.Controls.Add(this.button_search_butn);
             this.Controls.Add(this.group_analytics);
             this.Controls.Add(this.check_serach_activate);
@@ -617,9 +615,9 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button2_Arch_edit;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.GroupBox group_analytics;
         private System.Windows.Forms.Button button_diag_analytics;
+        private System.Windows.Forms.Button button2;
     }
 }

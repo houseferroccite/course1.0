@@ -242,6 +242,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Guest";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Гость";
             this.Load += new System.EventHandler(this.Guest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNav_guest)).EndInit();

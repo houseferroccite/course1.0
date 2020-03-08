@@ -30,12 +30,12 @@
         {
             this.button_seen_arch_ended = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.grid_Arch_Status = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.grid_Arch_Status = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_Arch_Status)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_seen_arch_ended
@@ -59,6 +59,17 @@
             this.panel1.Size = new System.Drawing.Size(706, 173);
             this.panel1.TabIndex = 2;
             // 
+            // grid_Arch_Status
+            // 
+            this.grid_Arch_Status.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_Arch_Status.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grid_Arch_Status.Location = new System.Drawing.Point(0, 0);
+            this.grid_Arch_Status.Name = "grid_Arch_Status";
+            this.grid_Arch_Status.RowTemplate.Height = 24;
+            this.grid_Arch_Status.Size = new System.Drawing.Size(706, 173);
+            this.grid_Arch_Status.TabIndex = 0;
+            this.grid_Arch_Status.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_Arch_Status_CellClick);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
@@ -80,17 +91,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Изменение статуса договора и сдача в архив";
             // 
-            // grid_Arch_Status
-            // 
-            this.grid_Arch_Status.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_Arch_Status.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grid_Arch_Status.Location = new System.Drawing.Point(0, 0);
-            this.grid_Arch_Status.Name = "grid_Arch_Status";
-            this.grid_Arch_Status.RowTemplate.Height = 24;
-            this.grid_Arch_Status.Size = new System.Drawing.Size(706, 173);
-            this.grid_Arch_Status.TabIndex = 0;
-            this.grid_Arch_Status.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_Arch_Status_CellClick);
-            // 
             // Arch_Dogovora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -100,12 +100,13 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button_seen_arch_ended);
             this.Name = "Arch_Dogovora";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Подтверждение статуса и сдача в архив";
             this.Load += new System.EventHandler(this.Arch_Dogovora_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grid_Arch_Status)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_Arch_Status)).EndInit();
             this.ResumeLayout(false);
 
         }

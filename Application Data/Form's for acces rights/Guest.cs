@@ -38,6 +38,7 @@ namespace course1._0.Application_Data.Form_s_for_acces_rights
 
         private void Guest_Load(object sender, EventArgs e)
         {
+            button__Click(sender, e);
             bindingNav_guest.Visible = false;
         }
     }
