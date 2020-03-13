@@ -490,6 +490,11 @@ namespace course1._0.Forms
             arch.Show();
         }
 
+        private void group_analytics_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void Button_create_Dog_Click(object sender, EventArgs e)
         {
             Add_Dogovora dd = new Add_Dogovora();

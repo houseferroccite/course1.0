@@ -53,7 +53,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.grid_for_all = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button_search_butn = new System.Windows.Forms.Button();
@@ -62,28 +61,28 @@
             this.check_serach_activate = new System.Windows.Forms.CheckBox();
             this.button_create_Dog = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.group_analytics = new System.Windows.Forms.GroupBox();
             this.button_diag_analytics = new System.Windows.Forms.Button();
             this.loadAllTablesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.myCreatePOprojectDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.grid_for_all = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_for_all)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.group_analytics.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loadAllTablesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myCreatePOprojectDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_for_all)).BeginInit();
             this.SuspendLayout();
             // 
             // button_otch_Adm
@@ -94,7 +93,7 @@
             this.button_otch_Adm.Location = new System.Drawing.Point(2, 17);
             this.button_otch_Adm.Margin = new System.Windows.Forms.Padding(2);
             this.button_otch_Adm.Name = "button_otch_Adm";
-            this.button_otch_Adm.Size = new System.Drawing.Size(433, 57);
+            this.button_otch_Adm.Size = new System.Drawing.Size(721, 57);
             this.button_otch_Adm.TabIndex = 8;
             this.button_otch_Adm.Text = "Отчет по клиентам с действующими договорами";
             this.button_otch_Adm.UseVisualStyleBackColor = true;
@@ -108,7 +107,7 @@
             this.button3.Location = new System.Drawing.Point(0, 34);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(284, 38);
+            this.button3.Size = new System.Drawing.Size(723, 38);
             this.button3.TabIndex = 1;
             this.button3.Text = "Список кураторов";
             this.button3.UseVisualStyleBackColor = true;
@@ -122,7 +121,7 @@
             this.button_client.Location = new System.Drawing.Point(0, 112);
             this.button_client.Margin = new System.Windows.Forms.Padding(2);
             this.button_client.Name = "button_client";
-            this.button_client.Size = new System.Drawing.Size(284, 41);
+            this.button_client.Size = new System.Drawing.Size(723, 41);
             this.button_client.TabIndex = 0;
             this.button_client.Text = "Список клиентов";
             this.button_client.UseVisualStyleBackColor = true;
@@ -136,7 +135,7 @@
             this.buttonArhDog.Location = new System.Drawing.Point(0, 72);
             this.buttonArhDog.Margin = new System.Windows.Forms.Padding(2);
             this.buttonArhDog.Name = "buttonArhDog";
-            this.buttonArhDog.Size = new System.Drawing.Size(284, 40);
+            this.buttonArhDog.Size = new System.Drawing.Size(723, 40);
             this.buttonArhDog.TabIndex = 0;
             this.buttonArhDog.Text = "Список архивированных договоров";
             this.buttonArhDog.UseVisualStyleBackColor = true;
@@ -151,7 +150,7 @@
             this.button_Dol.Location = new System.Drawing.Point(0, 153);
             this.button_Dol.Margin = new System.Windows.Forms.Padding(2);
             this.button_Dol.Name = "button_Dol";
-            this.button_Dol.Size = new System.Drawing.Size(284, 39);
+            this.button_Dol.Size = new System.Drawing.Size(723, 39);
             this.button_Dol.TabIndex = 0;
             this.button_Dol.Text = "Список должностей";
             this.button_Dol.UseVisualStyleBackColor = true;
@@ -165,7 +164,7 @@
             this.button_Sotr.Location = new System.Drawing.Point(0, 273);
             this.button_Sotr.Margin = new System.Windows.Forms.Padding(2);
             this.button_Sotr.Name = "button_Sotr";
-            this.button_Sotr.Size = new System.Drawing.Size(284, 35);
+            this.button_Sotr.Size = new System.Drawing.Size(723, 35);
             this.button_Sotr.TabIndex = 0;
             this.button_Sotr.Text = "Список сотрудников";
             this.button_Sotr.UseVisualStyleBackColor = true;
@@ -179,7 +178,7 @@
             this.button_work.Location = new System.Drawing.Point(0, 192);
             this.button_work.Margin = new System.Windows.Forms.Padding(2);
             this.button_work.Name = "button_work";
-            this.button_work.Size = new System.Drawing.Size(284, 40);
+            this.button_work.Size = new System.Drawing.Size(723, 40);
             this.button_work.TabIndex = 0;
             this.button_work.Text = "Список видов работ";
             this.button_work.UseVisualStyleBackColor = true;
@@ -193,7 +192,7 @@
             this.button_language.Location = new System.Drawing.Point(0, 232);
             this.button_language.Margin = new System.Windows.Forms.Padding(2);
             this.button_language.Name = "button_language";
-            this.button_language.Size = new System.Drawing.Size(284, 41);
+            this.button_language.Size = new System.Drawing.Size(723, 41);
             this.button_language.TabIndex = 0;
             this.button_language.Text = "Список языков программирования";
             this.button_language.UseVisualStyleBackColor = true;
@@ -207,7 +206,7 @@
             this.buttonDog.Location = new System.Drawing.Point(0, 0);
             this.buttonDog.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDog.Name = "buttonDog";
-            this.buttonDog.Size = new System.Drawing.Size(284, 34);
+            this.buttonDog.Size = new System.Drawing.Size(723, 34);
             this.buttonDog.TabIndex = 0;
             this.buttonDog.Text = "Список договоров";
             this.buttonDog.UseVisualStyleBackColor = true;
@@ -244,7 +243,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1071, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(856, 27);
             this.bindingNavigator1.TabIndex = 3;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -300,6 +299,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -333,29 +333,16 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // grid_for_all
-            // 
-            this.grid_for_all.BackgroundColor = System.Drawing.SystemColors.Info;
-            this.grid_for_all.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_for_all.Location = new System.Drawing.Point(0, 410);
-            this.grid_for_all.Margin = new System.Windows.Forms.Padding(2);
-            this.grid_for_all.Name = "grid_for_all";
-            this.grid_for_all.RowHeadersWidth = 51;
-            this.grid_for_all.RowTemplate.Height = 27;
-            this.grid_for_all.Size = new System.Drawing.Size(1066, 156);
-            this.grid_for_all.TabIndex = 8;
-            this.grid_for_all.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_for_all_CellClick_1);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.button_otch_Adm);
-            this.groupBox1.Location = new System.Drawing.Point(414, 80);
+            this.groupBox1.Location = new System.Drawing.Point(126, 80);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox1.Size = new System.Drawing.Size(437, 156);
+            this.groupBox1.Size = new System.Drawing.Size(725, 142);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Формирование отчетов";
@@ -368,7 +355,7 @@
             this.button1.Location = new System.Drawing.Point(2, 74);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(433, 64);
+            this.button1.Size = new System.Drawing.Size(721, 64);
             this.button1.TabIndex = 11;
             this.button1.Text = "Отчет по сотрудникам о их навыках в программировании \r\n(Используемый язык програм" +
     "мирования)";
@@ -379,10 +366,10 @@
             // 
             this.button_search_butn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_search_butn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_search_butn.Location = new System.Drawing.Point(859, 366);
+            this.button_search_butn.Location = new System.Drawing.Point(436, 679);
             this.button_search_butn.Margin = new System.Windows.Forms.Padding(2);
             this.button_search_butn.Name = "button_search_butn";
-            this.button_search_butn.Size = new System.Drawing.Size(202, 38);
+            this.button_search_butn.Size = new System.Drawing.Size(417, 32);
             this.button_search_butn.TabIndex = 10;
             this.button_search_butn.Text = "Поиск";
             this.button_search_butn.UseVisualStyleBackColor = true;
@@ -402,10 +389,10 @@
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 25F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(0, 1);
+            this.label1.Location = new System.Drawing.Point(2, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1061, 80);
+            this.label1.Size = new System.Drawing.Size(854, 77);
             this.label1.TabIndex = 0;
             this.label1.Text = "Администратор";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -413,10 +400,10 @@
             // check_serach_activate
             // 
             this.check_serach_activate.Font = new System.Drawing.Font("Segoe UI Semilight", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.check_serach_activate.Location = new System.Drawing.Point(861, 333);
+            this.check_serach_activate.Location = new System.Drawing.Point(125, 679);
             this.check_serach_activate.Margin = new System.Windows.Forms.Padding(2);
             this.check_serach_activate.Name = "check_serach_activate";
-            this.check_serach_activate.Size = new System.Drawing.Size(200, 29);
+            this.check_serach_activate.Size = new System.Drawing.Size(307, 32);
             this.check_serach_activate.TabIndex = 14;
             this.check_serach_activate.Text = "Активировать поиск";
             this.check_serach_activate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -427,10 +414,10 @@
             // 
             this.button_create_Dog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_create_Dog.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_create_Dog.Location = new System.Drawing.Point(0, 0);
+            this.button_create_Dog.Location = new System.Drawing.Point(128, 312);
             this.button_create_Dog.Margin = new System.Windows.Forms.Padding(2);
             this.button_create_Dog.Name = "button_create_Dog";
-            this.button_create_Dog.Size = new System.Drawing.Size(205, 127);
+            this.button_create_Dog.Size = new System.Drawing.Size(360, 48);
             this.button_create_Dog.TabIndex = 12;
             this.button_create_Dog.Text = "Сформировать договор для нового клиента";
             this.button_create_Dog.UseVisualStyleBackColor = true;
@@ -439,13 +426,21 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel2.Controls.Add(this.flowLayoutPanel1);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(0, 79);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(124, 325);
+            this.panel2.Size = new System.Drawing.Size(124, 632);
             this.panel2.TabIndex = 13;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(126, 1);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.flowLayoutPanel1.TabIndex = 18;
             // 
             // pictureBox2
             // 
@@ -453,7 +448,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(2, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(119, 320);
+            this.pictureBox2.Size = new System.Drawing.Size(119, 630);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -477,28 +472,18 @@
             this.panel3.Controls.Add(this.buttonArhDog);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.buttonDog);
-            this.panel3.Location = new System.Drawing.Point(127, 83);
+            this.panel3.Location = new System.Drawing.Point(128, 365);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(284, 317);
+            this.panel3.Size = new System.Drawing.Size(723, 310);
             this.panel3.TabIndex = 15;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.button_create_Dog);
-            this.panel4.Location = new System.Drawing.Point(859, 91);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(205, 238);
-            this.panel4.TabIndex = 16;
             // 
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(0, 131);
+            this.button2.Location = new System.Drawing.Point(493, 312);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(205, 104);
+            this.button2.Size = new System.Drawing.Size(358, 48);
             this.button2.TabIndex = 13;
             this.button2.Text = "Корректировка договоров и сдача в архив";
             this.button2.UseVisualStyleBackColor = true;
@@ -507,14 +492,15 @@
             // group_analytics
             // 
             this.group_analytics.Controls.Add(this.button_diag_analytics);
-            this.group_analytics.Location = new System.Drawing.Point(416, 222);
+            this.group_analytics.Location = new System.Drawing.Point(128, 222);
             this.group_analytics.Margin = new System.Windows.Forms.Padding(2);
             this.group_analytics.Name = "group_analytics";
             this.group_analytics.Padding = new System.Windows.Forms.Padding(2);
-            this.group_analytics.Size = new System.Drawing.Size(437, 177);
+            this.group_analytics.Size = new System.Drawing.Size(725, 86);
             this.group_analytics.TabIndex = 17;
             this.group_analytics.TabStop = false;
             this.group_analytics.Text = "Аналитика";
+            this.group_analytics.Enter += new System.EventHandler(this.group_analytics_Enter);
             // 
             // button_diag_analytics
             // 
@@ -523,7 +509,7 @@
             this.button_diag_analytics.Location = new System.Drawing.Point(2, 17);
             this.button_diag_analytics.Margin = new System.Windows.Forms.Padding(2);
             this.button_diag_analytics.Name = "button_diag_analytics";
-            this.button_diag_analytics.Size = new System.Drawing.Size(433, 158);
+            this.button_diag_analytics.Size = new System.Drawing.Size(721, 67);
             this.button_diag_analytics.TabIndex = 2;
             this.button_diag_analytics.Text = "Аналитика";
             this.button_diag_analytics.UseVisualStyleBackColor = true;
@@ -533,18 +519,29 @@
             // 
             this.loadAllTablesBindingSource.DataMember = "LoadAllTables";
             // 
+            // grid_for_all
+            // 
+            this.grid_for_all.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_for_all.Location = new System.Drawing.Point(0, 716);
+            this.grid_for_all.Name = "grid_for_all";
+            this.grid_for_all.RowHeadersWidth = 51;
+            this.grid_for_all.RowTemplate.Height = 24;
+            this.grid_for_all.Size = new System.Drawing.Size(844, 130);
+            this.grid_for_all.TabIndex = 18;
+            // 
             // Adm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1071, 577);
+            this.ClientSize = new System.Drawing.Size(856, 858);
+            this.Controls.Add(this.grid_for_all);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button_create_Dog);
             this.Controls.Add(this.button_search_butn);
             this.Controls.Add(this.group_analytics);
             this.Controls.Add(this.check_serach_activate);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.grid_for_all);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bindingNavigator1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -558,17 +555,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_for_all)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.group_analytics.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.loadAllTablesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myCreatePOprojectDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_for_all)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -603,8 +599,6 @@
         //private myCreatePO_projectDataSet myCreatePO_projectDataSet;
         //private myCreatePO_projectDataSet1 myCreatePO_projectDataSet1;
         private System.Windows.Forms.BindingSource loadAllTablesBindingSource;
-        //private myCreatePO_projectDataSet1TableAdapters.LoadAllTablesTableAdapter loadAllTablesTableAdapter;
-        private System.Windows.Forms.DataGridView grid_for_all;
         private System.Windows.Forms.Button button_search_butn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
@@ -615,9 +609,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.GroupBox group_analytics;
         private System.Windows.Forms.Button button_diag_analytics;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.DataGridView grid_for_all;
     }
 }

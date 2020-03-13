@@ -107,6 +107,11 @@ namespace course1._0
             MessageBox.Show(" < Coming Soon /> ", "Обновление уже готовится....");
         }
 
+        private void combo_login_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             //* in password

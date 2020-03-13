@@ -20,7 +20,7 @@ namespace course1._0.Application_Data.Form_s_for_acces_rights
             InitializeComponent();
         }
           
-        private string NameExcel = @"C:\Users\Programm_adm\Desktop\College\Курсовая ВАЖНО\Application\course1.0\bin\Debug\guest.xls";
+        private string NameExcel = @"D:\College\Курсовая ВАЖНО\Application\course1.0\bin\Debug\guest.xls";
         private void button__Click(object sender, EventArgs e)
         {
             excel.Application app = new excel.Application();
@@ -30,10 +30,8 @@ namespace course1._0.Application_Data.Form_s_for_acces_rights
 
         private void button_see_letter_imprisoned_Dogovorov_Click(object sender, EventArgs e)
         {
-            
             INFO_company seen = new INFO_company();
             seen.ShowDialog();
-            
         }
 
         private void Guest_Load(object sender, EventArgs e)

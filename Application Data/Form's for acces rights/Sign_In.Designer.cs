@@ -75,6 +75,7 @@
             this.combo_login.Name = "combo_login";
             this.combo_login.Size = new System.Drawing.Size(289, 33);
             this.combo_login.TabIndex = 2;
+            this.combo_login.SelectedIndexChanged += new System.EventHandler(this.combo_login_SelectedIndexChanged);
             // 
             // text_password
             // 
